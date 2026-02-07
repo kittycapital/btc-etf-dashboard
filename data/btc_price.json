@@ -1,7 +1,7 @@
 {
   "description": "BTC/USD daily closing prices",
   "source": "CoinGecko",
-  "last_updated": "2026-02-07T14:03:31.403439+00:00",
+  "last_updated": "2026-02-07T14:31:24.577464+00:00",
   "prices": {
     "2025-02-08": 96558.46,
     "2025-02-09": 96558.24,
