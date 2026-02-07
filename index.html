@@ -415,7 +415,9 @@ body {
   <div class="period-selector">
     <button class="period-btn" data-period="14">2주</button>
     <button class="period-btn" data-period="30">1개월</button>
-    <button class="period-btn active" data-period="60">2개월</button>
+    <button class="period-btn active" data-period="90">3개월</button>
+    <button class="period-btn" data-period="180">6개월</button>
+    <button class="period-btn" data-period="365">1년</button>
     <button class="period-btn" data-period="0">전체</button>
   </div>
 </div>
@@ -429,7 +431,7 @@ body {
   <!-- Daily Net Flow Bar Chart -->
   <div class="chart-section">
     <div class="chart-title">📊 일별 순유입/유출</div>
-    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M)</div>
+    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M) · <span style="color: rgba(255,170,0,0.6)">━</span> BTC 가격</div>
     <div class="chart-container tall">
       <canvas id="dailyFlowChart"></canvas>
     </div>
@@ -489,7 +491,7 @@ body {
 </div>
 
 <div class="footer">
-  데이터 출처: <a href="https://bitbo.io/treasuries/etf-flows/" target="_blank">bitbo.io</a> ·
+  데이터 출처: <a href="https://bitbo.io/treasuries/etf-flows/" target="_blank">bitbo.io</a> · BTC 가격: <a href="https://www.coingecko.com" target="_blank">CoinGecko</a> ·
   GitHub Actions로 매일 자동 업데이트 ·
   투자 조언이 아닙니다
 </div>
@@ -528,16 +530,26 @@ const COLORS = {
 const TOP_ETFS = ['IBIT', 'FBTC', 'GBTC', 'ARKB', 'BITB'];
 
 let allData = null;
+let btcPriceData = null;
 let charts = {};
-let currentPeriod = 60;
+let currentPeriod = 90;
 
 // ─── Data Loading ───────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const resp = await fetch('data/etf_flows.json');
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
-    allData = await resp.json();
+    const [flowResp, priceResp] = await Promise.all([
+      fetch('data/etf_flows.json'),
+      fetch('data/btc_price.json').catch(() => null)
+    ]);
+    if (!flowResp.ok) throw new Error(`HTTP ${flowResp.status}: ${flowResp.statusText}`);
+    allData = await flowResp.json();
     console.log(`[ETF] Loaded ${allData.daily_flows.length} records`);
+
+    if (priceResp && priceResp.ok) {
+      btcPriceData = await priceResp.json();
+      console.log(`[ETF] BTC prices: ${Object.keys(btcPriceData.prices || {}).length} days`);
+    }
+
     renderDashboard();
   } catch (e) {
     console.error('Failed to load data:', e);
@@ -679,7 +691,7 @@ function renderSummaryCards(data) {
   `).join('');
 }
 
-// ─── Daily Flow Bar Chart ───────────────────────────────────────────────────
+// ─── Daily Flow Bar Chart + BTC Price Overlay ──────────────────────────────
 function renderDailyFlowChart(data) {
   const ctx = document.getElementById('dailyFlowChart');
   if (charts.daily) charts.daily.destroy();
@@ -687,25 +699,88 @@ function renderDailyFlowChart(data) {
   const bgColors = data.map(d => d.total >= 0 ? '#00d68f' : '#ff3d71');
   const hoverBg = data.map(d => d.total >= 0 ? '#00d68fcc' : '#ff3d71cc');
 
+  // BTC price data for overlay
+  const btcPrices = data.map(d => {
+    if (btcPriceData && btcPriceData.prices && btcPriceData.prices[d.date]) {
+      return btcPriceData.prices[d.date];
+    }
+    return null;
+  });
+  const hasBtcData = btcPrices.some(p => p !== null);
+
+  const datasets = [{
+    label: '순유입 (US$M)',
+    data: data.map(d => d.total),
+    backgroundColor: bgColors,
+    hoverBackgroundColor: hoverBg,
+    borderWidth: 0,
+    borderRadius: 2,
+    barPercentage: 0.85,
+    yAxisID: 'y',
+    order: 2,
+  }];
+
+  if (hasBtcData) {
+    datasets.push({
+      label: 'BTC 가격 (USD)',
+      data: btcPrices,
+      type: 'line',
+      borderColor: 'rgba(255, 170, 0, 0.35)',
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: '#ffaa00',
+      tension: 0.3,
+      yAxisID: 'yBtc',
+      order: 1,
+      spanGaps: true,
+    });
+  }
+
+  const scales = {
+    x: {
+      grid: { display: false },
+      ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 15 }
+    },
+    y: {
+      position: 'left',
+      grid: { color: '#1e1e3044' },
+      ticks: {
+        callback: v => (v > 0 ? '+' : '') + v
+      }
+    }
+  };
+
+  if (hasBtcData) {
+    scales.yBtc = {
+      position: 'right',
+      grid: { display: false },
+      ticks: {
+        color: 'rgba(255, 170, 0, 0.5)',
+        callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v)
+      }
+    };
+  }
+
   charts.daily = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: data.map(d => formatDate(d.date)),
-      datasets: [{
-        label: '순유입 (US$M)',
-        data: data.map(d => d.total),
-        backgroundColor: bgColors,
-        hoverBackgroundColor: hoverBg,
-        borderWidth: 0,
-        borderRadius: 2,
-        barPercentage: 0.85,
-      }]
+      datasets: datasets
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: {
+          display: hasBtcData,
+          labels: { 
+            filter: (item) => item.text === 'BTC 가격 (USD)',
+            color: 'rgba(255, 170, 0, 0.6)',
+            font: { size: 10 }
+          }
+        },
         tooltip: {
           backgroundColor: '#1a1a28',
           borderColor: '#2a2a45',
@@ -719,11 +794,15 @@ function renderDailyFlowChart(data) {
               return formatDateFull(data[idx].date);
             },
             label: (item) => {
+              if (item.dataset.yAxisID === 'yBtc') {
+                return `BTC: $${Number(item.raw).toLocaleString()}`;
+              }
               const val = item.raw;
               const sign = val >= 0 ? '+' : '';
               return `순유입: ${sign}${val.toFixed(1)}M`;
             },
             afterLabel: (item) => {
+              if (item.dataset.yAxisID === 'yBtc') return '';
               const idx = item.dataIndex;
               const d = data[idx];
               const lines = [];
@@ -736,18 +815,7 @@ function renderDailyFlowChart(data) {
           }
         }
       },
-      scales: {
-        x: {
-          grid: { display: false },
-          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 15 }
-        },
-        y: {
-          grid: { color: '#1e1e3044' },
-          ticks: {
-            callback: v => (v > 0 ? '+' : '') + v
-          }
-        }
-      }
+      scales: scales
     }
   });
 }

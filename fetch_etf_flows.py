@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 FLOWS_FILE = os.path.join(DATA_DIR, "etf_flows.json")
+BTC_PRICE_FILE = os.path.join(DATA_DIR, "btc_price.json")
 SOURCE_URL = "https://bitbo.io/treasuries/etf-flows/"
 
 ETF_TICKERS = [
@@ -268,6 +269,67 @@ def merge_and_save(existing: dict, new_records: list[dict]) -> None:
     print(f"[OK] Saved → {FLOWS_FILE}")
 
 
+# ─── BTC Price Fetching (CoinGecko free API) ────────────────────────────────
+def fetch_btc_prices():
+    """
+    Fetch daily BTC/USD prices from CoinGecko.
+    Merges with existing data, keeping full history.
+    """
+    print("[INFO] Fetching BTC price data...")
+    url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=365&interval=daily"
+
+    result = subprocess.run(
+        ["curl", "-sL", "--max-time", "30",
+         "-H", "Accept: application/json",
+         "-H", "User-Agent: BTCETFDashboard/1.0",
+         url],
+        capture_output=True, text=True, timeout=60,
+    )
+
+    if result.returncode != 0:
+        print(f"[WARN] BTC price fetch failed: {result.stderr[:200]}")
+        return
+
+    try:
+        data = json.loads(result.stdout)
+    except json.JSONDecodeError:
+        print(f"[WARN] BTC price response not JSON: {result.stdout[:200]}")
+        return
+
+    if "prices" not in data:
+        print(f"[WARN] No 'prices' key in BTC response: {list(data.keys())}")
+        return
+
+    # Parse: [[timestamp_ms, price], ...]
+    new_prices = {}
+    for ts_ms, price in data["prices"]:
+        dt = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc)
+        date_iso = dt.strftime("%Y-%m-%d")
+        new_prices[date_iso] = round(price, 2)
+
+    # Merge with existing
+    existing = {}
+    if os.path.exists(BTC_PRICE_FILE):
+        with open(BTC_PRICE_FILE, "r") as f:
+            existing = json.load(f)
+
+    prices = existing.get("prices", {})
+    prices.update(new_prices)
+
+    result_data = {
+        "description": "BTC/USD daily closing prices",
+        "source": "CoinGecko",
+        "last_updated": datetime.now(timezone.utc).isoformat(),
+        "prices": dict(sorted(prices.items())),
+    }
+
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(BTC_PRICE_FILE, "w") as f:
+        json.dump(result_data, f, indent=2)
+
+    print(f"[OK] BTC prices: {len(new_prices)} new → {len(prices)} total")
+
+
 # ─── Entry point ─────────────────────────────────────────────────────────────
 def main():
     try:
@@ -284,6 +346,12 @@ def main():
 
         existing = load_existing()
         merge_and_save(existing, records)
+
+        # Also fetch BTC price (non-fatal if it fails)
+        try:
+            fetch_btc_prices()
+        except Exception as e:
+            print(f"[WARN] BTC price fetch failed (non-fatal): {e}")
 
     except Exception as exc:
         print(f"[FATAL] {exc}")
