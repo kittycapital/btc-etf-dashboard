@@ -1,23 +1,32 @@
 #!/usr/bin/env python3
 """
 Bitcoin ETF Flow Data Fetcher
-Scrapes daily ETF flow data from bitbo.io and saves to JSON.
-Designed to run via GitHub Actions on a daily schedule.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Uses SoSoValue's free API for Bitcoin spot ETF daily flow data.
+
+Setup (one-time):
+  1. Go to https://sosovalue.com/developer
+  2. Sign up and get a free API key
+  3. In your GitHub repo: Settings → Secrets → Add: SOSOVALUE_API_KEY
+  4. Run the workflow manually to test
+
+The free tier allows 20 calls/min — more than enough for daily updates.
 """
 
 import json
 import os
-import re
 import sys
 from datetime import datetime, timezone
 from urllib.request import urlopen, Request
-from html.parser import HTMLParser
+from urllib.error import HTTPError
 
 
 # ─── Configuration ───────────────────────────────────────────────────────────
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 FLOWS_FILE = os.path.join(DATA_DIR, "etf_flows.json")
-SOURCE_URL = "https://bitbo.io/treasuries/etf-flows/"
+
+API_KEY = os.environ.get("SOSOVALUE_API_KEY", "")
+BASE_URL = "https://openapi.sosovalue.com"
 
 ETF_TICKERS = [
     "IBIT", "FBTC", "GBTC", "BTC", "BITB",
@@ -39,154 +48,232 @@ ETF_INFO = {
     "DEFI": {"name": "Hashdex Bitcoin ETF", "issuer": "Hashdex"},
 }
 
-
-# ─── HTML Parser ─────────────────────────────────────────────────────────────
-class ETFTableParser(HTMLParser):
-    """Parse ETF flow table from bitbo.io HTML."""
-
-    def __init__(self):
-        super().__init__()
-        self.in_table = False
-        self.in_thead = False
-        self.in_tbody = False
-        self.in_tr = False
-        self.in_td = False
-        self.in_th = False
-        self.current_row = []
-        self.headers = []
-        self.rows = []
-        self.current_data = ""
-
-    def handle_starttag(self, tag, attrs):
-        attrs_dict = dict(attrs)
-        if tag == "table":
-            self.in_table = True
-        elif tag == "thead" and self.in_table:
-            self.in_thead = True
-        elif tag == "tbody" and self.in_table:
-            self.in_tbody = True
-        elif tag == "tr" and self.in_table:
-            self.in_tr = True
-            self.current_row = []
-        elif tag == "th" and self.in_tr:
-            self.in_th = True
-            self.current_data = ""
-        elif tag == "td" and self.in_tr:
-            self.in_td = True
-            self.current_data = ""
-
-    def handle_endtag(self, tag):
-        if tag == "table":
-            self.in_table = False
-        elif tag == "thead":
-            self.in_thead = False
-        elif tag == "tbody":
-            self.in_tbody = False
-        elif tag == "tr" and self.in_tr:
-            self.in_tr = False
-            if self.in_thead and self.current_row:
-                self.headers = self.current_row
-            elif self.in_tbody and self.current_row:
-                self.rows.append(self.current_row)
-        elif tag == "th" and self.in_th:
-            self.in_th = False
-            self.current_row.append(self.current_data.strip())
-        elif tag == "td" and self.in_td:
-            self.in_td = False
-            self.current_row.append(self.current_data.strip())
-
-    def handle_data(self, data):
-        if self.in_th or self.in_td:
-            self.current_data += data
+# Map various ETF names from API responses to our standardized tickers
+TICKER_ALIASES = {}
+for ticker, info in ETF_INFO.items():
+    TICKER_ALIASES[ticker] = ticker
+    TICKER_ALIASES[ticker.lower()] = ticker
+    TICKER_ALIASES[info["name"]] = ticker
+    TICKER_ALIASES[info["name"].lower()] = ticker
 
 
-# ─── Data Fetching ───────────────────────────────────────────────────────────
-def fetch_html(url: str) -> str:
-    """Fetch HTML content from URL."""
+# ─── API Helpers ─────────────────────────────────────────────────────────────
+def api_get(endpoint: str, params: dict = None) -> dict:
+    """Make GET request to SoSoValue API."""
+    url = f"{BASE_URL}{endpoint}"
+    if params:
+        qs = "&".join(f"{k}={v}" for k, v in params.items() if v is not None)
+        url += f"?{qs}"
+
     req = Request(url, headers={
-        "User-Agent": "Mozilla/5.0 (compatible; BTCETFDashboard/1.0)"
+        "x-soso-api-key": API_KEY,
+        "Accept": "application/json",
     })
+
+    print(f"[API] GET {endpoint}")
     with urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8")
+        body = resp.read().decode("utf-8")
+        data = json.loads(body)
+
+    if data.get("code") != 0:
+        raise Exception(f"API error (code={data.get('code')}): {data.get('msg')}")
+
+    return data.get("data")
 
 
-def parse_flow_value(val: str) -> float | None:
-    """Parse a flow value string like '-277.2' or '0.0' into float."""
-    if not val or val == "-":
-        return None
-    cleaned = val.replace(",", "").replace(" ", "")
-    try:
-        return float(cleaned)
-    except ValueError:
-        return None
-
-
-def parse_date(date_str: str) -> str | None:
-    """Parse date string like 'Feb 04, 2026' into ISO format 'YYYY-MM-DD'."""
-    try:
-        dt = datetime.strptime(date_str.strip(), "%b %d, %Y")
-        return dt.strftime("%Y-%m-%d")
-    except ValueError:
+def resolve_ticker(name: str) -> str | None:
+    """Resolve ETF name to our standardized ticker."""
+    if not name:
         return None
 
+    # Exact match
+    if name in TICKER_ALIASES:
+        return TICKER_ALIASES[name]
 
-def scrape_etf_flows() -> list[dict]:
-    """Scrape ETF flow data from bitbo.io."""
-    print(f"[INFO] Fetching data from {SOURCE_URL}")
-    html = fetch_html(SOURCE_URL)
+    # Case-insensitive
+    lower = name.lower().strip()
+    if lower in TICKER_ALIASES:
+        return TICKER_ALIASES[lower]
 
-    parser = ETFTableParser()
-    parser.feed(html)
+    # Partial match (e.g. "iShares Bitcoin Trust ETF" → IBIT)
+    for alias, ticker in TICKER_ALIASES.items():
+        if alias.lower() in lower or lower in alias.lower():
+            return ticker
 
-    if not parser.headers or not parser.rows:
-        print("[ERROR] Could not find ETF flow table in HTML")
-        return []
+    # Extract ticker from parentheses: "Something (IBIT)"
+    import re
+    m = re.search(r'\(([A-Z]{3,5})\)', name)
+    if m and m.group(1) in ETF_TICKERS:
+        return m.group(1)
 
-    print(f"[INFO] Found {len(parser.rows)} rows")
+    print(f"  [WARN] Unknown ETF name: '{name}'")
+    return None
 
-    records = []
-    for row in parser.rows:
-        if not row or len(row) < 2:
+
+def to_millions(val) -> float:
+    """Convert a value to millions USD. Auto-detects if already in millions."""
+    if val is None:
+        return 0.0
+    f = float(val)
+    # If abs value > 50,000 assume it's in raw USD, convert to millions
+    # Typical daily ETF flow ranges: -1000M to +1000M
+    if abs(f) > 50_000:
+        return round(f / 1_000_000, 1)
+    return round(f, 1)
+
+
+# ─── Fetch ETF Flow History ─────────────────────────────────────────────────
+def fetch_etf_flows() -> list[dict]:
+    """
+    Fetch Bitcoin ETF flow history from SoSoValue.
+    Tries multiple known endpoint patterns.
+    """
+    # SoSoValue API endpoint for ETF inflow history
+    # Try documented endpoints (structure may vary)
+    endpoints_to_try = [
+        ("/api/v1/etf/history/inflow", {"currency": "BTC"}),
+        ("/api/v1/etf/historical/inflow", {"currency": "BTC"}),
+        ("/api/v1/etf/inflow/history", {"currency": "BTC"}),
+        ("/api/v1/etf/btc/history", {}),
+    ]
+
+    data = None
+    used_endpoint = None
+
+    for endpoint, params in endpoints_to_try:
+        try:
+            data = api_get(endpoint, params)
+            used_endpoint = endpoint
+            print(f"[OK] Successfully called {endpoint}")
+            break
+        except HTTPError as e:
+            if e.code == 404:
+                print(f"  [SKIP] {endpoint} → 404 Not Found")
+                continue
+            raise
+        except Exception as e:
+            print(f"  [SKIP] {endpoint} → {e}")
             continue
 
-        date_str = row[0]
-        date_iso = parse_date(date_str)
+    if data is None:
+        print("[ERROR] No working API endpoint found.")
+        print("  The SoSoValue API structure may have changed.")
+        print("  Check: https://sosovalue.gitbook.io/soso-value-api-doc/")
+        return []
 
-        # Skip summary rows (Total, Average, Maximum, Minimum)
+    # Debug: print data structure
+    if isinstance(data, dict):
+        print(f"[DEBUG] Response keys: {list(data.keys())[:10]}")
+    elif isinstance(data, list):
+        print(f"[DEBUG] Response is a list with {len(data)} items")
+        if data:
+            print(f"[DEBUG] First item keys: {list(data[0].keys()) if isinstance(data[0], dict) else type(data[0])}")
+
+    # Parse the response into our standard format
+    records = parse_sosovalue_response(data)
+
+    if records:
+        print(f"[OK] Parsed {len(records)} daily flow records (endpoint: {used_endpoint})")
+    return records
+
+
+def parse_sosovalue_response(data) -> list[dict]:
+    """
+    Parse SoSoValue API response into standardized records.
+    Handles various response structures flexibly.
+    """
+    records = []
+
+    # Determine the list of daily entries
+    daily_list = []
+    if isinstance(data, list):
+        daily_list = data
+    elif isinstance(data, dict):
+        # Try common keys
+        for key in ["list", "dataList", "items", "history", "data", "flows"]:
+            if key in data and isinstance(data[key], list):
+                daily_list = data[key]
+                break
+
+    if not daily_list:
+        print(f"[WARN] Could not find daily flow list in response")
+        print(f"[DEBUG] Full response preview: {json.dumps(data, default=str)[:1000]}")
+        return []
+
+    for entry in daily_list:
+        if not isinstance(entry, dict):
+            continue
+
+        # ── Parse date ──
+        date_iso = None
+        for date_key in ["date", "tradingDate", "dataDate", "day", "time", "timestamp"]:
+            if date_key in entry:
+                raw = entry[date_key]
+                if isinstance(raw, (int, float)) and raw > 1_000_000_000:
+                    # Unix timestamp (seconds or milliseconds)
+                    ts = raw / 1000 if raw > 1_000_000_000_000 else raw
+                    dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+                    date_iso = dt.strftime("%Y-%m-%d")
+                elif isinstance(raw, str) and len(raw) >= 10:
+                    date_iso = raw[:10]
+                break
+
         if not date_iso:
             continue
 
-        flows = {}
+        # ── Parse total ──
         total = 0.0
-        for i, ticker in enumerate(ETF_TICKERS):
-            col_idx = i + 1
-            if col_idx < len(row):
-                val = parse_flow_value(row[col_idx])
-                flows[ticker] = val if val is not None else 0.0
-                total += flows[ticker]
-            else:
-                flows[ticker] = 0.0
+        for total_key in ["totalNetInflow", "netInflow", "total", "totalFlow", "netFlow", "dailyNetInflow"]:
+            if total_key in entry and entry[total_key] is not None:
+                total = to_millions(entry[total_key])
+                break
 
-        # Use the "Totals" column if available
-        totals_idx = len(ETF_TICKERS) + 1
-        if totals_idx < len(row):
-            parsed_total = parse_flow_value(row[totals_idx])
-            if parsed_total is not None:
-                total = parsed_total
+        # ── Parse per-ETF flows ──
+        flows = {t: 0.0 for t in ETF_TICKERS}
+        etf_total = 0.0
+
+        # Look for ETF breakdown list
+        for list_key in ["etfList", "list", "etfs", "funds", "tickers", "details"]:
+            if list_key in entry and isinstance(entry[list_key], list):
+                for etf in entry[list_key]:
+                    if not isinstance(etf, dict):
+                        continue
+
+                    # Find ticker
+                    etf_name = ""
+                    for name_key in ["name", "ticker", "symbol", "etfName", "fundName"]:
+                        if name_key in etf:
+                            etf_name = str(etf[name_key])
+                            break
+
+                    ticker = resolve_ticker(etf_name)
+                    if not ticker:
+                        continue
+
+                    # Find flow value
+                    for val_key in ["netInflow", "change", "flow", "dailyChange", "netFlow", "value"]:
+                        if val_key in etf and etf[val_key] is not None:
+                            flows[ticker] = to_millions(etf[val_key])
+                            etf_total += flows[ticker]
+                            break
+                break
+
+        # Use ETF-level total if overall total is missing
+        if total == 0 and etf_total != 0:
+            total = round(etf_total, 1)
 
         records.append({
             "date": date_iso,
             "flows": flows,
-            "total": round(total, 1),
+            "total": total,
         })
 
-    # Sort by date ascending
     records.sort(key=lambda x: x["date"])
     return records
 
 
 # ─── Data Storage ────────────────────────────────────────────────────────────
-def load_existing_data() -> dict:
+def load_existing() -> dict:
     """Load existing data from JSON file."""
     if os.path.exists(FLOWS_FILE):
         with open(FLOWS_FILE, "r", encoding="utf-8") as f:
@@ -194,7 +281,7 @@ def load_existing_data() -> dict:
     return {
         "metadata": {
             "description": "Bitcoin Spot ETF Daily Net Flows (US$M)",
-            "source": "bitbo.io/treasuries/etf-flows",
+            "source": "SoSoValue API",
             "etf_info": ETF_INFO,
             "tickers": ETF_TICKERS,
             "last_updated": None,
@@ -203,60 +290,69 @@ def load_existing_data() -> dict:
     }
 
 
-def merge_data(existing: dict, new_records: list[dict]) -> dict:
-    """Merge new records into existing data, avoiding duplicates."""
-    existing_dates = {r["date"] for r in existing["daily_flows"]}
+def merge_and_save(existing: dict, new_records: list[dict]):
+    """Merge new records and save."""
+    existing_map = {r["date"]: i for i, r in enumerate(existing["daily_flows"])}
+    added = updated = 0
 
-    added = 0
-    updated = 0
-    for record in new_records:
-        if record["date"] in existing_dates:
-            # Update existing record
-            for i, r in enumerate(existing["daily_flows"]):
-                if r["date"] == record["date"]:
-                    existing["daily_flows"][i] = record
-                    updated += 1
-                    break
+    for rec in new_records:
+        if rec["date"] in existing_map:
+            idx = existing_map[rec["date"]]
+            new_has_detail = any(v != 0 for v in rec["flows"].values())
+            if new_has_detail or rec["total"] != 0:
+                existing["daily_flows"][idx] = rec
+                updated += 1
         else:
-            existing["daily_flows"].append(record)
+            existing["daily_flows"].append(rec)
             added += 1
 
-    # Sort by date
     existing["daily_flows"].sort(key=lambda x: x["date"])
-
-    # Update metadata
     existing["metadata"]["last_updated"] = datetime.now(timezone.utc).isoformat()
 
-    print(f"[INFO] Added {added} new records, updated {updated} existing records")
-    print(f"[INFO] Total records: {len(existing['daily_flows'])}")
-
-    return existing
-
-
-def save_data(data: dict):
-    """Save data to JSON file."""
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(FLOWS_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"[INFO] Saved to {FLOWS_FILE}")
+        json.dump(existing, f, indent=2, ensure_ascii=False)
+
+    print(f"[INFO] +{added} new, ~{updated} updated → Total: {len(existing['daily_flows'])} records")
+    print(f"[OK] Saved to {FLOWS_FILE}")
 
 
 # ─── Main ────────────────────────────────────────────────────────────────────
 def main():
+    if not API_KEY:
+        print("=" * 60)
+        print("  SOSOVALUE_API_KEY is not set!")
+        print()
+        print("  Setup steps:")
+        print("  1. Visit https://sosovalue.com/developer")
+        print("  2. Sign up for a free API key")
+        print("  3. GitHub → Settings → Secrets → New:")
+        print("     Name:  SOSOVALUE_API_KEY")
+        print("     Value: your-api-key-here")
+        print("  4. Re-run this workflow")
+        print("=" * 60)
+        sys.exit(1)
+
     try:
-        new_records = scrape_etf_flows()
-        if not new_records:
-            print("[WARN] No new records scraped")
+        records = fetch_etf_flows()
+        if not records:
+            print("[WARN] No records fetched")
             sys.exit(1)
 
-        existing = load_existing_data()
-        merged = merge_data(existing, new_records)
-        save_data(merged)
+        existing = load_existing()
+        merge_and_save(existing, records)
 
-        print("[OK] ETF flow data updated successfully")
-
+    except HTTPError as e:
+        print(f"[ERROR] HTTP {e.code}: {e.reason}")
+        if e.code == 401:
+            print("  → Invalid API key")
+        elif e.code == 429:
+            print("  → Rate limited (wait 1 min)")
+        sys.exit(1)
     except Exception as e:
         print(f"[ERROR] {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 
