@@ -276,7 +276,7 @@ def fetch_btc_prices():
     Merges with existing data, keeping full history.
     """
     print("[INFO] Fetching BTC price data...")
-    url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=800&interval=daily"
+    url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=800"
 
     result = subprocess.run(
         ["curl", "-sL", "--max-time", "30",
