@@ -1,7 +1,7 @@
 {
   "description": "BTC/USD daily closing prices",
-  "source": "Yahoo Finance",
-  "last_updated": "2026-02-07T14:34:01.678797+00:00",
+  "source": "CoinGecko",
+  "last_updated": "2026-02-07T14:35:15.631246+00:00",
   "prices": {
     "2024-01-01": 44167.33,
     "2024-01-02": 44957.97,
