@@ -431,7 +431,7 @@ body {
   <!-- Daily Net Flow Bar Chart -->
   <div class="chart-section">
     <div class="chart-title">📊 일별 순유입/유출</div>
-    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M) · <span style="color: rgba(255,170,0,0.6)">━</span> BTC 가격</div>
+    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M) · <span style="color: rgba(255,255,255,0.6)">━</span> BTC 가격</div>
     <div class="chart-container tall">
       <canvas id="dailyFlowChart"></canvas>
     </div>
@@ -453,15 +453,6 @@ body {
       <div class="chart-container">
         <canvas id="etfShareChart"></canvas>
       </div>
-    </div>
-  </div>
-
-  <!-- ETF Breakdown Stacked Bar -->
-  <div class="chart-section">
-    <div class="chart-title">🔍 주요 ETF별 일별 흐름</div>
-    <div class="chart-subtitle">IBIT · FBTC · GBTC · ARKB · BITB 상위 5개 ETF</div>
-    <div class="chart-container tall">
-      <canvas id="stackedChart"></canvas>
     </div>
   </div>
 
@@ -604,7 +595,6 @@ function renderDashboard() {
   renderDailyFlowChart(data);
   renderCumulativeChart(data);
   renderETFShareChart(data);
-  renderStackedChart(data);
   renderETFTable(data);
   renderDailyTable(data);
   renderWeeklyChart(data);
@@ -725,12 +715,12 @@ function renderDailyFlowChart(data) {
       label: 'BTC 가격 (USD)',
       data: btcPrices,
       type: 'line',
-      borderColor: 'rgba(255, 170, 0, 0.35)',
+      borderColor: 'rgba(255, 255, 255, 0.45)',
       backgroundColor: 'transparent',
       borderWidth: 2,
       pointRadius: 0,
       pointHoverRadius: 4,
-      pointHoverBackgroundColor: '#ffaa00',
+      pointHoverBackgroundColor: '#ffffff',
       tension: 0.3,
       yAxisID: 'yBtc',
       order: 1,
@@ -763,7 +753,7 @@ function renderDailyFlowChart(data) {
       min: Math.floor((minPrice - padding) / 1000) * 1000,
       max: Math.ceil((maxPrice + padding) / 1000) * 1000,
       ticks: {
-        color: 'rgba(255, 170, 0, 0.5)',
+        color: 'rgba(255, 255, 255, 0.5)',
         callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v)
       }
     };
@@ -783,7 +773,7 @@ function renderDailyFlowChart(data) {
           display: hasBtcData,
           labels: { 
             filter: (item) => item.text === 'BTC 가격 (USD)',
-            color: 'rgba(255, 170, 0, 0.6)',
+            color: 'rgba(255, 255, 255, 0.6)',
             font: { size: 10 }
           }
         },
@@ -935,61 +925,6 @@ function renderETFShareChart(data) {
               return ` ${item.label}: ${fmt(val)}M`;
             }
           }
-        }
-      }
-    }
-  });
-}
-
-// ─── Stacked Bar Chart (Top 5 ETFs) ────────────────────────────────────────
-function renderStackedChart(data) {
-  const ctx = document.getElementById('stackedChart');
-  if (charts.stacked) charts.stacked.destroy();
-
-  const datasets = TOP_ETFS.map(ticker => ({
-    label: ticker,
-    data: data.map(d => d.flows[ticker] || 0),
-    backgroundColor: COLORS[ticker] + 'cc',
-    borderWidth: 0,
-    borderRadius: 1,
-    barPercentage: 0.9,
-  }));
-
-  charts.stacked = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: data.map(d => formatDate(d.date)),
-      datasets,
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'top',
-          labels: { padding: 16 }
-        },
-        tooltip: {
-          backgroundColor: '#1a1a28',
-          borderColor: '#2a2a45',
-          borderWidth: 1,
-          mode: 'index',
-          callbacks: {
-            title: (items) => formatDateFull(data[items[0].dataIndex].date),
-            label: (item) => ` ${item.dataset.label}: ${fmt(item.raw)}M`,
-          }
-        }
-      },
-      scales: {
-        x: {
-          stacked: true,
-          grid: { display: false },
-          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 15 }
-        },
-        y: {
-          stacked: true,
-          grid: { color: '#1e1e3044' },
-          ticks: { callback: v => (v > 0 ? '+' : '') + v }
         }
       }
     }
