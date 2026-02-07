@@ -272,50 +272,90 @@ def merge_and_save(existing: dict, new_records: list[dict]) -> None:
 # ─── BTC Price Fetching (CoinGecko free API) ────────────────────────────────
 def fetch_btc_prices():
     """
-    Fetch daily BTC/USD prices from CoinGecko.
+    Fetch daily BTC/USD prices from CoinGecko using range endpoint.
+    Makes multiple calls to cover full ETF history (2024-01-01 ~ now).
     Merges with existing data, keeping full history.
     """
+    import time as _time
+
     print("[INFO] Fetching BTC price data...")
-    url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=800"
 
-    result = subprocess.run(
-        ["curl", "-sL", "--max-time", "30",
-         "-H", "Accept: application/json",
-         "-H", "User-Agent: BTCETFDashboard/1.0",
-         url],
-        capture_output=True, text=True, timeout=60,
-    )
-
-    if result.returncode != 0:
-        print(f"[WARN] BTC price fetch failed: {result.stderr[:200]}")
-        return
-
-    try:
-        data = json.loads(result.stdout)
-    except json.JSONDecodeError:
-        print(f"[WARN] BTC price response not JSON: {result.stdout[:200]}")
-        return
-
-    if "prices" not in data:
-        print(f"[WARN] No 'prices' key in BTC response: {list(data.keys())}")
-        return
-
-    # Parse: [[timestamp_ms, price], ...]
-    new_prices = {}
-    for ts_ms, price in data["prices"]:
-        dt = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc)
-        date_iso = dt.strftime("%Y-%m-%d")
-        new_prices[date_iso] = round(price, 2)
-
-    # Merge with existing
+    # Load existing
     existing = {}
     if os.path.exists(BTC_PRICE_FILE):
         with open(BTC_PRICE_FILE, "r") as f:
             existing = json.load(f)
-
     prices = existing.get("prices", {})
-    prices.update(new_prices)
 
+    # Define date ranges to fetch (6-month chunks)
+    ranges = [
+        ("2024-01-01", "2024-06-30"),
+        ("2024-07-01", "2024-12-31"),
+        ("2025-01-01", "2025-06-30"),
+        ("2025-07-01", "2025-12-31"),
+        ("2026-01-01", "2026-06-30"),
+    ]
+
+    total_new = 0
+    for start_str, end_str in ranges:
+        start_dt = datetime.strptime(start_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        end_dt = datetime.strptime(end_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+
+        # Skip future ranges
+        if start_dt > datetime.now(timezone.utc):
+            continue
+
+        # Skip if we already have good coverage for this range
+        existing_in_range = sum(1 for d in prices if start_str <= d <= end_str)
+        expected_days = (min(end_dt, datetime.now(timezone.utc)) - start_dt).days
+        if existing_in_range >= expected_days * 0.9:
+            print(f"  [{start_str}~{end_str}] Already have {existing_in_range} days, skipping")
+            continue
+
+        ts_from = int(start_dt.timestamp())
+        ts_to = int(min(end_dt, datetime.now(timezone.utc)).timestamp())
+        url = f"https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from={ts_from}&to={ts_to}"
+
+        result = subprocess.run(
+            ["curl", "-sL", "--max-time", "30",
+             "-H", "Accept: application/json",
+             "-H", "User-Agent: BTCETFDashboard/1.0",
+             url],
+            capture_output=True, text=True, timeout=60,
+        )
+
+        if result.returncode != 0:
+            print(f"  [{start_str}~{end_str}] curl failed")
+            continue
+
+        try:
+            data = json.loads(result.stdout)
+        except json.JSONDecodeError:
+            print(f"  [{start_str}~{end_str}] Not JSON: {result.stdout[:100]}")
+            continue
+
+        if "prices" not in data:
+            print(f"  [{start_str}~{end_str}] No prices key: {list(data.keys())}")
+            # Check for rate limit
+            if "status" in data:
+                print(f"  Rate limited: {data.get('status', {}).get('error_message', '')}")
+                break
+            continue
+
+        count = 0
+        for ts_ms, price in data["prices"]:
+            dt = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc)
+            date_iso = dt.strftime("%Y-%m-%d")
+            prices[date_iso] = round(price, 2)
+            count += 1
+
+        total_new += count
+        print(f"  [{start_str}~{end_str}] Got {count} data points")
+
+        # Respect rate limit (free: ~10 calls/min)
+        _time.sleep(7)
+
+    # Save
     result_data = {
         "description": "BTC/USD daily closing prices",
         "source": "CoinGecko",
@@ -327,7 +367,7 @@ def fetch_btc_prices():
     with open(BTC_PRICE_FILE, "w") as f:
         json.dump(result_data, f, indent=2)
 
-    print(f"[OK] BTC prices: {len(new_prices)} new → {len(prices)} total")
+    print(f"[OK] BTC prices: {total_new} fetched → {len(prices)} total days")
 
 
 # ─── Entry point ─────────────────────────────────────────────────────────────
