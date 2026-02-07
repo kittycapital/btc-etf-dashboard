@@ -1,0 +1,37 @@
+name: Update Bitcoin ETF Flow Data
+
+on:
+  schedule:
+    # 매일 오전 7시 KST (전날 22:00 UTC) - 미국 장 마감 후
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch:  # 수동 실행 가능
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Fetch ETF flow data
+      run: python fetch_etf_flows.py
+      continue-on-error: false
+
+    - name: Commit and push data
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/etf_flows.json
+        git diff --staged --quiet || git commit -m "📊 Update ETF flow data $(date +'%Y-%m-%d')"
+        git push
