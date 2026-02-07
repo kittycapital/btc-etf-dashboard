@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>비트코인 ETF 자금 흐름 대시보드</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.7/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.6/chart.umd.min.js"></script>
+<script>
+if(typeof Chart === 'undefined') {
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.js';
+  document.head.appendChild(s);
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -495,6 +502,13 @@ body {
 </div>
 
 <script>
+// ─── Chart.js availability check ────────────────────────────────────────────
+if (typeof Chart === 'undefined') {
+  document.getElementById('summaryCards').innerHTML =
+    '<div class="loading" style="color: #ff3d71;">Chart.js 로딩 실패 — 페이지를 새로고침하세요</div>';
+  throw new Error('Chart.js failed to load');
+}
+
 // ─── Chart.js Global Config ─────────────────────────────────────────────────
 Chart.defaults.color = '#8888a8';
 Chart.defaults.borderColor = '#1e1e30';
@@ -528,12 +542,14 @@ let currentPeriod = 60;
 async function loadData() {
   try {
     const resp = await fetch('data/etf_flows.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
     allData = await resp.json();
+    console.log(`[ETF] Loaded ${allData.daily_flows.length} records`);
     renderDashboard();
   } catch (e) {
     console.error('Failed to load data:', e);
     document.getElementById('summaryCards').innerHTML =
-      '<div class="loading" style="color: var(--red);">데이터 로딩 실패 — data/etf_flows.json 파일을 확인하세요</div>';
+      '<div class="loading" style="color: var(--red);">데이터 로딩 실패 — data/etf_flows.json 파일을 확인하세요<br><small>' + e.message + '</small></div>';
   }
 }
 
