@@ -108,24 +108,6 @@ body {
   50% { opacity: 0.4; }
 }
 
-.period-selector {
-  display: flex;
-  gap: 4px;
-  margin-top: 16px;
-}
-
-.period-btn {
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
 .period-btn:hover { border-color: var(--border-glow); color: var(--text-primary); }
 .period-btn.active {
   background: var(--accent);
@@ -236,6 +218,22 @@ body {
 .etf-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.etf-table-wrap::-webkit-scrollbar {
+  height: 4px;
+}
+.etf-table-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+.etf-table-wrap::-webkit-scrollbar-thumb {
+  background: var(--border-glow);
+  border-radius: 2px;
+}
+
+.daily-table,
+.etf-table {
+  min-width: 520px;
 }
 
 .etf-table {
@@ -363,20 +361,67 @@ body {
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
   .two-col { grid-template-columns: 1fr; }
-  .header { padding: 20px 16px 16px; }
-  .dashboard { padding: 16px; }
-  .chart-container { height: 260px; }
+  .header { padding: 16px 14px 12px; }
+  .dashboard { padding: 12px; gap: 12px; }
+  .chart-section { padding: 16px 14px; border-radius: 10px; }
+  .chart-container { height: 250px; }
   .chart-container.tall { height: 300px; }
-  .summary-grid { grid-template-columns: repeat(2, 1fr); }
+  .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .card { padding: 12px 14px; border-radius: 10px; }
+  .card-value { font-size: 20px; }
+  .card-label { font-size: 10px; margin-bottom: 4px; }
+  .card-sub { font-size: 10px; }
+  .footer { padding: 16px 12px; font-size: 10px; }
 }
 
 @media (max-width: 500px) {
-  .summary-grid { grid-template-columns: 1fr; }
-  .card-value { font-size: 20px; }
-  .header h1 { font-size: 18px; }
+  .summary-grid { grid-template-columns: repeat(2, 1fr); }
+  .card-value { font-size: 18px; }
+  .card { padding: 10px 12px; }
+  .header h1 { font-size: 16px; }
+  .header h1 .btc-icon { width: 24px; height: 24px; font-size: 14px; }
+  .header-meta { font-size: 10px; gap: 10px; }
+  .chart-container { height: 220px; }
+  .chart-container.tall { height: 270px; }
+  .chart-title { font-size: 13px; }
+  .chart-subtitle { font-size: 10px; margin-bottom: 14px; }
+  .etf-table { font-size: 11px; }
+  .etf-table th, .etf-table td { padding: 8px 8px; }
+  .daily-table td { font-size: 10px; }
 }
 
-/* ─── Loading ─── */
+/* ─── Period Selector Mobile Scroll ─── */
+.period-selector {
+  display: flex;
+  gap: 4px;
+  margin-top: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.period-selector::-webkit-scrollbar { display: none; }
+
+.period-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (max-width: 500px) {
+  .period-btn { padding: 8px 14px; font-size: 13px; }
+}
 .loading {
   display: flex;
   align-items: center;
@@ -413,9 +458,10 @@ body {
     </div>
   </div>
   <div class="period-selector">
-    <button class="period-btn" data-period="14">2주</button>
+    <button class="period-btn" data-period="7">1주</button>
     <button class="period-btn" data-period="30">1개월</button>
-    <button class="period-btn active" data-period="60">2개월</button>
+    <button class="period-btn active" data-period="90">3개월</button>
+    <button class="period-btn" data-period="365">1년</button>
     <button class="period-btn" data-period="0">전체</button>
   </div>
 </div>
@@ -429,7 +475,7 @@ body {
   <!-- Daily Net Flow Bar Chart -->
   <div class="chart-section">
     <div class="chart-title">📊 일별 순유입/유출</div>
-    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M)</div>
+    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M) · <span style="color: rgba(255,255,255,0.6)">━</span> BTC 가격</div>
     <div class="chart-container tall">
       <canvas id="dailyFlowChart"></canvas>
     </div>
@@ -451,15 +497,6 @@ body {
       <div class="chart-container">
         <canvas id="etfShareChart"></canvas>
       </div>
-    </div>
-  </div>
-
-  <!-- ETF Breakdown Stacked Bar -->
-  <div class="chart-section">
-    <div class="chart-title">🔍 주요 ETF별 일별 흐름</div>
-    <div class="chart-subtitle">IBIT · FBTC · GBTC · ARKB · BITB 상위 5개 ETF</div>
-    <div class="chart-container tall">
-      <canvas id="stackedChart"></canvas>
     </div>
   </div>
 
@@ -489,7 +526,7 @@ body {
 </div>
 
 <div class="footer">
-  데이터 출처: <a href="https://bitbo.io/treasuries/etf-flows/" target="_blank">bitbo.io</a> ·
+  데이터 출처: <a href="https://bitbo.io/treasuries/etf-flows/" target="_blank">bitbo.io</a> · BTC 가격: <a href="https://www.coingecko.com" target="_blank">CoinGecko</a> ·
   GitHub Actions로 매일 자동 업데이트 ·
   투자 조언이 아닙니다
 </div>
@@ -503,12 +540,15 @@ if (typeof Chart === 'undefined') {
 }
 
 // ─── Chart.js Global Config ─────────────────────────────────────────────────
+const isMobile = window.innerWidth <= 600;
 Chart.defaults.color = '#8888a8';
 Chart.defaults.borderColor = '#1e1e30';
 Chart.defaults.font.family = "'JetBrains Mono', 'Noto Sans KR', monospace";
-Chart.defaults.font.size = 11;
-Chart.defaults.plugins.legend.labels.boxWidth = 12;
-Chart.defaults.plugins.legend.labels.padding = 16;
+Chart.defaults.font.size = isMobile ? 10 : 11;
+Chart.defaults.plugins.legend.labels.boxWidth = isMobile ? 8 : 12;
+Chart.defaults.plugins.legend.labels.padding = isMobile ? 10 : 16;
+Chart.defaults.plugins.tooltip.intersect = false;
+Chart.defaults.plugins.tooltip.mode = 'index';
 
 const COLORS = {
   IBIT: '#3366ff',
@@ -528,16 +568,26 @@ const COLORS = {
 const TOP_ETFS = ['IBIT', 'FBTC', 'GBTC', 'ARKB', 'BITB'];
 
 let allData = null;
+let btcPriceData = null;
 let charts = {};
-let currentPeriod = 60;
+let currentPeriod = 90;
 
 // ─── Data Loading ───────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const resp = await fetch('data/etf_flows.json');
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
-    allData = await resp.json();
+    const [flowResp, priceResp] = await Promise.all([
+      fetch('data/etf_flows.json'),
+      fetch('data/btc_price.json').catch(() => null)
+    ]);
+    if (!flowResp.ok) throw new Error(`HTTP ${flowResp.status}: ${flowResp.statusText}`);
+    allData = await flowResp.json();
     console.log(`[ETF] Loaded ${allData.daily_flows.length} records`);
+
+    if (priceResp && priceResp.ok) {
+      btcPriceData = await priceResp.json();
+      console.log(`[ETF] BTC prices: ${Object.keys(btcPriceData.prices || {}).length} days`);
+    }
+
     renderDashboard();
   } catch (e) {
     console.error('Failed to load data:', e);
@@ -592,7 +642,6 @@ function renderDashboard() {
   renderDailyFlowChart(data);
   renderCumulativeChart(data);
   renderETFShareChart(data);
-  renderStackedChart(data);
   renderETFTable(data);
   renderDailyTable(data);
   renderWeeklyChart(data);
@@ -679,7 +728,7 @@ function renderSummaryCards(data) {
   `).join('');
 }
 
-// ─── Daily Flow Bar Chart ───────────────────────────────────────────────────
+// ─── Daily Flow Bar Chart + BTC Price Overlay ──────────────────────────────
 function renderDailyFlowChart(data) {
   const ctx = document.getElementById('dailyFlowChart');
   if (charts.daily) charts.daily.destroy();
@@ -687,25 +736,94 @@ function renderDailyFlowChart(data) {
   const bgColors = data.map(d => d.total >= 0 ? '#00d68f' : '#ff3d71');
   const hoverBg = data.map(d => d.total >= 0 ? '#00d68fcc' : '#ff3d71cc');
 
+  // BTC price data for overlay
+  const btcPrices = data.map(d => {
+    if (btcPriceData && btcPriceData.prices && btcPriceData.prices[d.date]) {
+      return btcPriceData.prices[d.date];
+    }
+    return null;
+  });
+  const hasBtcData = btcPrices.some(p => p !== null);
+
+  const datasets = [{
+    label: '순유입 (US$M)',
+    data: data.map(d => d.total),
+    backgroundColor: bgColors,
+    hoverBackgroundColor: hoverBg,
+    borderWidth: 0,
+    borderRadius: 2,
+    barPercentage: 0.85,
+    yAxisID: 'y',
+    order: 2,
+  }];
+
+  if (hasBtcData) {
+    datasets.push({
+      label: 'BTC 가격 (USD)',
+      data: btcPrices,
+      type: 'line',
+      borderColor: 'rgba(255, 255, 255, 0.45)',
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: '#ffffff',
+      tension: 0.3,
+      yAxisID: 'yBtc',
+      order: 1,
+      spanGaps: true,
+    });
+  }
+
+  const scales = {
+    x: {
+      grid: { display: false },
+      ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: isMobile ? 7 : 15 }
+    },
+    y: {
+      position: 'left',
+      grid: { color: '#1e1e3044' },
+      ticks: {
+        callback: v => (v > 0 ? '+' : '') + v
+      }
+    }
+  };
+
+  if (hasBtcData) {
+    const validPrices = btcPrices.filter(p => p !== null);
+    const minPrice = Math.min(...validPrices);
+    const maxPrice = Math.max(...validPrices);
+    const padding = (maxPrice - minPrice) * 0.15;
+    scales.yBtc = {
+      position: 'right',
+      grid: { display: false },
+      min: Math.floor((minPrice - padding) / 1000) * 1000,
+      max: Math.ceil((maxPrice + padding) / 1000) * 1000,
+      ticks: {
+        color: 'rgba(255, 255, 255, 0.5)',
+        callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v)
+      }
+    };
+  }
+
   charts.daily = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: data.map(d => formatDate(d.date)),
-      datasets: [{
-        label: '순유입 (US$M)',
-        data: data.map(d => d.total),
-        backgroundColor: bgColors,
-        hoverBackgroundColor: hoverBg,
-        borderWidth: 0,
-        borderRadius: 2,
-        barPercentage: 0.85,
-      }]
+      datasets: datasets
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: {
+          display: hasBtcData,
+          labels: { 
+            filter: (item) => item.text === 'BTC 가격 (USD)',
+            color: 'rgba(255, 255, 255, 0.6)',
+            font: { size: 10 }
+          }
+        },
         tooltip: {
           backgroundColor: '#1a1a28',
           borderColor: '#2a2a45',
@@ -719,11 +837,15 @@ function renderDailyFlowChart(data) {
               return formatDateFull(data[idx].date);
             },
             label: (item) => {
+              if (item.dataset.yAxisID === 'yBtc') {
+                return `BTC: $${Number(item.raw).toLocaleString()}`;
+              }
               const val = item.raw;
               const sign = val >= 0 ? '+' : '';
               return `순유입: ${sign}${val.toFixed(1)}M`;
             },
             afterLabel: (item) => {
+              if (item.dataset.yAxisID === 'yBtc') return '';
               const idx = item.dataIndex;
               const d = data[idx];
               const lines = [];
@@ -736,18 +858,7 @@ function renderDailyFlowChart(data) {
           }
         }
       },
-      scales: {
-        x: {
-          grid: { display: false },
-          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 15 }
-        },
-        y: {
-          grid: { color: '#1e1e3044' },
-          ticks: {
-            callback: v => (v > 0 ? '+' : '') + v
-          }
-        }
-      }
+      scales: scales
     }
   });
 }
@@ -797,7 +908,7 @@ function renderCumulativeChart(data) {
       scales: {
         x: {
           grid: { display: false },
-          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 }
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: isMobile ? 5 : 8 }
         },
         y: {
           grid: { color: '#1e1e3044' },
@@ -861,61 +972,6 @@ function renderETFShareChart(data) {
               return ` ${item.label}: ${fmt(val)}M`;
             }
           }
-        }
-      }
-    }
-  });
-}
-
-// ─── Stacked Bar Chart (Top 5 ETFs) ────────────────────────────────────────
-function renderStackedChart(data) {
-  const ctx = document.getElementById('stackedChart');
-  if (charts.stacked) charts.stacked.destroy();
-
-  const datasets = TOP_ETFS.map(ticker => ({
-    label: ticker,
-    data: data.map(d => d.flows[ticker] || 0),
-    backgroundColor: COLORS[ticker] + 'cc',
-    borderWidth: 0,
-    borderRadius: 1,
-    barPercentage: 0.9,
-  }));
-
-  charts.stacked = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: data.map(d => formatDate(d.date)),
-      datasets,
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'top',
-          labels: { padding: 16 }
-        },
-        tooltip: {
-          backgroundColor: '#1a1a28',
-          borderColor: '#2a2a45',
-          borderWidth: 1,
-          mode: 'index',
-          callbacks: {
-            title: (items) => formatDateFull(data[items[0].dataIndex].date),
-            label: (item) => ` ${item.dataset.label}: ${fmt(item.raw)}M`,
-          }
-        }
-      },
-      scales: {
-        x: {
-          stacked: true,
-          grid: { display: false },
-          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 15 }
-        },
-        y: {
-          stacked: true,
-          grid: { color: '#1e1e3044' },
-          ticks: { callback: v => (v > 0 ? '+' : '') + v }
         }
       }
     }
@@ -1041,7 +1097,7 @@ function renderWeeklyChart(data) {
       scales: {
         x: {
           grid: { display: false },
-          ticks: { font: { size: 10 } }
+          ticks: { font: { size: isMobile ? 9 : 10 }, maxRotation: 0, autoSkip: true }
         },
         y: {
           grid: { color: '#1e1e3044' },
@@ -1064,6 +1120,19 @@ document.querySelectorAll('.period-btn').forEach(btn => {
 
 // ─── Init ───────────────────────────────────────────────────────────────────
 loadData();
+
+// ─── imweb iframe auto-height ───────────────────────────────────────────────
+function postHeight() {
+  const h = document.documentElement.scrollHeight;
+  window.parent.postMessage({ type: 'resize', height: h }, '*');
+  window.parent.postMessage({ height: h }, '*');
+  // imweb specific
+  window.parent.postMessage(JSON.stringify({ event: 'setHeight', height: h }), '*');
+}
+// Post height after render and on resize
+const heightObserver = new ResizeObserver(() => postHeight());
+heightObserver.observe(document.body);
+window.addEventListener('load', () => setTimeout(postHeight, 500));
 </script>
 </body>
 </html>
