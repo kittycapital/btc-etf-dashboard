@@ -25,15 +25,13 @@ jobs:
         python-version: '3.11'
 
     - name: Fetch ETF flow data
-      env:
-        SOSOVALUE_API_KEY: ${{ secrets.SOSOVALUE_API_KEY }}
       run: python fetch_etf_flows.py
-      continue-on-error: false
 
     - name: Commit and push data
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add data/etf_flows.json
+        git reset data/_debug_response.html 2>/dev/null || true
         git diff --staged --quiet || git commit -m "📊 Update ETF flow data $(date +'%Y-%m-%d')"
         git push
