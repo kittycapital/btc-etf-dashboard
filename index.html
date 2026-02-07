@@ -753,9 +753,15 @@ function renderDailyFlowChart(data) {
   };
 
   if (hasBtcData) {
+    const validPrices = btcPrices.filter(p => p !== null);
+    const minPrice = Math.min(...validPrices);
+    const maxPrice = Math.max(...validPrices);
+    const padding = (maxPrice - minPrice) * 0.15;
     scales.yBtc = {
       position: 'right',
       grid: { display: false },
+      min: Math.floor((minPrice - padding) / 1000) * 1000,
+      max: Math.ceil((maxPrice + padding) / 1000) * 1000,
       ticks: {
         color: 'rgba(255, 170, 0, 0.5)',
         callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v)
