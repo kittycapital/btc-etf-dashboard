@@ -25,6 +25,8 @@ jobs:
         python-version: '3.11'
 
     - name: Fetch ETF flow data
+      env:
+        SOSOVALUE_API_KEY: ${{ secrets.SOSOVALUE_API_KEY }}
       run: python fetch_etf_flows.py
       continue-on-error: false
 
