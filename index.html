@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>비트코인 ETF 자금 흐름 대시보드</title>
+<title>미국 현물 ETF 자금 흐름 대시보드</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,10 +68,9 @@ body {
   gap: 10px;
 }
 
-.header h1 .btc-icon {
+.header h1 .asset-icon {
   width: 28px;
   height: 28px;
-  background: var(--orange);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -79,6 +78,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: #000;
+  transition: background 0.3s;
 }
 
 .header-meta {
@@ -106,6 +106,100 @@ body {
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
+}
+
+/* ─── Asset Tabs ─── */
+.asset-tabs {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.asset-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.asset-tab:hover {
+  border-color: var(--border-glow);
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.asset-tab .tab-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.asset-tab.active {
+  font-weight: 600;
+  background: var(--bg-elevated);
+}
+
+.asset-tab[data-asset="btc"] .tab-icon { background: #f7931a; }
+.asset-tab[data-asset="eth"] .tab-icon { background: #627eea; color: #fff; }
+.asset-tab[data-asset="sol"] .tab-icon { background: #9945ff; color: #fff; }
+
+.asset-tab[data-asset="btc"].active { border-color: #f7931a; color: #f7931a; }
+.asset-tab[data-asset="eth"].active { border-color: #627eea; color: #627eea; }
+.asset-tab[data-asset="sol"].active { border-color: #9945ff; color: #9945ff; }
+
+/* ─── Controls Row ─── */
+.controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.period-selector {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.period-selector::-webkit-scrollbar { display: none; }
+
+.period-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .period-btn:hover { border-color: var(--border-glow); color: var(--text-primary); }
@@ -220,21 +314,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.etf-table-wrap::-webkit-scrollbar {
-  height: 4px;
-}
-.etf-table-wrap::-webkit-scrollbar-track {
-  background: transparent;
-}
-.etf-table-wrap::-webkit-scrollbar-thumb {
-  background: var(--border-glow);
-  border-radius: 2px;
-}
+.etf-table-wrap::-webkit-scrollbar { height: 4px; }
+.etf-table-wrap::-webkit-scrollbar-track { background: transparent; }
+.etf-table-wrap::-webkit-scrollbar-thumb { background: var(--border-glow); border-radius: 2px; }
 
-.daily-table,
-.etf-table {
-  min-width: 520px;
-}
+.daily-table, .etf-table { min-width: 520px; }
 
 .etf-table {
   width: 100%;
@@ -261,7 +345,6 @@ body {
 }
 
 .etf-table tr:last-child td { border-bottom: none; }
-
 .etf-table tr:hover td { background: var(--bg-elevated); }
 
 .etf-table .ticker {
@@ -281,9 +364,7 @@ body {
 .etf-table .flow-value.neg { color: var(--red); }
 .etf-table .flow-value.zero { color: var(--text-muted); }
 
-.flow-bar-cell {
-  width: 120px;
-}
+.flow-bar-cell { width: 120px; }
 
 .flow-bar-wrap {
   width: 100%;
@@ -303,7 +384,7 @@ body {
 .flow-bar.pos { background: var(--green); }
 .flow-bar.neg { background: var(--red); }
 
-/* ─── Daily Table (Last 10 days) ─── */
+/* ─── Daily Table ─── */
 .daily-table {
   width: 100%;
   border-collapse: collapse;
@@ -358,6 +439,28 @@ body {
 .footer a { color: var(--text-secondary); text-decoration: none; }
 .footer a:hover { color: var(--text-primary); }
 
+/* ─── Loading ─── */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
   .two-col { grid-template-columns: 1fr; }
@@ -379,7 +482,7 @@ body {
   .card-value { font-size: 18px; }
   .card { padding: 10px 12px; }
   .header h1 { font-size: 16px; }
-  .header h1 .btc-icon { width: 24px; height: 24px; font-size: 14px; }
+  .header h1 .asset-icon { width: 24px; height: 24px; font-size: 14px; }
   .header-meta { font-size: 10px; gap: 10px; }
   .chart-container { height: 220px; }
   .chart-container.tall { height: 270px; }
@@ -388,60 +491,10 @@ body {
   .etf-table { font-size: 11px; }
   .etf-table th, .etf-table td { padding: 8px 8px; }
   .daily-table td { font-size: 10px; }
-}
-
-/* ─── Period Selector Mobile Scroll ─── */
-.period-selector {
-  display: flex;
-  gap: 4px;
-  margin-top: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 4px;
-}
-.period-selector::-webkit-scrollbar { display: none; }
-
-.period-btn {
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-@media (max-width: 500px) {
+  .asset-tab { padding: 7px 12px; font-size: 12px; gap: 6px; }
+  .asset-tab .tab-icon { width: 20px; height: 20px; font-size: 11px; }
   .period-btn { padding: 8px 14px; font-size: 13px; }
 }
-.loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.spinner {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--border);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-right: 10px;
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
@@ -449,20 +502,35 @@ body {
 <div class="header">
   <div class="header-top">
     <h1>
-      <span class="btc-icon">₿</span>
-      비트코인 ETF 자금 흐름
+      <span class="asset-icon" id="headerIcon">₿</span>
+      <span id="headerTitle">비트코인 ETF 자금 흐름</span>
     </h1>
     <div class="header-meta">
       <span class="status"><span class="dot"></span> 매일 자동 업데이트</span>
       <span id="lastUpdated">-</span>
     </div>
   </div>
-  <div class="period-selector">
-    <button class="period-btn" data-period="7">1주</button>
-    <button class="period-btn" data-period="30">1개월</button>
-    <button class="period-btn active" data-period="90">3개월</button>
-    <button class="period-btn" data-period="365">1년</button>
-    <button class="period-btn" data-period="0">전체</button>
+
+  <div class="asset-tabs" id="assetTabs">
+    <button class="asset-tab active" data-asset="btc">
+      <span class="tab-icon">₿</span> Bitcoin
+    </button>
+    <button class="asset-tab" data-asset="eth">
+      <span class="tab-icon">Ξ</span> Ethereum
+    </button>
+    <button class="asset-tab" data-asset="sol">
+      <span class="tab-icon">◎</span> Solana
+    </button>
+  </div>
+
+  <div class="controls-row">
+    <div class="period-selector">
+      <button class="period-btn" data-period="7">1주</button>
+      <button class="period-btn" data-period="30">1개월</button>
+      <button class="period-btn active" data-period="90">3개월</button>
+      <button class="period-btn" data-period="365">1년</button>
+      <button class="period-btn" data-period="0">전체</button>
+    </div>
   </div>
 </div>
 
@@ -475,7 +543,7 @@ body {
   <!-- Daily Net Flow Bar Chart -->
   <div class="chart-section">
     <div class="chart-title">📊 일별 순유입/유출</div>
-    <div class="chart-subtitle">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M) · <span style="color: rgba(255,255,255,0.6)">━</span> BTC 가격</div>
+    <div class="chart-subtitle" id="dailyChartSub">미국 비트코인 현물 ETF 전체 · 단위: 백만 달러 (US$M)</div>
     <div class="chart-container tall">
       <canvas id="dailyFlowChart"></canvas>
     </div>
@@ -525,14 +593,14 @@ body {
   </div>
 </div>
 
-<div class="footer">
+<div class="footer" id="footerArea">
   데이터 출처: <a href="https://bitbo.io/treasuries/etf-flows/" target="_blank">bitbo.io</a> · BTC 가격: <a href="https://www.coingecko.com" target="_blank">CoinGecko</a> ·
   GitHub Actions로 매일 자동 업데이트 ·
   투자 조언이 아닙니다
 </div>
 
 <script>
-// ─── Chart.js availability check ────────────────────────────────────────────
+// ─── Chart.js check ─────────────────────────────────────────────────────────
 if (typeof Chart === 'undefined') {
   document.getElementById('summaryCards').innerHTML =
     '<div class="loading" style="color: #ff3d71;">Chart.js 로딩 실패 — 페이지를 새로고침하세요</div>';
@@ -550,49 +618,112 @@ Chart.defaults.plugins.legend.labels.padding = isMobile ? 10 : 16;
 Chart.defaults.plugins.tooltip.intersect = false;
 Chart.defaults.plugins.tooltip.mode = 'index';
 
-const COLORS = {
-  IBIT: '#3366ff',
-  FBTC: '#00d68f',
-  GBTC: '#ff3d71',
-  ARKB: '#ffaa00',
-  BITB: '#9966ff',
-  BTC: '#00cfff',
-  HODL: '#ff6b35',
-  BTCO: '#44aaee',
-  BRRR: '#ee44aa',
-  EZBC: '#66ee44',
-  BTCW: '#eeee44',
-  DEFI: '#aa66ee',
+// ─── Multi-Asset Configuration ──────────────────────────────────────────────
+const ASSET_CONFIG = {
+  btc: {
+    name: 'Bitcoin',
+    nameKo: '비트코인',
+    symbol: '₿',
+    color: '#f7931a',
+    flowFile: 'data/etf_flows.json',
+    priceFile: 'data/btc_price.json',
+    source: 'bitbo.io',
+    sourceUrl: 'https://bitbo.io/treasuries/etf-flows/',
+    topEtfs: ['IBIT', 'FBTC', 'GBTC', 'ARKB', 'BITB'],
+    etfColors: {
+      IBIT: '#3366ff', FBTC: '#00d68f', GBTC: '#ff3d71', ARKB: '#ffaa00',
+      BITB: '#9966ff', BTC: '#00cfff', HODL: '#ff6b35', BTCO: '#44aaee',
+      BRRR: '#ee44aa', EZBC: '#66ee44', BTCW: '#eeee44', DEFI: '#aa66ee',
+    },
+    priceLabel: 'BTC 가격',
+    cumulativeColor: '#f7931a',
+  },
+  eth: {
+    name: 'Ethereum',
+    nameKo: '이더리움',
+    symbol: 'Ξ',
+    color: '#627eea',
+    flowFile: 'data/eth_etf_flows.json',
+    priceFile: 'data/eth_price.json',
+    source: 'farside.co.uk',
+    sourceUrl: 'https://farside.co.uk/eth/',
+    topEtfs: ['ETHA', 'FETH', 'ETHE', 'ETHW', 'ETH'],
+    etfColors: {
+      ETHA: '#627eea', FETH: '#00d68f', ETHW: '#ff6b35', TETH: '#ffaa00',
+      ETHV: '#3366ff', QETH: '#9966ff', EZET: '#66ee44', ETHE: '#ff3d71',
+      ETH: '#00cfff',
+    },
+    priceLabel: 'ETH 가격',
+    cumulativeColor: '#627eea',
+  },
+  sol: {
+    name: 'Solana',
+    nameKo: '솔라나',
+    symbol: '◎',
+    color: '#9945ff',
+    flowFile: 'data/sol_etf_flows.json',
+    priceFile: 'data/sol_price.json',
+    source: 'farside.co.uk',
+    sourceUrl: 'https://farside.co.uk/sol/',
+    topEtfs: ['BSOL', 'VSOL', 'FSOL', 'TSOL', 'SOEZ'],
+    etfColors: {
+      BSOL: '#9945ff', VSOL: '#00d68f', FSOL: '#3366ff', TSOL: '#ffaa00',
+      SOEZ: '#66ee44', GSOL: '#ff3d71',
+    },
+    priceLabel: 'SOL 가격',
+    cumulativeColor: '#9945ff',
+  },
 };
 
-const TOP_ETFS = ['IBIT', 'FBTC', 'GBTC', 'ARKB', 'BITB'];
-
-let allData = null;
-let btcPriceData = null;
-let charts = {};
+// ─── State ──────────────────────────────────────────────────────────────────
+let currentAsset = 'btc';
 let currentPeriod = 90;
+let allData = null;
+let priceData = null;
+let charts = {};
+const dataCache = {};  // { btc: { flow, price }, eth: {...}, sol: {...} }
 
 // ─── Data Loading ───────────────────────────────────────────────────────────
-async function loadData() {
+async function loadAssetData(asset) {
+  // Return cached data if available
+  if (dataCache[asset]) {
+    allData = dataCache[asset].flow;
+    priceData = dataCache[asset].price;
+    return true;
+  }
+
+  const config = ASSET_CONFIG[asset];
   try {
     const [flowResp, priceResp] = await Promise.all([
-      fetch('data/etf_flows.json'),
-      fetch('data/btc_price.json').catch(() => null)
+      fetch(config.flowFile),
+      fetch(config.priceFile).catch(() => null)
     ]);
-    if (!flowResp.ok) throw new Error(`HTTP ${flowResp.status}: ${flowResp.statusText}`);
-    allData = await flowResp.json();
-    console.log(`[ETF] Loaded ${allData.daily_flows.length} records`);
 
+    if (!flowResp.ok) throw new Error(`HTTP ${flowResp.status}: ${flowResp.statusText}`);
+
+    const flowData = await flowResp.json();
+    let pData = null;
     if (priceResp && priceResp.ok) {
-      btcPriceData = await priceResp.json();
-      console.log(`[ETF] BTC prices: ${Object.keys(btcPriceData.prices || {}).length} days`);
+      pData = await priceResp.json();
     }
 
-    renderDashboard();
+    // Cache it
+    dataCache[asset] = { flow: flowData, price: pData };
+    allData = flowData;
+    priceData = pData;
+
+    console.log(`[ETF] ${asset.toUpperCase()}: ${allData.daily_flows.length} records loaded`);
+    return true;
   } catch (e) {
-    console.error('Failed to load data:', e);
+    console.error(`Failed to load ${asset} data:`, e);
+    allData = null;
+    priceData = null;
     document.getElementById('summaryCards').innerHTML =
-      '<div class="loading" style="color: var(--red);">데이터 로딩 실패 — data/etf_flows.json 파일을 확인하세요<br><small>' + e.message + '</small></div>';
+      `<div class="loading" style="color: var(--red);">
+        ${config.nameKo} ETF 데이터 로딩 실패<br>
+        <small>${config.flowFile} — ${e.message}</small>
+      </div>`;
+    return false;
   }
 }
 
@@ -633,6 +764,56 @@ function getWeekKey(iso) {
   return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
 }
 
+// ─── UI Updates ─────────────────────────────────────────────────────────────
+function updateHeader() {
+  const cfg = ASSET_CONFIG[currentAsset];
+  const icon = document.getElementById('headerIcon');
+  icon.textContent = cfg.symbol;
+  icon.style.background = cfg.color;
+  icon.style.color = currentAsset === 'btc' ? '#000' : '#fff';
+  document.getElementById('headerTitle').textContent = `${cfg.nameKo} ETF 자금 흐름`;
+  document.title = `${cfg.nameKo} ETF 자금 흐름 대시보드`;
+}
+
+function updateFooter() {
+  const cfg = ASSET_CONFIG[currentAsset];
+  document.getElementById('footerArea').innerHTML = `
+    데이터 출처: <a href="${cfg.sourceUrl}" target="_blank">${cfg.source}</a> ·
+    ${cfg.priceLabel}: <a href="https://www.coingecko.com" target="_blank">CoinGecko</a> ·
+    GitHub Actions로 매일 자동 업데이트 · 투자 조언이 아닙니다
+  `;
+}
+
+function updateChartSubtitle() {
+  const cfg = ASSET_CONFIG[currentAsset];
+  const priceNote = priceData ? ` · <span style="color: rgba(255,255,255,0.6)">━</span> ${cfg.priceLabel}` : '';
+  document.getElementById('dailyChartSub').innerHTML =
+    `미국 ${cfg.nameKo} 현물 ETF 전체 · 단위: 백만 달러 (US$M)${priceNote}`;
+}
+
+// ─── Switch Asset ───────────────────────────────────────────────────────────
+async function switchAsset(asset) {
+  if (asset === currentAsset && allData) return;
+  currentAsset = asset;
+
+  // Update tab UI
+  document.querySelectorAll('.asset-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.asset-tab[data-asset="${asset}"]`).classList.add('active');
+
+  updateHeader();
+
+  // Show loading
+  document.getElementById('summaryCards').innerHTML =
+    '<div class="loading"><div class="spinner"></div>데이터 로딩 중...</div>';
+
+  const ok = await loadAssetData(asset);
+  if (ok) {
+    updateFooter();
+    updateChartSubtitle();
+    renderDashboard();
+  }
+}
+
 // ─── Render All ─────────────────────────────────────────────────────────────
 function renderDashboard() {
   const data = getFilteredData();
@@ -646,7 +827,6 @@ function renderDashboard() {
   renderDailyTable(data);
   renderWeeklyChart(data);
 
-  // Update header
   if (allData.metadata.last_updated) {
     const d = new Date(allData.metadata.last_updated);
     document.getElementById('lastUpdated').textContent = `마지막 업데이트: ${d.toLocaleDateString('ko-KR')}`;
@@ -657,8 +837,7 @@ function renderDashboard() {
 function renderSummaryCards(data) {
   const latest = data[data.length - 1];
   const cumulative = data.reduce((sum, d) => sum + d.total, 0);
-  
-  // Streak
+
   let streak = 0;
   const lastSign = latest.total >= 0 ? 1 : -1;
   for (let i = data.length - 1; i >= 0; i--) {
@@ -666,14 +845,9 @@ function renderSummaryCards(data) {
     else break;
   }
 
-  // 7-day total
   const last7 = data.slice(-7);
   const weekTotal = last7.reduce((sum, d) => sum + d.total, 0);
 
-  // Average daily
-  const avgDaily = cumulative / data.length;
-
-  // Biggest single day
   let maxDay = data[0], minDay = data[0];
   data.forEach(d => {
     if (d.total > maxDay.total) maxDay = d;
@@ -728,22 +902,23 @@ function renderSummaryCards(data) {
   `).join('');
 }
 
-// ─── Daily Flow Bar Chart + BTC Price Overlay ──────────────────────────────
+// ─── Daily Flow Bar Chart ───────────────────────────────────────────────────
 function renderDailyFlowChart(data) {
+  const cfg = ASSET_CONFIG[currentAsset];
   const ctx = document.getElementById('dailyFlowChart');
   if (charts.daily) charts.daily.destroy();
 
   const bgColors = data.map(d => d.total >= 0 ? '#00d68f' : '#ff3d71');
   const hoverBg = data.map(d => d.total >= 0 ? '#00d68fcc' : '#ff3d71cc');
 
-  // BTC price data for overlay
-  const btcPrices = data.map(d => {
-    if (btcPriceData && btcPriceData.prices && btcPriceData.prices[d.date]) {
-      return btcPriceData.prices[d.date];
+  // Price overlay
+  const prices = data.map(d => {
+    if (priceData && priceData.prices && priceData.prices[d.date]) {
+      return priceData.prices[d.date];
     }
     return null;
   });
-  const hasBtcData = btcPrices.some(p => p !== null);
+  const hasPrice = prices.some(p => p !== null);
 
   const datasets = [{
     label: '순유입 (US$M)',
@@ -757,10 +932,10 @@ function renderDailyFlowChart(data) {
     order: 2,
   }];
 
-  if (hasBtcData) {
+  if (hasPrice) {
     datasets.push({
-      label: 'BTC 가격 (USD)',
-      data: btcPrices,
+      label: `${cfg.priceLabel} (USD)`,
+      data: prices,
       type: 'line',
       borderColor: 'rgba(255, 255, 255, 0.45)',
       backgroundColor: 'transparent',
@@ -769,7 +944,7 @@ function renderDailyFlowChart(data) {
       pointHoverRadius: 4,
       pointHoverBackgroundColor: '#ffffff',
       tension: 0.3,
-      yAxisID: 'yBtc',
+      yAxisID: 'yPrice',
       order: 1,
       spanGaps: true,
     });
@@ -783,25 +958,27 @@ function renderDailyFlowChart(data) {
     y: {
       position: 'left',
       grid: { color: '#1e1e3044' },
-      ticks: {
-        callback: v => (v > 0 ? '+' : '') + v
-      }
+      ticks: { callback: v => (v > 0 ? '+' : '') + v }
     }
   };
 
-  if (hasBtcData) {
-    const validPrices = btcPrices.filter(p => p !== null);
-    const minPrice = Math.min(...validPrices);
-    const maxPrice = Math.max(...validPrices);
-    const padding = (maxPrice - minPrice) * 0.15;
-    scales.yBtc = {
+  if (hasPrice) {
+    const validPrices = prices.filter(p => p !== null);
+    const minP = Math.min(...validPrices);
+    const maxP = Math.max(...validPrices);
+    const padding = (maxP - minP) * 0.15;
+    const divider = maxP > 10000 ? 1000 : maxP > 1000 ? 100 : 1;
+    scales.yPrice = {
       position: 'right',
       grid: { display: false },
-      min: Math.floor((minPrice - padding) / 1000) * 1000,
-      max: Math.ceil((maxPrice + padding) / 1000) * 1000,
+      min: Math.floor((minP - padding) / divider) * divider,
+      max: Math.ceil((maxP + padding) / divider) * divider,
       ticks: {
         color: 'rgba(255, 255, 255, 0.5)',
-        callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v)
+        callback: v => {
+          if (v >= 1000) return '$' + (v/1000).toFixed(0) + 'K';
+          return '$' + v;
+        }
       }
     };
   }
@@ -817,9 +994,9 @@ function renderDailyFlowChart(data) {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: hasBtcData,
-          labels: { 
-            filter: (item) => item.text === 'BTC 가격 (USD)',
+          display: hasPrice,
+          labels: {
+            filter: (item) => item.text.includes('가격'),
             color: 'rgba(255, 255, 255, 0.6)',
             font: { size: 10 }
           }
@@ -832,26 +1009,21 @@ function renderDailyFlowChart(data) {
           bodyColor: '#e8e8f0',
           padding: 12,
           callbacks: {
-            title: (items) => {
-              const idx = items[0].dataIndex;
-              return formatDateFull(data[idx].date);
-            },
+            title: (items) => formatDateFull(data[items[0].dataIndex].date),
             label: (item) => {
-              if (item.dataset.yAxisID === 'yBtc') {
-                return `BTC: $${Number(item.raw).toLocaleString()}`;
+              if (item.dataset.yAxisID === 'yPrice') {
+                return `${cfg.priceLabel}: $${Number(item.raw).toLocaleString()}`;
               }
               const val = item.raw;
-              const sign = val >= 0 ? '+' : '';
-              return `순유입: ${sign}${val.toFixed(1)}M`;
+              return `순유입: ${val >= 0 ? '+' : ''}${val.toFixed(1)}M`;
             },
             afterLabel: (item) => {
-              if (item.dataset.yAxisID === 'yBtc') return '';
-              const idx = item.dataIndex;
-              const d = data[idx];
+              if (item.dataset.yAxisID === 'yPrice') return '';
+              const d = data[item.dataIndex];
               const lines = [];
-              TOP_ETFS.forEach(t => {
+              cfg.topEtfs.forEach(t => {
                 const v = d.flows[t];
-                if (v !== 0) lines.push(`  ${t}: ${v > 0 ? '+' : ''}${v.toFixed(1)}M`);
+                if (v !== undefined && v !== 0) lines.push(`  ${t}: ${v > 0 ? '+' : ''}${v.toFixed(1)}M`);
               });
               return lines;
             }
@@ -865,14 +1037,12 @@ function renderDailyFlowChart(data) {
 
 // ─── Cumulative Chart ───────────────────────────────────────────────────────
 function renderCumulativeChart(data) {
+  const cfg = ASSET_CONFIG[currentAsset];
   const ctx = document.getElementById('cumulativeChart');
   if (charts.cumulative) charts.cumulative.destroy();
 
-  let cumulative = 0;
-  const cumData = data.map(d => {
-    cumulative += d.total;
-    return cumulative;
-  });
+  let cum = 0;
+  const cumData = data.map(d => { cum += d.total; return cum; });
 
   charts.cumulative = new Chart(ctx, {
     type: 'line',
@@ -881,8 +1051,8 @@ function renderCumulativeChart(data) {
       datasets: [{
         label: '누적 순유입 (US$M)',
         data: cumData,
-        borderColor: '#3366ff',
-        backgroundColor: '#3366ff15',
+        borderColor: cfg.cumulativeColor,
+        backgroundColor: cfg.cumulativeColor + '15',
         fill: true,
         tension: 0.3,
         pointRadius: 0,
@@ -921,10 +1091,10 @@ function renderCumulativeChart(data) {
 
 // ─── ETF Share Doughnut ─────────────────────────────────────────────────────
 function renderETFShareChart(data) {
+  const cfg = ASSET_CONFIG[currentAsset];
   const ctx = document.getElementById('etfShareChart');
   if (charts.share) charts.share.destroy();
 
-  // Calc total inflows per ETF
   const totals = {};
   allData.metadata.tickers.forEach(t => { totals[t] = 0; });
   data.forEach(d => {
@@ -933,14 +1103,13 @@ function renderETFShareChart(data) {
     });
   });
 
-  // Sort by absolute value
   const sorted = Object.entries(totals).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
   const top6 = sorted.slice(0, 6);
   const othersVal = sorted.slice(6).reduce((s, [_, v]) => s + v, 0);
 
   const labels = top6.map(([t]) => t).concat(othersVal !== 0 ? ['기타'] : []);
   const values = top6.map(([_, v]) => v).concat(othersVal !== 0 ? [othersVal] : []);
-  const colors = top6.map(([t]) => COLORS[t]).concat(['#555570']);
+  const colors = top6.map(([t]) => cfg.etfColors[t] || '#555570').concat(['#555570']);
 
   charts.share = new Chart(ctx, {
     type: 'doughnut',
@@ -980,6 +1149,7 @@ function renderETFShareChart(data) {
 
 // ─── ETF Summary Table ──────────────────────────────────────────────────────
 function renderETFTable(data) {
+  const cfg = ASSET_CONFIG[currentAsset];
   const totals = {};
   allData.metadata.tickers.forEach(t => { totals[t] = 0; });
   data.forEach(d => {
@@ -990,7 +1160,6 @@ function renderETFTable(data) {
 
   const sorted = Object.entries(totals).sort((a, b) => b[1] - a[1]);
   const maxAbs = Math.max(...sorted.map(([_, v]) => Math.abs(v)), 1);
-
   const info = allData.metadata.etf_info;
 
   let html = `<table class="etf-table">
@@ -1007,7 +1176,7 @@ function renderETFTable(data) {
     const barCls = total >= 0 ? 'pos' : 'neg';
 
     html += `<tr>
-      <td class="ticker" style="color: ${COLORS[ticker] || 'inherit'}">${ticker}</td>
+      <td class="ticker" style="color: ${cfg.etfColors[ticker] || 'inherit'}">${ticker}</td>
       <td class="issuer">${info[ticker]?.issuer || '-'}</td>
       <td class="flow-value ${cls}" style="text-align:right">${fmt(total)}</td>
       <td class="flow-bar-cell">
@@ -1024,8 +1193,9 @@ function renderETFTable(data) {
 
 // ─── Daily Detail Table ─────────────────────────────────────────────────────
 function renderDailyTable(data) {
+  const cfg = ASSET_CONFIG[currentAsset];
   const recent = data.slice(-10).reverse();
-  const mainTickers = ['IBIT', 'FBTC', 'GBTC', 'ARKB', 'BITB'];
+  const mainTickers = cfg.topEtfs;
 
   let html = `<table class="daily-table">
     <thead><tr>
@@ -1108,7 +1278,14 @@ function renderWeeklyChart(data) {
   });
 }
 
-// ─── Period Selector ────────────────────────────────────────────────────────
+// ─── Event Listeners ────────────────────────────────────────────────────────
+
+// Asset tabs
+document.querySelectorAll('.asset-tab').forEach(tab => {
+  tab.addEventListener('click', () => switchAsset(tab.dataset.asset));
+});
+
+// Period buttons
 document.querySelectorAll('.period-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelector('.period-btn.active').classList.remove('active');
@@ -1118,18 +1295,29 @@ document.querySelectorAll('.period-btn').forEach(btn => {
   });
 });
 
+// URL hash support: #eth, #sol, #btc
+function getAssetFromHash() {
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  if (ASSET_CONFIG[hash]) return hash;
+  return 'btc';
+}
+
+window.addEventListener('hashchange', () => {
+  switchAsset(getAssetFromHash());
+});
+
 // ─── Init ───────────────────────────────────────────────────────────────────
-loadData();
+const initialAsset = getAssetFromHash();
+switchAsset(initialAsset);
 
 // ─── imweb iframe auto-height ───────────────────────────────────────────────
 function postHeight() {
   const h = document.documentElement.scrollHeight;
   window.parent.postMessage({ type: 'resize', height: h }, '*');
   window.parent.postMessage({ height: h }, '*');
-  // imweb specific
   window.parent.postMessage(JSON.stringify({ event: 'setHeight', height: h }), '*');
 }
-// Post height after render and on resize
+
 const heightObserver = new ResizeObserver(() => postHeight());
 heightObserver.observe(document.body);
 window.addEventListener('load', () => setTimeout(postHeight, 500));
