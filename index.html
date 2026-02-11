@@ -69,16 +69,11 @@ body {
 }
 
 .header h1 .asset-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-  transition: background 0.3s;
+  object-fit: cover;
+  transition: all 0.3s;
 }
 
 .header-meta {
@@ -144,12 +139,7 @@ body {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: #000;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
@@ -157,10 +147,6 @@ body {
   font-weight: 600;
   background: var(--bg-elevated);
 }
-
-.asset-tab[data-asset="btc"] .tab-icon { background: #f7931a; }
-.asset-tab[data-asset="eth"] .tab-icon { background: #627eea; color: #fff; }
-.asset-tab[data-asset="sol"] .tab-icon { background: #9945ff; color: #fff; }
 
 .asset-tab[data-asset="btc"].active { border-color: #f7931a; color: #f7931a; }
 .asset-tab[data-asset="eth"].active { border-color: #627eea; color: #627eea; }
@@ -482,7 +468,7 @@ body {
   .card-value { font-size: 18px; }
   .card { padding: 10px 12px; }
   .header h1 { font-size: 16px; }
-  .header h1 .asset-icon { width: 24px; height: 24px; font-size: 14px; }
+  .header h1 .asset-icon { width: 24px; height: 24px; }
   .header-meta { font-size: 10px; gap: 10px; }
   .chart-container { height: 220px; }
   .chart-container.tall { height: 270px; }
@@ -492,7 +478,7 @@ body {
   .etf-table th, .etf-table td { padding: 8px 8px; }
   .daily-table td { font-size: 10px; }
   .asset-tab { padding: 7px 12px; font-size: 12px; gap: 6px; }
-  .asset-tab .tab-icon { width: 20px; height: 20px; font-size: 11px; }
+  .asset-tab .tab-icon { width: 18px; height: 18px; }
   .period-btn { padding: 8px 14px; font-size: 13px; }
 }
 </style>
@@ -502,7 +488,7 @@ body {
 <div class="header">
   <div class="header-top">
     <h1>
-      <span class="asset-icon" id="headerIcon">₿</span>
+      <img class="asset-icon" id="headerIcon" src="assets/btc.png" alt="">
       <span id="headerTitle">비트코인 ETF 자금 흐름</span>
     </h1>
     <div class="header-meta">
@@ -513,13 +499,13 @@ body {
 
   <div class="asset-tabs" id="assetTabs">
     <button class="asset-tab active" data-asset="btc">
-      <span class="tab-icon">₿</span> Bitcoin
+      <img class="tab-icon" src="assets/btc.png" alt=""> Bitcoin
     </button>
     <button class="asset-tab" data-asset="eth">
-      <span class="tab-icon">Ξ</span> Ethereum
+      <img class="tab-icon" src="assets/eth.svg" alt=""> Ethereum
     </button>
     <button class="asset-tab" data-asset="sol">
-      <span class="tab-icon">◎</span> Solana
+      <img class="tab-icon" src="assets/sol.png" alt=""> Solana
     </button>
   </div>
 
@@ -718,6 +704,13 @@ async function loadAssetData(asset) {
     console.error(`Failed to load ${asset} data:`, e);
     allData = null;
     priceData = null;
+    // Clear all charts
+    Object.values(charts).forEach(c => { try { c.destroy(); } catch(e) {} });
+    charts = {};
+    ['etfTableWrap', 'dailyTableWrap'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = '';
+    });
     document.getElementById('summaryCards').innerHTML =
       `<div class="loading" style="color: var(--red);">
         ${config.nameKo} ETF 데이터 로딩 실패<br>
@@ -765,12 +758,16 @@ function getWeekKey(iso) {
 }
 
 // ─── UI Updates ─────────────────────────────────────────────────────────────
+const ASSET_LOGOS = {
+  btc: 'assets/btc.png',
+  eth: 'assets/eth.svg',
+  sol: 'assets/sol.png',
+};
+
 function updateHeader() {
   const cfg = ASSET_CONFIG[currentAsset];
   const icon = document.getElementById('headerIcon');
-  icon.textContent = cfg.symbol;
-  icon.style.background = cfg.color;
-  icon.style.color = currentAsset === 'btc' ? '#000' : '#fff';
+  icon.src = ASSET_LOGOS[currentAsset];
   document.getElementById('headerTitle').textContent = `${cfg.nameKo} ETF 자금 흐름`;
   document.title = `${cfg.nameKo} ETF 자금 흐름 대시보드`;
 }
