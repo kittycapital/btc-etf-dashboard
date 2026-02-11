@@ -1,0 +1,82 @@
+name: Update ETF Flow Data
+
+on:
+  schedule:
+    # 매일 한국시간 7:00 AM (UTC 22:00 전날)
+    - cron: '0 22 * * *'
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  update-etf-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Create data directory
+        run: mkdir -p data
+
+      # ─── BTC: bitbo.io ───
+      - name: Fetch BTC ETF flows (bitbo.io)
+        run: python3 fetch_etf_flows.py
+        continue-on-error: true
+
+      # ─── ETH & SOL: farside.co.uk ───
+      - name: Fetch ETH & SOL ETF flows (Farside)
+        run: python3 fetch_farside_flows.py eth sol
+        continue-on-error: true
+
+      # ─── ETH & SOL Prices: CoinGecko ───
+      - name: Fetch ETH & SOL prices (CoinGecko)
+        run: python3 fetch_crypto_prices.py eth sol
+        continue-on-error: true
+
+      # ─── Verify outputs ───
+      - name: Verify data files
+        run: |
+          echo "=== Data files ==="
+          ls -la data/*.json 2>/dev/null || echo "No JSON files found"
+          echo ""
+          for f in data/etf_flows.json data/eth_etf_flows.json data/sol_etf_flows.json; do
+            if [ -f "$f" ]; then
+              COUNT=$(python3 -c "import json; d=json.load(open('$f')); print(len(d.get('daily_flows', [])))")
+              echo "✅ $f — $COUNT records"
+            else
+              echo "❌ $f — MISSING"
+            fi
+          done
+          echo ""
+          for f in data/btc_price.json data/eth_price.json data/sol_price.json; do
+            if [ -f "$f" ]; then
+              COUNT=$(python3 -c "import json; d=json.load(open('$f')); print(len(d.get('prices', {})))")
+              echo "✅ $f — $COUNT days"
+            else
+              echo "⚠️  $f — not yet available"
+            fi
+          done
+
+      # ─── Commit & Push ───
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            TIMESTAMP=$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')
+            git commit -m "📊 ETF 데이터 업데이트: $TIMESTAMP"
+            git push
+          fi
