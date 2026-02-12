@@ -21,7 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 cloudscraper
+          pip install playwright
+          playwright install chromium --with-deps
 
       - name: Create data directory
         run: mkdir -p data
@@ -35,6 +37,19 @@ jobs:
       - name: Fetch ETH & SOL ETF flows (Farside)
         run: python3 fetch_farside_flows.py eth sol
         continue-on-error: true
+
+      - name: Debug Farside (if failed)
+        if: always()
+        run: |
+          for f in data/_debug_eth.html data/_debug_sol.html; do
+            if [ -f "$f" ]; then
+              echo "=== $f (first 500 chars) ==="
+              head -c 500 "$f"
+              echo ""
+              echo "=== size: $(wc -c < "$f") bytes ==="
+              echo ""
+            fi
+          done
 
       # ─── ETH & SOL Prices: CoinGecko ───
       - name: Fetch ETH & SOL prices (CoinGecko)
@@ -70,6 +85,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Remove debug files before commit
+          rm -f data/_debug_*.html
           git add data/
           
           # Only commit if there are changes
