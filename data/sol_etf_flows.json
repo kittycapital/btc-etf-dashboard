@@ -36,7 +36,7 @@
       "SOEZ",
       "GSOL"
     ],
-    "last_updated": "2026-02-12T00:43:12.798332+00:00"
+    "last_updated": "2026-02-12T00:47:57.810824+00:00"
   },
   "daily_flows": [
     {
@@ -341,63 +341,159 @@
     },
     {
       "date": "2026-01-26",
-      "flows": {},
+      "flows": {
+        "BSOL": 2.5,
+        "VSOL": 0.0,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": 0.0
+      },
       "total": 2.5
     },
     {
       "date": "2026-01-27",
-      "flows": {},
+      "flows": {
+        "BSOL": 0.0,
+        "VSOL": 0.0,
+        "FSOL": 3.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": -1.1
+      },
       "total": 1.9
     },
     {
       "date": "2026-01-28",
-      "flows": {},
+      "flows": {
+        "BSOL": 5.0,
+        "VSOL": 0.4,
+        "FSOL": 1.1,
+        "TSOL": 0.0,
+        "SOEZ": 1.1,
+        "GSOL": -0.9
+      },
       "total": 6.7
     },
     {
       "date": "2026-01-29",
-      "flows": {},
+      "flows": {
+        "BSOL": -0.9,
+        "VSOL": 0.0,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": -1.3
+      },
       "total": -2.2
     },
     {
       "date": "2026-01-30",
-      "flows": {},
-      "total": -11.2
+      "flows": {
+        "BSOL": -10.1,
+        "VSOL": 0.0,
+        "FSOL": 1.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": -2.2
+      },
+      "total": -11.3
     },
     {
       "date": "2026-02-02",
-      "flows": {},
-      "total": 5.6
+      "flows": {
+        "BSOL": 3.4,
+        "VSOL": 0.0,
+        "FSOL": 2.1,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": 0.0
+      },
+      "total": 5.5
     },
     {
       "date": "2026-02-03",
-      "flows": {},
-      "total": 1.2
+      "flows": {
+        "BSOL": 0.0,
+        "VSOL": -0.7,
+        "FSOL": 1.2,
+        "TSOL": -0.5,
+        "SOEZ": 0.9,
+        "GSOL": 0.0
+      },
+      "total": 0.9
     },
     {
       "date": "2026-02-04",
-      "flows": {},
+      "flows": {
+        "BSOL": -1.5,
+        "VSOL": 0.0,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": -5.2
+      },
       "total": -6.7
     },
     {
       "date": "2026-02-05",
-      "flows": {},
-      "total": 2.8
+      "flows": {
+        "BSOL": 1.5,
+        "VSOL": -0.5,
+        "FSOL": 1.9,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": 0.0
+      },
+      "total": 2.9
     },
     {
       "date": "2026-02-06",
-      "flows": {},
+      "flows": {
+        "BSOL": -12.0,
+        "VSOL": -0.6,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.7,
+        "GSOL": 0.0
+      },
       "total": -11.9
     },
     {
       "date": "2026-02-09",
-      "flows": {},
-      "total": -0.0
+      "flows": {
+        "BSOL": 1.3,
+        "VSOL": 0.0,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": -1.3
+      },
+      "total": 0.0
     },
     {
       "date": "2026-02-10",
-      "flows": {},
+      "flows": {
+        "BSOL": 7.7,
+        "VSOL": 0.0,
+        "FSOL": 0.7,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": 0.0
+      },
       "total": 8.4
+    },
+    {
+      "date": "2026-02-11",
+      "flows": {
+        "BSOL": 0.0,
+        "VSOL": 0.0,
+        "FSOL": 0.0,
+        "TSOL": 0.0,
+        "SOEZ": 0.0,
+        "GSOL": 0.0
+      },
+      "total": 0.0
     }
   ]
 }
