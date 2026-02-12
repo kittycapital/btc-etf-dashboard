@@ -23,7 +23,7 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 # Asset configs — easy to add more later (e.g. BTC from Farside)
 ASSETS = {
     "eth": {
-        "url": "https://farside.co.uk/eth/",
+        "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
         "output_file": "eth_etf_flows.json",
         "description": "Ethereum Spot ETF Daily Net Flows (US$M)",
         "etf_info": {
