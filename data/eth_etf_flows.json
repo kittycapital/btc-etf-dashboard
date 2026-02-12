@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "description": "Ethereum Spot ETF Daily Net Flows (US$M)",
+    "source": "farside.co.uk",
+    "etf_info": {
+      "ETHA": {
+        "name": "iShares Ethereum Trust",
+        "issuer": "BlackRock"
+      },
+      "FETH": {
+        "name": "Fidelity Ethereum Fund",
+        "issuer": "Fidelity"
+      },
+      "ETHW": {
+        "name": "Bitwise Ethereum ETF",
+        "issuer": "Bitwise"
+      },
+      "TETH": {
+        "name": "21Shares Core Ethereum ETF",
+        "issuer": "21Shares"
+      },
+      "ETHV": {
+        "name": "VanEck Ethereum ETF",
+        "issuer": "VanEck"
+      },
+      "QETH": {
+        "name": "Invesco Galaxy Ethereum ETF",
+        "issuer": "Invesco"
+      },
+      "EZET": {
+        "name": "Franklin Ethereum ETF",
+        "issuer": "Franklin Templeton"
+      },
+      "ETHE": {
+        "name": "Grayscale Ethereum Trust",
+        "issuer": "Grayscale"
+      },
+      "ETH": {
+        "name": "Grayscale Ethereum Mini Trust",
+        "issuer": "Grayscale"
+      }
+    },
+    "tickers": [
+      "ETHA",
+      "FETH",
+      "ETHW",
+      "TETH",
+      "ETHV",
+      "QETH",
+      "EZET",
+      "ETHE",
+      "ETH"
+    ],
+    "last_updated": "2026-02-12T00:04:37.573815+00:00"
+  },
+  "daily_flows": [
+    {
+      "date": "2026-01-26",
+      "flows": {
+        "ETHA": -20.2,
+        "FETH": 137.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 117.0
+    },
+    {
+      "date": "2026-01-27",
+      "flows": {
+        "ETHA": -59.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -14.6,
+        "ETH": 10.0
+      },
+      "total": -63.6
+    },
+    {
+      "date": "2026-01-28",
+      "flows": {
+        "ETHA": 27.3,
+        "FETH": 0.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 28.1
+    },
+    {
+      "date": "2026-01-29",
+      "flows": {
+        "ETHA": -54.9,
+        "FETH": -59.2,
+        "ETHW": -2.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -13.1,
+        "ETH": -26.5
+      },
+      "total": -155.7
+    },
+    {
+      "date": "2026-01-30",
+      "flows": {
+        "ETHA": -157.2,
+        "FETH": -95.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -252.9
+    },
+    {
+      "date": "2026-02-02",
+      "flows": {
+        "ETHA": -82.1,
+        "FETH": 66.6,
+        "ETHW": 5.0,
+        "TETH": 0.0,
+        "ETHV": 7.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -2.9
+    },
+    {
+      "date": "2026-02-03",
+      "flows": {
+        "ETHA": 42.9,
+        "FETH": -54.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -2.5,
+        "QETH": 1.1,
+        "EZET": 0.0,
+        "ETHE": 8.2,
+        "ETH": 19.1
+      },
+      "total": 14.0
+    },
+    {
+      "date": "2026-02-04",
+      "flows": {
+        "ETHA": -58.9,
+        "FETH": -20.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -79.4
+    },
+    {
+      "date": "2026-02-05",
+      "flows": {
+        "ETHA": -8.5,
+        "FETH": -55.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 3.5,
+        "EZET": 0.0,
+        "ETHE": -27.1,
+        "ETH": 7.1
+      },
+      "total": -80.8
+    },
+    {
+      "date": "2026-02-06",
+      "flows": {
+        "ETHA": -45.4,
+        "FETH": 4.6,
+        "ETHW": 11.8,
+        "TETH": 0.0,
+        "ETHV": 3.0,
+        "QETH": 2.5,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.8
+      },
+      "total": -16.7
+    },
+    {
+      "date": "2026-02-09",
+      "flows": {
+        "ETHA": -45.0,
+        "FETH": 67.3,
+        "ETHW": -9.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 44.6
+      },
+      "total": 57.0
+    },
+    {
+      "date": "2026-02-10",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 13.3
+      },
+      "total": 13.8
+    },
+    {
+      "date": "2026-02-11",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -11.5,
+        "ETH": -4.4
+      },
+      "total": -15.9
+    }
+  ]
+}
