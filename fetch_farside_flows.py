@@ -303,13 +303,18 @@ def parse_farside_table(html: str, asset_key: str) -> tuple[list[str], list[dict
         print(f"[ERROR] No tickers found in header for {asset_key}")
         return [], []
 
-    # ── Extract data rows from <tbody> ──
-    tbody_match = re.search(r"<tbody>(.*?)</tbody>", table_html, re.DOTALL | re.I)
-    if not tbody_match:
+    # ── Extract data rows from ALL <tbody> sections ──
+    # Farside may split data into multiple <tbody> elements (e.g. one per month)
+    tbody_matches = re.findall(r"<tbody>(.*?)</tbody>", table_html, re.DOTALL | re.I)
+    if not tbody_matches:
         print(f"[ERROR] No tbody found for {asset_key}")
         return tickers, []
 
-    data_rows = re.findall(r"<tr[^>]*>(.*?)</tr>", tbody_match.group(1), re.DOTALL | re.I)
+    print(f"[INFO] Found {len(tbody_matches)} tbody section(s) for {asset_key}")
+
+    all_row_html = "\n".join(tbody_matches)
+    data_rows = re.findall(r"<tr[^>]*>(.*?)</tr>", all_row_html, re.DOTALL | re.I)
+    print(f"[INFO] Total data rows in table: {len(data_rows)}")
 
     # Labels to skip (summary/header rows)
     SKIP_LABELS = {"Seed", "Total", "Average", "Maximum", "Minimum"}
