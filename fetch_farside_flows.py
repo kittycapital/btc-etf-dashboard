@@ -60,36 +60,140 @@ MONTHS = {
 }
 
 
-# ─── Fetch HTML via curl ─────────────────────────────────────────────────────
+# ─── Fetch HTML — multi-strategy (Cloudflare bypass) ────────────────────────
+
 def fetch_html(url: str) -> str:
-    """Fetch page using curl with browser headers to bypass Cloudflare."""
+    """
+    Fetch page with multiple strategies to bypass Cloudflare.
+    Order: cloudscraper → playwright → curl fallback
+    """
     print(f"[INFO] Fetching {url}")
 
-    result = subprocess.run(
-        [
-            "curl", "-sL",
-            "--max-time", "30",
-            "-H", "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-            "-H", "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "-H", "Accept-Language: en-US,en;q=0.9",
-            url,
-        ],
-        capture_output=True, text=True, timeout=60,
+    # Strategy 1: cloudscraper (handles basic Cloudflare UAM)
+    html = _fetch_cloudscraper(url)
+    if html and _is_valid_html(html):
+        print(f"[INFO] cloudscraper OK — {len(html):,} bytes")
+        return html
+
+    # Strategy 2: playwright (headless browser, handles JS challenges)
+    html = _fetch_playwright(url)
+    if html and _is_valid_html(html):
+        print(f"[INFO] playwright OK — {len(html):,} bytes")
+        return html
+
+    # Strategy 3: curl with enhanced headers (last resort)
+    html = _fetch_curl(url)
+    if html and _is_valid_html(html):
+        print(f"[INFO] curl OK — {len(html):,} bytes")
+        return html
+
+    raise RuntimeError(
+        f"All fetch strategies failed for {url}. "
+        "Farside may be blocking this IP range."
     )
 
-    if result.returncode != 0:
-        raise RuntimeError(f"curl failed (exit {result.returncode}): {result.stderr[:300]}")
 
-    html = result.stdout
-    if len(html) < 1000:
-        raise RuntimeError(f"Response too short ({len(html)} bytes), likely blocked")
+def _is_valid_html(html: str) -> bool:
+    """Check if we got real page content, not a Cloudflare challenge."""
+    if len(html) < 5000:
+        print(f"  [SKIP] Too short ({len(html)} bytes)")
+        return False
+    if "class=\"etf\"" not in html and "class='etf'" not in html:
+        # Also check for table tag as loose match
+        if "<table" not in html:
+            print(f"  [SKIP] No ETF table found in {len(html)} bytes")
+            return False
+    return True
 
-    if "403 Forbidden" in html or "Access Denied" in html:
-        raise RuntimeError("Got 403/Access Denied — Cloudflare may be blocking")
 
-    print(f"[INFO] Received {len(html):,} bytes")
-    return html
+def _fetch_cloudscraper(url: str) -> str | None:
+    """Strategy 1: cloudscraper library."""
+    try:
+        import cloudscraper
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'linux',
+                'desktop': True,
+            }
+        )
+        resp = scraper.get(url, timeout=30)
+        resp.raise_for_status()
+        return resp.text
+    except ImportError:
+        print("  [cloudscraper] Not installed, skipping")
+        return None
+    except Exception as e:
+        print(f"  [cloudscraper] Failed: {e}")
+        return None
+
+
+def _fetch_playwright(url: str) -> str | None:
+    """Strategy 2: Playwright headless Chromium."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  [playwright] Not installed, skipping")
+        return None
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(
+                user_agent=(
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+                )
+            )
+            page = context.new_page()
+            page.goto(url, wait_until="networkidle", timeout=30000)
+
+            # Wait for the ETF table to appear
+            try:
+                page.wait_for_selector("table.etf", timeout=10000)
+            except Exception:
+                pass  # Still grab whatever we got
+
+            html = page.content()
+            browser.close()
+            return html
+    except Exception as e:
+        print(f"  [playwright] Failed: {e}")
+        return None
+
+
+def _fetch_curl(url: str) -> str | None:
+    """Strategy 3: curl with comprehensive browser headers."""
+    try:
+        result = subprocess.run(
+            [
+                "curl", "-sL",
+                "--max-time", "30",
+                "-H", "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                "-H", "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "-H", "Accept-Language: en-US,en;q=0.9",
+                "-H", "Accept-Encoding: identity",
+                "-H", "Cache-Control: no-cache",
+                "-H", "Pragma: no-cache",
+                "-H", "Sec-Fetch-Dest: document",
+                "-H", "Sec-Fetch-Mode: navigate",
+                "-H", "Sec-Fetch-Site: none",
+                "-H", "Sec-Fetch-User: ?1",
+                "-H", "Upgrade-Insecure-Requests: 1",
+                url,
+            ],
+            capture_output=True, text=True, timeout=60,
+        )
+
+        if result.returncode != 0:
+            print(f"  [curl] Exit code {result.returncode}")
+            return None
+
+        return result.stdout
+    except Exception as e:
+        print(f"  [curl] Failed: {e}")
+        return None
 
 
 # ─── Parsing helpers ─────────────────────────────────────────────────────────
@@ -152,13 +256,23 @@ def parse_farside_table(html: str, asset_key: str) -> tuple[list[str], list[dict
         tickers: list of ticker symbols found in header
         records: list of {date, flows: {ticker: value}, total}
     """
-    # Find table with class="etf"
+    # Find table with class="etf" (flexible matching)
     table_match = re.search(
-        r'<table\s+class="etf"[^>]*>(.*?)</table>',
+        r'<table[^>]*class=["\']etf["\'][^>]*>(.*?)</table>',
         html, re.DOTALL | re.I
     )
     if not table_match:
+        # Fallback: any table with "etf" in class
+        table_match = re.search(
+            r'<table[^>]*class=["\'][^"\']*etf[^"\']*["\'][^>]*>(.*?)</table>',
+            html, re.DOTALL | re.I
+        )
+    if not table_match:
+        # Log what we DO see for debugging
+        tables = re.findall(r'<table[^>]*>', html[:5000], re.I)
         print(f"[ERROR] No table.etf found for {asset_key}")
+        print(f"[DEBUG] Tables in first 5KB: {tables[:5]}")
+        print(f"[DEBUG] HTML starts with: {html[:300]}")
         return [], []
 
     table_html = table_match.group(1)
