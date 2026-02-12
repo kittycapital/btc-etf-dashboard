@@ -51,9 +51,5679 @@
       "ETHE",
       "ETH"
     ],
-    "last_updated": "2026-02-12T00:04:37.573815+00:00"
+    "last_updated": "2026-02-12T00:16:08.141795+00:00"
   },
   "daily_flows": [
+    {
+      "date": "2024-07-23",
+      "flows": {
+        "ETHA": 266.5,
+        "FETH": 71.3,
+        "ETHW": 204.0,
+        "TETH": 7.5,
+        "ETHV": 7.6,
+        "QETH": 5.5,
+        "EZET": 13.2,
+        "ETHE": -484.1,
+        "ETH": 15.1
+      },
+      "total": 106.6
+    },
+    {
+      "date": "2024-07-24",
+      "flows": {
+        "ETHA": 17.4,
+        "FETH": 74.5,
+        "ETHW": 29.6,
+        "TETH": 0.0,
+        "ETHV": 19.8,
+        "QETH": 2.5,
+        "EZET": 3.9,
+        "ETHE": -326.9,
+        "ETH": 45.9
+      },
+      "total": -133.3
+    },
+    {
+      "date": "2024-07-25",
+      "flows": {
+        "ETHA": 70.9,
+        "FETH": 34.3,
+        "ETHW": 16.3,
+        "TETH": 0.0,
+        "ETHV": 8.0,
+        "QETH": 6.2,
+        "EZET": 0.0,
+        "ETHE": -346.2,
+        "ETH": 58.1
+      },
+      "total": -152.4
+    },
+    {
+      "date": "2024-07-26",
+      "flows": {
+        "ETHA": 87.2,
+        "FETH": 39.3,
+        "ETHW": 16.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 6.2,
+        "ETHE": -356.3,
+        "ETH": 44.9
+      },
+      "total": -162.7
+    },
+    {
+      "date": "2024-07-29",
+      "flows": {
+        "ETHA": 58.2,
+        "FETH": 24.8,
+        "ETHW": 10.4,
+        "TETH": 0.0,
+        "ETHV": 10.9,
+        "QETH": 0.0,
+        "EZET": 2.5,
+        "ETHE": -210.0,
+        "ETH": 4.9
+      },
+      "total": -98.3
+    },
+    {
+      "date": "2024-07-30",
+      "flows": {
+        "ETHA": 118.0,
+        "FETH": 16.4,
+        "ETHW": 3.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 3.7,
+        "ETHE": -120.3,
+        "ETH": 12.4
+      },
+      "total": 33.7
+    },
+    {
+      "date": "2024-07-31",
+      "flows": {
+        "ETHA": 5.0,
+        "FETH": 18.8,
+        "ETHW": 4.7,
+        "TETH": 3.3,
+        "ETHV": 4.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -133.3,
+        "ETH": 19.5
+      },
+      "total": -77.2
+    },
+    {
+      "date": "2024-08-01",
+      "flows": {
+        "ETHA": 89.6,
+        "FETH": 11.7,
+        "ETHW": 3.4,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -78.0,
+        "ETH": 0.0
+      },
+      "total": 26.7
+    },
+    {
+      "date": "2024-08-02",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 6.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.1,
+        "ETHE": -61.4,
+        "ETH": 0.0
+      },
+      "total": -54.3
+    },
+    {
+      "date": "2024-08-05",
+      "flows": {
+        "ETHA": 47.1,
+        "FETH": 16.2,
+        "ETHW": 7.2,
+        "TETH": 0.0,
+        "ETHV": 16.6,
+        "QETH": 0.0,
+        "EZET": 0.9,
+        "ETHE": -46.8,
+        "ETH": 7.6
+      },
+      "total": 48.8
+    },
+    {
+      "date": "2024-08-06",
+      "flows": {
+        "ETHA": 109.9,
+        "FETH": 22.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.0,
+        "ETHE": -39.7,
+        "ETH": 4.7
+      },
+      "total": 98.4
+    },
+    {
+      "date": "2024-08-07",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 4.7,
+        "ETHW": 1.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.8,
+        "ETHE": -31.9,
+        "ETH": 0.0
+      },
+      "total": -23.7
+    },
+    {
+      "date": "2024-08-08",
+      "flows": {
+        "ETHA": 11.7,
+        "FETH": -2.6,
+        "ETHW": 2.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -19.8,
+        "ETH": 5.0
+      },
+      "total": -2.9
+    },
+    {
+      "date": "2024-08-09",
+      "flows": {
+        "ETHA": 19.6,
+        "FETH": 3.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -41.7,
+        "ETH": 2.4
+      },
+      "total": -15.8
+    },
+    {
+      "date": "2024-08-12",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 4.0,
+        "ETHW": 2.9,
+        "TETH": 0.0,
+        "ETHV": -2.9,
+        "QETH": 0.0,
+        "EZET": 1.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 5.0
+    },
+    {
+      "date": "2024-08-13",
+      "flows": {
+        "ETHA": 49.1,
+        "FETH": 5.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.8,
+        "EZET": 0.0,
+        "ETHE": -31.0,
+        "ETH": 0.0
+      },
+      "total": 24.3
+    },
+    {
+      "date": "2024-08-14",
+      "flows": {
+        "ETHA": 16.1,
+        "FETH": 6.6,
+        "ETHW": 2.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -16.9,
+        "ETH": 2.3
+      },
+      "total": 10.8
+    },
+    {
+      "date": "2024-08-15",
+      "flows": {
+        "ETHA": 0.8,
+        "FETH": 2.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -42.5,
+        "ETH": 0.0
+      },
+      "total": -39.2
+    },
+    {
+      "date": "2024-08-16",
+      "flows": {
+        "ETHA": 10.3,
+        "FETH": 7.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -4.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.7,
+        "ETH": 0.0
+      },
+      "total": -15.0
+    },
+    {
+      "date": "2024-08-19",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 1.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -20.3,
+        "ETH": 4.9
+      },
+      "total": -13.5
+    },
+    {
+      "date": "2024-08-20",
+      "flows": {
+        "ETHA": 26.8,
+        "FETH": 0.0,
+        "ETHW": 3.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -37.0,
+        "ETH": 0.0
+      },
+      "total": -6.5
+    },
+    {
+      "date": "2024-08-21",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 7.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.0,
+        "ETHE": -31.1,
+        "ETH": 4.2
+      },
+      "total": -18.0
+    },
+    {
+      "date": "2024-08-22",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 14.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 1.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -19.8,
+        "ETH": 3.7
+      },
+      "total": -0.8
+    },
+    {
+      "date": "2024-08-23",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.7,
+        "ETHW": 1.4,
+        "TETH": 0.0,
+        "ETHV": 2.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -9.8,
+        "ETH": 0.0
+      },
+      "total": -5.7
+    },
+    {
+      "date": "2024-08-26",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -2.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -1.0,
+        "ETHE": -9.5,
+        "ETH": 0.0
+      },
+      "total": -13.2
+    },
+    {
+      "date": "2024-08-27",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 3.9,
+        "ETHW": 1.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -9.2,
+        "ETH": 0.0
+      },
+      "total": -3.4
+    },
+    {
+      "date": "2024-08-28",
+      "flows": {
+        "ETHA": 8.4,
+        "FETH": 1.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -3.8,
+        "ETH": 0.0
+      },
+      "total": 5.9
+    },
+    {
+      "date": "2024-08-29",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.3,
+        "ETH": 3.6
+      },
+      "total": -1.7
+    },
+    {
+      "date": "2024-08-30",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2024-09-03",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 4.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -52.3,
+        "ETH": 0.0
+      },
+      "total": -47.4
+    },
+    {
+      "date": "2024-09-04",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -40.6,
+        "ETH": 3.1
+      },
+      "total": -37.5
+    },
+    {
+      "date": "2024-09-05",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.4,
+        "ETH": 7.2
+      },
+      "total": -0.2
+    },
+    {
+      "date": "2024-09-06",
+      "flows": {
+        "ETHA": 4.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.7,
+        "ETH": 0.0
+      },
+      "total": -6.0
+    },
+    {
+      "date": "2024-09-09",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 7.6,
+        "ETHW": 1.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -22.6,
+        "ETH": 8.0
+      },
+      "total": -5.2
+    },
+    {
+      "date": "2024-09-10",
+      "flows": {
+        "ETHA": 4.3,
+        "FETH": 7.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 11.4
+    },
+    {
+      "date": "2024-09-11",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 1.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -1.7,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -0.5
+    },
+    {
+      "date": "2024-09-12",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -20.1,
+        "ETH": 0.0
+      },
+      "total": -20.1
+    },
+    {
+      "date": "2024-09-13",
+      "flows": {
+        "ETHA": 3.7,
+        "FETH": 0.0,
+        "ETHW": 5.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.4,
+        "ETH": 0.0
+      },
+      "total": 1.5
+    },
+    {
+      "date": "2024-09-16",
+      "flows": {
+        "ETHA": 4.2,
+        "FETH": 0.0,
+        "ETHW": -2.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -13.8,
+        "ETH": 2.3
+      },
+      "total": -9.4
+    },
+    {
+      "date": "2024-09-17",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -17.9,
+        "ETH": 2.8
+      },
+      "total": -15.1
+    },
+    {
+      "date": "2024-09-18",
+      "flows": {
+        "ETHA": 4.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -14.7,
+        "ETH": 0.0
+      },
+      "total": -9.8
+    },
+    {
+      "date": "2024-09-19",
+      "flows": {
+        "ETHA": 5.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 5.2
+    },
+    {
+      "date": "2024-09-20",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 2.9
+      },
+      "total": 2.9
+    },
+    {
+      "date": "2024-09-23",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 1.3,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -80.6,
+        "ETH": 0.0
+      },
+      "total": -79.3
+    },
+    {
+      "date": "2024-09-24",
+      "flows": {
+        "ETHA": 59.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 1.9,
+        "QETH": 1.3,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 62.5
+    },
+    {
+      "date": "2024-09-25",
+      "flows": {
+        "ETHA": 9.4,
+        "FETH": 6.4,
+        "ETHW": 0.0,
+        "TETH": 0.8,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 26.6
+      },
+      "total": 43.2
+    },
+    {
+      "date": "2024-09-26",
+      "flows": {
+        "ETHA": 15.3,
+        "FETH": 15.9,
+        "ETHW": 1.0,
+        "TETH": 0.7,
+        "ETHV": 1.0,
+        "QETH": 2.0,
+        "EZET": 0.0,
+        "ETHE": -36.0,
+        "ETH": 0.0
+      },
+      "total": -0.1
+    },
+    {
+      "date": "2024-09-27",
+      "flows": {
+        "ETHA": 11.5,
+        "FETH": 42.5,
+        "ETHW": 5.4,
+        "TETH": 1.4,
+        "ETHV": 2.0,
+        "QETH": 4.3,
+        "EZET": 0.0,
+        "ETHE": -10.7,
+        "ETH": 2.3
+      },
+      "total": 58.7
+    },
+    {
+      "date": "2024-09-30",
+      "flows": {
+        "ETHA": 11.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -11.8,
+        "ETH": 0.0
+      },
+      "total": -0.8
+    },
+    {
+      "date": "2024-10-01",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -25.0,
+        "ETHW": -0.9,
+        "TETH": 1.2,
+        "ETHV": 2.7,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -26.6,
+        "ETH": 0.0
+      },
+      "total": -48.6
+    },
+    {
+      "date": "2024-10-02",
+      "flows": {
+        "ETHA": 18.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.8,
+        "ETHE": -5.4,
+        "ETH": 0.0
+      },
+      "total": 14.4
+    },
+    {
+      "date": "2024-10-03",
+      "flows": {
+        "ETHA": 12.1,
+        "FETH": -0.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -14.7,
+        "ETH": 0.0
+      },
+      "total": -3.2
+    },
+    {
+      "date": "2024-10-04",
+      "flows": {
+        "ETHA": 14.7,
+        "FETH": 0.0,
+        "ETHW": 0.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.2,
+        "ETH": 0.0
+      },
+      "total": 7.4
+    },
+    {
+      "date": "2024-10-07",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2024-10-08",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -3.6,
+        "ETHW": -4.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -8.1
+    },
+    {
+      "date": "2024-10-09",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2024-10-10",
+      "flows": {
+        "ETHA": 17.8,
+        "FETH": -3.5,
+        "ETHW": -4.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.3,
+        "ETH": 3.3
+      },
+      "total": 3.1
+    },
+    {
+      "date": "2024-10-11",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 8.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.7,
+        "ETH": 0.0
+      },
+      "total": -0.1
+    },
+    {
+      "date": "2024-10-14",
+      "flows": {
+        "ETHA": 14.3,
+        "FETH": 1.3,
+        "ETHW": 0.0,
+        "TETH": 0.4,
+        "ETHV": 0.0,
+        "QETH": 1.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 17.0
+    },
+    {
+      "date": "2024-10-15",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 2.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -15.3,
+        "ETH": 0.0
+      },
+      "total": -12.7
+    },
+    {
+      "date": "2024-10-16",
+      "flows": {
+        "ETHA": 11.9,
+        "FETH": 8.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 3.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 24.2
+    },
+    {
+      "date": "2024-10-17",
+      "flows": {
+        "ETHA": 23.6,
+        "FETH": 31.1,
+        "ETHW": 1.5,
+        "TETH": 2.3,
+        "ETHV": 0.0,
+        "QETH": 0.5,
+        "EZET": 0.0,
+        "ETHE": -15.7,
+        "ETH": 5.1
+      },
+      "total": 48.4
+    },
+    {
+      "date": "2024-10-18",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 1.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 1.9
+    },
+    {
+      "date": "2024-10-21",
+      "flows": {
+        "ETHA": 4.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 3.9,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -29.6,
+        "ETH": 0.0
+      },
+      "total": -20.8
+    },
+    {
+      "date": "2024-10-22",
+      "flows": {
+        "ETHA": 11.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 11.9
+    },
+    {
+      "date": "2024-10-23",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 6.2,
+        "ETHW": 0.0,
+        "TETH": 1.6,
+        "ETHV": 0.0,
+        "QETH": 1.0,
+        "EZET": 0.0,
+        "ETHE": -7.6,
+        "ETH": 0.0
+      },
+      "total": 1.2
+    },
+    {
+      "date": "2024-10-24",
+      "flows": {
+        "ETHA": 2.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 2.3
+    },
+    {
+      "date": "2024-10-25",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -19.2,
+        "ETH": 0.0
+      },
+      "total": -19.2
+    },
+    {
+      "date": "2024-10-28",
+      "flows": {
+        "ETHA": 2.3,
+        "FETH": 5.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.4,
+        "ETH": 0.0
+      },
+      "total": -1.1
+    },
+    {
+      "date": "2024-10-29",
+      "flows": {
+        "ETHA": 13.6,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -6.0,
+        "ETH": 0.0
+      },
+      "total": 7.6
+    },
+    {
+      "date": "2024-10-30",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 5.3,
+        "ETHW": -3.6,
+        "TETH": 2.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 4.4
+    },
+    {
+      "date": "2024-10-31",
+      "flows": {
+        "ETHA": 49.6,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -36.6,
+        "ETH": 0.0
+      },
+      "total": 13.0
+    },
+    {
+      "date": "2024-11-01",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.5,
+        "EZET": 0.0,
+        "ETHE": -11.4,
+        "ETH": 0.0
+      },
+      "total": -10.9
+    },
+    {
+      "date": "2024-11-04",
+      "flows": {
+        "ETHA": 11.0,
+        "FETH": -31.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.8,
+        "ETH": -31.9
+      },
+      "total": -63.2
+    },
+    {
+      "date": "2024-11-05",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2024-11-06",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 26.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 25.4
+      },
+      "total": 52.3
+    },
+    {
+      "date": "2024-11-07",
+      "flows": {
+        "ETHA": 23.7,
+        "FETH": 28.9,
+        "ETHW": 6.6,
+        "TETH": 0.0,
+        "ETHV": 12.7,
+        "QETH": 2.3,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 5.5
+      },
+      "total": 79.7
+    },
+    {
+      "date": "2024-11-08",
+      "flows": {
+        "ETHA": 59.8,
+        "FETH": 18.4,
+        "ETHW": 3.4,
+        "TETH": 0.0,
+        "ETHV": 4.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 85.9
+    },
+    {
+      "date": "2024-11-11",
+      "flows": {
+        "ETHA": 101.1,
+        "FETH": 115.5,
+        "ETHW": 15.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 63.3
+      },
+      "total": 295.5
+    },
+    {
+      "date": "2024-11-12",
+      "flows": {
+        "ETHA": 131.4,
+        "FETH": 0.0,
+        "ETHW": 17.0,
+        "TETH": 2.0,
+        "ETHV": 6.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -33.2,
+        "ETH": 12.7
+      },
+      "total": 135.9
+    },
+    {
+      "date": "2024-11-13",
+      "flows": {
+        "ETHA": 35.6,
+        "FETH": 101.7,
+        "ETHW": 13.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.6,
+        "ETH": 2.2
+      },
+      "total": 146.9
+    },
+    {
+      "date": "2024-11-14",
+      "flows": {
+        "ETHA": 18.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -1.1,
+        "QETH": 0.9,
+        "EZET": 0.0,
+        "ETHE": -21.9,
+        "ETH": 0.0
+      },
+      "total": -3.2
+    },
+    {
+      "date": "2024-11-15",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -18.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -1.1,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -40.3,
+        "ETH": 0.0
+      },
+      "total": -59.8
+    },
+    {
+      "date": "2024-11-18",
+      "flows": {
+        "ETHA": -23.9,
+        "FETH": 3.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -13.3,
+        "ETH": -5.1
+      },
+      "total": -39.1
+    },
+    {
+      "date": "2024-11-19",
+      "flows": {
+        "ETHA": -14.2,
+        "FETH": -46.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -20.4,
+        "ETH": 0.0
+      },
+      "total": -81.3
+    },
+    {
+      "date": "2024-11-20",
+      "flows": {
+        "ETHA": 16.7,
+        "FETH": -30.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -16.3,
+        "ETH": 0.0
+      },
+      "total": -30.3
+    },
+    {
+      "date": "2024-11-21",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 16.8,
+        "ETHW": 2.9,
+        "TETH": 0.0,
+        "ETHV": 2.5,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.1,
+        "ETH": -4.1
+      },
+      "total": -9.0
+    },
+    {
+      "date": "2024-11-22",
+      "flows": {
+        "ETHA": 99.7,
+        "FETH": 5.8,
+        "ETHW": 5.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -18.6,
+        "ETH": -0.6
+      },
+      "total": 91.3
+    },
+    {
+      "date": "2024-11-25",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 4.4,
+        "ETHW": 8.7,
+        "TETH": -1.2,
+        "ETHV": 2.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.6,
+        "ETH": -4.0
+      },
+      "total": 2.9
+    },
+    {
+      "date": "2024-11-26",
+      "flows": {
+        "ETHA": 50.1,
+        "FETH": -1.7,
+        "ETHW": 0.0,
+        "TETH": -2.8,
+        "ETHV": 0.0,
+        "QETH": -1.2,
+        "EZET": 0.0,
+        "ETHE": -20.1,
+        "ETH": 16.3
+      },
+      "total": 40.6
+    },
+    {
+      "date": "2024-11-27",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 38.0,
+        "ETHW": 1.6,
+        "TETH": 0.0,
+        "ETHV": 13.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 37.3
+      },
+      "total": 90.1
+    },
+    {
+      "date": "2024-11-29",
+      "flows": {
+        "ETHA": 250.4,
+        "FETH": 79.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 3.4
+      },
+      "total": 332.9
+    },
+    {
+      "date": "2024-12-02",
+      "flows": {
+        "ETHA": 55.9,
+        "FETH": 19.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": -7.2,
+        "EZET": 0.0,
+        "ETHE": -44.4,
+        "ETH": 0.0
+      },
+      "total": 24.2
+    },
+    {
+      "date": "2024-12-03",
+      "flows": {
+        "ETHA": 65.3,
+        "FETH": 73.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -6.4,
+        "ETH": 0.0
+      },
+      "total": 132.6
+    },
+    {
+      "date": "2024-12-04",
+      "flows": {
+        "ETHA": 124.4,
+        "FETH": 40.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -6.2,
+        "ETH": 8.8
+      },
+      "total": 167.7
+    },
+    {
+      "date": "2024-12-05",
+      "flows": {
+        "ETHA": 292.7,
+        "FETH": 113.6,
+        "ETHW": 6.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -15.1,
+        "ETH": 30.7
+      },
+      "total": 428.5
+    },
+    {
+      "date": "2024-12-06",
+      "flows": {
+        "ETHA": 34.6,
+        "FETH": 47.9,
+        "ETHW": 13.4,
+        "TETH": -6.9,
+        "ETHV": 1.5,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -29.6,
+        "ETH": 22.9
+      },
+      "total": 83.8
+    },
+    {
+      "date": "2024-12-09",
+      "flows": {
+        "ETHA": 155.4,
+        "FETH": 30.1,
+        "ETHW": -13.0,
+        "TETH": -4.1,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.4,
+        "ETH": 8.8
+      },
+      "total": 149.8
+    },
+    {
+      "date": "2024-12-10",
+      "flows": {
+        "ETHA": 81.7,
+        "FETH": 202.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -4.0,
+        "ETH": 25.8
+      },
+      "total": 305.7
+    },
+    {
+      "date": "2024-12-11",
+      "flows": {
+        "ETHA": 74.2,
+        "FETH": 0.0,
+        "ETHW": 8.2,
+        "TETH": 0.0,
+        "ETHV": 5.6,
+        "QETH": 0.0,
+        "EZET": 2.9,
+        "ETHE": -2.3,
+        "ETH": 13.4
+      },
+      "total": 102.0
+    },
+    {
+      "date": "2024-12-12",
+      "flows": {
+        "ETHA": 202.3,
+        "FETH": 19.4,
+        "ETHW": 0.0,
+        "TETH": 1.6,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -22.8,
+        "ETH": 73.2
+      },
+      "total": 273.7
+    },
+    {
+      "date": "2024-12-13",
+      "flows": {
+        "ETHA": 9.5,
+        "FETH": 6.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 7.2,
+        "ETH": 0.0
+      },
+      "total": 23.6
+    },
+    {
+      "date": "2024-12-16",
+      "flows": {
+        "ETHA": 30.7,
+        "FETH": 4.1,
+        "ETHW": 8.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 7.6
+      },
+      "total": 51.1
+    },
+    {
+      "date": "2024-12-17",
+      "flows": {
+        "ETHA": 134.8,
+        "FETH": 3.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 1.5,
+        "ETHE": 0.0,
+        "ETH": 4.5
+      },
+      "total": 144.7
+    },
+    {
+      "date": "2024-12-18",
+      "flows": {
+        "ETHA": 81.9,
+        "FETH": 0.0,
+        "ETHW": -14.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -49.2,
+        "ETH": -15.6
+      },
+      "total": 2.5
+    },
+    {
+      "date": "2024-12-19",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 5.1,
+        "ETHW": -6.8,
+        "TETH": 0.0,
+        "ETHV": 4.9,
+        "QETH": -2.4,
+        "EZET": 0.0,
+        "ETHE": -58.1,
+        "ETH": -3.2
+      },
+      "total": -60.5
+    },
+    {
+      "date": "2024-12-20",
+      "flows": {
+        "ETHA": -103.7,
+        "FETH": 13.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 7.5,
+        "ETH": 8.1
+      },
+      "total": -75.1
+    },
+    {
+      "date": "2024-12-23",
+      "flows": {
+        "ETHA": 89.5,
+        "FETH": 46.4,
+        "ETHW": 1.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -6.1
+      },
+      "total": 130.8
+    },
+    {
+      "date": "2024-12-24",
+      "flows": {
+        "ETHA": 43.9,
+        "FETH": 3.5,
+        "ETHW": 6.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 53.6
+    },
+    {
+      "date": "2024-12-26",
+      "flows": {
+        "ETHA": 28.2,
+        "FETH": 83.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.0
+      },
+      "total": 117.2
+    },
+    {
+      "date": "2024-12-27",
+      "flows": {
+        "ETHA": 20.2,
+        "FETH": 27.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 47.7
+    },
+    {
+      "date": "2024-12-30",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -20.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -3.9,
+        "ETHE": -17.4,
+        "ETH": -13.8
+      },
+      "total": -55.5
+    },
+    {
+      "date": "2024-12-31",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 31.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.6,
+        "ETH": 9.8
+      },
+      "total": 36.0
+    },
+    {
+      "date": "2025-01-02",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": -56.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -21.4,
+        "ETH": 0.0
+      },
+      "total": -77.5
+    },
+    {
+      "date": "2025-01-03",
+      "flows": {
+        "ETHA": 33.9,
+        "FETH": 27.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.2,
+        "ETH": 5.1
+      },
+      "total": 58.9
+    },
+    {
+      "date": "2025-01-06",
+      "flows": {
+        "ETHA": 124.1,
+        "FETH": 4.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 128.7
+    },
+    {
+      "date": "2025-01-07",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -67.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.0,
+        "ETH": -11.2
+      },
+      "total": -86.8
+    },
+    {
+      "date": "2025-01-08",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -147.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.3,
+        "ETH": -3.4
+      },
+      "total": -159.4
+    },
+    {
+      "date": "2025-01-10",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -65.4,
+        "ETHW": -3.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -68.5
+    },
+    {
+      "date": "2025-01-13",
+      "flows": {
+        "ETHA": 12.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -14.5,
+        "ETH": -37.8
+      },
+      "total": -39.4
+    },
+    {
+      "date": "2025-01-14",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 1.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 1.2
+    },
+    {
+      "date": "2025-01-15",
+      "flows": {
+        "ETHA": 19.8,
+        "FETH": 29.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 2.5,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 8.1
+      },
+      "total": 59.7
+    },
+    {
+      "date": "2025-01-16",
+      "flows": {
+        "ETHA": 111.2,
+        "FETH": 70.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -18.7,
+        "ETH": 4.1
+      },
+      "total": 166.6
+    },
+    {
+      "date": "2025-01-17",
+      "flows": {
+        "ETHA": 7.4,
+        "FETH": 14.0,
+        "ETHW": 2.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 23.9
+    },
+    {
+      "date": "2025-01-21",
+      "flows": {
+        "ETHA": 56.3,
+        "FETH": 3.3,
+        "ETHW": 3.1,
+        "TETH": 0.0,
+        "ETHV": 3.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -4.4,
+        "ETH": 12.5
+      },
+      "total": 74.4
+    },
+    {
+      "date": "2025-01-22",
+      "flows": {
+        "ETHA": 79.1,
+        "FETH": 9.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -17.4,
+        "ETH": 0.0
+      },
+      "total": 70.7
+    },
+    {
+      "date": "2025-01-23",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 7.3,
+        "ETHW": -3.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -22.3,
+        "ETH": 3.1
+      },
+      "total": -14.9
+    },
+    {
+      "date": "2025-01-24",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 6.0,
+        "TETH": 1.2,
+        "ETHV": 0.0,
+        "QETH": 2.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 9.2
+    },
+    {
+      "date": "2025-01-27",
+      "flows": {
+        "ETHA": 20.7,
+        "FETH": -68.5,
+        "ETHW": -4.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -84.2,
+        "ETH": 0.0
+      },
+      "total": -136.2
+    },
+    {
+      "date": "2025-01-28",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-01-29",
+      "flows": {
+        "ETHA": 9.5,
+        "FETH": 5.5,
+        "ETHW": -4.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -15.7,
+        "ETH": 0.0
+      },
+      "total": -4.7
+    },
+    {
+      "date": "2025-01-30",
+      "flows": {
+        "ETHA": 79.9,
+        "FETH": 15.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -40.3,
+        "ETH": 12.8
+      },
+      "total": 67.8
+    },
+    {
+      "date": "2025-01-31",
+      "flows": {
+        "ETHA": 57.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 2.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -31.9,
+        "ETH": 0.0
+      },
+      "total": 27.8
+    },
+    {
+      "date": "2025-02-03",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 49.7,
+        "ETHW": 0.0,
+        "TETH": 5.2,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 15.9,
+        "ETH": 12.8
+      },
+      "total": 83.6
+    },
+    {
+      "date": "2025-02-04",
+      "flows": {
+        "ETHA": 276.2,
+        "FETH": 27.5,
+        "ETHW": 4.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 307.8
+    },
+    {
+      "date": "2025-02-05",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 20.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.2,
+        "ETH": 5.2
+      },
+      "total": 18.1
+    },
+    {
+      "date": "2025-02-06",
+      "flows": {
+        "ETHA": 10.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 10.7
+    },
+    {
+      "date": "2025-02-07",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-02-10",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -22.5,
+        "ETH": 0.0
+      },
+      "total": -22.5
+    },
+    {
+      "date": "2025-02-11",
+      "flows": {
+        "ETHA": 12.6,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 12.6
+    },
+    {
+      "date": "2025-02-12",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -10.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -30.2,
+        "ETH": 0.0
+      },
+      "total": -40.9
+    },
+    {
+      "date": "2025-02-13",
+      "flows": {
+        "ETHA": 12.0,
+        "FETH": 4.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -3.8,
+        "ETH": 0.0
+      },
+      "total": 12.8
+    },
+    {
+      "date": "2025-02-14",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 11.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 11.7
+    },
+    {
+      "date": "2025-02-18",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 4.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 4.6
+    },
+    {
+      "date": "2025-02-19",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 24.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.5,
+        "ETH": 0.0
+      },
+      "total": 19.0
+    },
+    {
+      "date": "2025-02-20",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -2.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.3,
+        "ETH": 0.0
+      },
+      "total": -13.1
+    },
+    {
+      "date": "2025-02-21",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": -8.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -8.9
+    },
+    {
+      "date": "2025-02-24",
+      "flows": {
+        "ETHA": -48.2,
+        "FETH": 0.0,
+        "ETHW": -9.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -15.4,
+        "ETH": -4.7
+      },
+      "total": -78.0
+    },
+    {
+      "date": "2025-02-25",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -12.5,
+        "ETHW": -8.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.1,
+        "ETH": -2.3
+      },
+      "total": -50.1
+    },
+    {
+      "date": "2025-02-26",
+      "flows": {
+        "ETHA": -69.8,
+        "FETH": -18.4,
+        "ETHW": -2.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -3.3,
+        "ETH": 0.0
+      },
+      "total": -94.3
+    },
+    {
+      "date": "2025-02-27",
+      "flows": {
+        "ETHA": -26.1,
+        "FETH": -25.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -19.6,
+        "ETH": 0.0
+      },
+      "total": -71.2
+    },
+    {
+      "date": "2025-02-28",
+      "flows": {
+        "ETHA": -30.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -11.7,
+        "ETH": 0.0
+      },
+      "total": -41.9
+    },
+    {
+      "date": "2025-03-03",
+      "flows": {
+        "ETHA": -16.1,
+        "FETH": 0.0,
+        "ETHW": 4.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -12.1
+    },
+    {
+      "date": "2025-03-04",
+      "flows": {
+        "ETHA": -26.3,
+        "FETH": 21.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.7,
+        "ETH": 8.5
+      },
+      "total": 14.6
+    },
+    {
+      "date": "2025-03-05",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -63.3,
+        "ETH": 0.0
+      },
+      "total": -63.3
+    },
+    {
+      "date": "2025-03-06",
+      "flows": {
+        "ETHA": -10.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -10.0
+    },
+    {
+      "date": "2025-03-07",
+      "flows": {
+        "ETHA": -11.2,
+        "FETH": -11.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -23.1
+    },
+    {
+      "date": "2025-03-10",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -23.7,
+        "ETHW": -1.6,
+        "TETH": -3.5,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -4.8,
+        "ETH": -3.9
+      },
+      "total": -37.5
+    },
+    {
+      "date": "2025-03-11",
+      "flows": {
+        "ETHA": -11.8,
+        "FETH": -9.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -21.6
+    },
+    {
+      "date": "2025-03-12",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -3.7,
+        "ETHW": 0.0,
+        "TETH": -1.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -1.4,
+        "ETHE": 0.0,
+        "ETH": -3.5
+      },
+      "total": -10.3
+    },
+    {
+      "date": "2025-03-13",
+      "flows": {
+        "ETHA": -15.1,
+        "FETH": -12.5,
+        "ETHW": 0.0,
+        "TETH": -0.5,
+        "ETHV": 1.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -41.7,
+        "ETH": -5.2
+      },
+      "total": -73.6
+    },
+    {
+      "date": "2025-03-14",
+      "flows": {
+        "ETHA": -36.4,
+        "FETH": -11.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 1.1,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -46.9
+    },
+    {
+      "date": "2025-03-17",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.3,
+        "ETH": 0.0
+      },
+      "total": -7.3
+    },
+    {
+      "date": "2025-03-18",
+      "flows": {
+        "ETHA": -40.2,
+        "FETH": -3.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -9.3
+      },
+      "total": -52.8
+    },
+    {
+      "date": "2025-03-19",
+      "flows": {
+        "ETHA": -12.9,
+        "FETH": -2.0,
+        "ETHW": 0.0,
+        "TETH": 0.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.2,
+        "ETH": -7.7
+      },
+      "total": -11.7
+    },
+    {
+      "date": "2025-03-20",
+      "flows": {
+        "ETHA": -9.0,
+        "FETH": -3.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -12.5
+    },
+    {
+      "date": "2025-03-21",
+      "flows": {
+        "ETHA": -11.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -6.7
+      },
+      "total": -18.6
+    },
+    {
+      "date": "2025-03-24",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-03-25",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": -1.5,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -1.8
+      },
+      "total": -3.3
+    },
+    {
+      "date": "2025-03-26",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -1.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -4.9
+      },
+      "total": -5.9
+    },
+    {
+      "date": "2025-03-27",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -2.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -2.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -4.2
+    },
+    {
+      "date": "2025-03-28",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 4.7,
+        "ETH": 0.0
+      },
+      "total": 4.7
+    },
+    {
+      "date": "2025-03-31",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 6.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 6.4
+    },
+    {
+      "date": "2025-04-01",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": -2.6,
+        "TETH": 1.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -2.7
+      },
+      "total": -3.6
+    },
+    {
+      "date": "2025-04-02",
+      "flows": {
+        "ETHA": -20.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -31.1,
+        "ETH": 0.0
+      },
+      "total": -51.3
+    },
+    {
+      "date": "2025-04-03",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": -3.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -3.6
+    },
+    {
+      "date": "2025-04-04",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 2.1,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 2.1
+    },
+    {
+      "date": "2025-04-07",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-04-08",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -3.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -3.3
+    },
+    {
+      "date": "2025-04-09",
+      "flows": {
+        "ETHA": -5.5,
+        "FETH": -5.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -11.2
+    },
+    {
+      "date": "2025-04-10",
+      "flows": {
+        "ETHA": 6.4,
+        "FETH": -36.0,
+        "ETHW": -2.5,
+        "TETH": 0.0,
+        "ETHV": -4.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -2.3,
+        "ETH": 0.0
+      },
+      "total": -38.8
+    },
+    {
+      "date": "2025-04-11",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": -3.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -26.1,
+        "ETH": 0.0
+      },
+      "total": -29.2
+    },
+    {
+      "date": "2025-04-14",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -7.8,
+        "ETHW": 0.0,
+        "TETH": 1.8,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -6.0
+    },
+    {
+      "date": "2025-04-15",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -3.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.6,
+        "ETH": 0.0
+      },
+      "total": -14.2
+    },
+    {
+      "date": "2025-04-16",
+      "flows": {
+        "ETHA": -4.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -1.8,
+        "ETHE": -8.2,
+        "ETH": 2.2
+      },
+      "total": -12.1
+    },
+    {
+      "date": "2025-04-17",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-04-21",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -25.4,
+        "ETH": 0.0
+      },
+      "total": -25.4
+    },
+    {
+      "date": "2025-04-22",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 32.7,
+        "ETHW": 6.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 38.8
+    },
+    {
+      "date": "2025-04-23",
+      "flows": {
+        "ETHA": -30.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.4
+      },
+      "total": -23.9
+    },
+    {
+      "date": "2025-04-24",
+      "flows": {
+        "ETHA": 40.0,
+        "FETH": 0.0,
+        "ETHW": 5.1,
+        "TETH": 4.1,
+        "ETHV": 2.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -6.6,
+        "ETH": 18.3
+      },
+      "total": 63.5
+    },
+    {
+      "date": "2025-04-25",
+      "flows": {
+        "ETHA": 54.4,
+        "FETH": 35.9,
+        "ETHW": 1.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 1.8,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 10.2
+      },
+      "total": 104.1
+    },
+    {
+      "date": "2025-04-28",
+      "flows": {
+        "ETHA": 67.5,
+        "FETH": 0.0,
+        "ETHW": -3.4,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 64.1
+    },
+    {
+      "date": "2025-04-29",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 25.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.1,
+        "ETH": 0.0
+      },
+      "total": 18.4
+    },
+    {
+      "date": "2025-04-30",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 5.8,
+        "ETHW": -1.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.1,
+        "ETH": 0.0
+      },
+      "total": -2.3
+    },
+    {
+      "date": "2025-05-01",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 6.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -12.0,
+        "ETH": 12.0
+      },
+      "total": 6.5
+    },
+    {
+      "date": "2025-05-02",
+      "flows": {
+        "ETHA": 20.1,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 20.1
+    },
+    {
+      "date": "2025-05-05",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-05-06",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -17.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -17.9
+    },
+    {
+      "date": "2025-05-07",
+      "flows": {
+        "ETHA": -21.8,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -21.8
+    },
+    {
+      "date": "2025-05-08",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -19.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 3.2
+      },
+      "total": -16.1
+    },
+    {
+      "date": "2025-05-09",
+      "flows": {
+        "ETHA": 17.6,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 17.6
+    },
+    {
+      "date": "2025-05-12",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -8.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -9.6,
+        "ETH": 0.0
+      },
+      "total": -17.6
+    },
+    {
+      "date": "2025-05-13",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 3.0,
+        "QETH": 0.0,
+        "EZET": 3.1,
+        "ETHE": 0.0,
+        "ETH": 7.4
+      },
+      "total": 13.5
+    },
+    {
+      "date": "2025-05-14",
+      "flows": {
+        "ETHA": 57.6,
+        "FETH": 5.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 63.5
+    },
+    {
+      "date": "2025-05-15",
+      "flows": {
+        "ETHA": 8.4,
+        "FETH": -31.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -16.6,
+        "ETH": 0.0
+      },
+      "total": -39.8
+    },
+    {
+      "date": "2025-05-16",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 13.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 8.6
+      },
+      "total": 22.2
+    },
+    {
+      "date": "2025-05-19",
+      "flows": {
+        "ETHA": 13.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 13.7
+    },
+    {
+      "date": "2025-05-20",
+      "flows": {
+        "ETHA": 45.0,
+        "FETH": 19.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 64.8
+    },
+    {
+      "date": "2025-05-21",
+      "flows": {
+        "ETHA": 24.9,
+        "FETH": -24.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.6
+    },
+    {
+      "date": "2025-05-22",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 42.2,
+        "ETHW": 5.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 43.7,
+        "ETH": 18.9
+      },
+      "total": 110.5
+    },
+    {
+      "date": "2025-05-23",
+      "flows": {
+        "ETHA": 52.8,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 5.8
+      },
+      "total": 58.6
+    },
+    {
+      "date": "2025-05-27",
+      "flows": {
+        "ETHA": 32.5,
+        "FETH": 3.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 2.9,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 38.8
+    },
+    {
+      "date": "2025-05-28",
+      "flows": {
+        "ETHA": 52.7,
+        "FETH": 25.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 1.6,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 4.9
+      },
+      "total": 84.9
+    },
+    {
+      "date": "2025-05-29",
+      "flows": {
+        "ETHA": 50.4,
+        "FETH": 38.3,
+        "ETHW": 4.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -4.6,
+        "ETH": 3.2
+      },
+      "total": 91.9
+    },
+    {
+      "date": "2025-05-30",
+      "flows": {
+        "ETHA": 70.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 70.2
+    },
+    {
+      "date": "2025-06-02",
+      "flows": {
+        "ETHA": 48.4,
+        "FETH": 29.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 78.2
+    },
+    {
+      "date": "2025-06-03",
+      "flows": {
+        "ETHA": 77.1,
+        "FETH": 21.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 3.0,
+        "ETHE": 0.0,
+        "ETH": 8.4
+      },
+      "total": 109.5
+    },
+    {
+      "date": "2025-06-04",
+      "flows": {
+        "ETHA": 73.2,
+        "FETH": -23.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 7.4
+      },
+      "total": 57.0
+    },
+    {
+      "date": "2025-06-05",
+      "flows": {
+        "ETHA": 34.7,
+        "FETH": -23.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 11.3
+    },
+    {
+      "date": "2025-06-06",
+      "flows": {
+        "ETHA": 15.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 9.4
+      },
+      "total": 25.3
+    },
+    {
+      "date": "2025-06-09",
+      "flows": {
+        "ETHA": 35.2,
+        "FETH": 12.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 4.6
+      },
+      "total": 52.7
+    },
+    {
+      "date": "2025-06-10",
+      "flows": {
+        "ETHA": 80.6,
+        "FETH": 26.3,
+        "ETHW": 8.4,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 9.7
+      },
+      "total": 125.0
+    },
+    {
+      "date": "2025-06-11",
+      "flows": {
+        "ETHA": 163.6,
+        "FETH": 37.3,
+        "ETHW": 6.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 13.3,
+        "ETH": 19.6
+      },
+      "total": 240.3
+    },
+    {
+      "date": "2025-06-12",
+      "flows": {
+        "ETHA": 101.5,
+        "FETH": 10.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 112.3
+    },
+    {
+      "date": "2025-06-13",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -8.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.7
+      },
+      "total": -2.1
+    },
+    {
+      "date": "2025-06-16",
+      "flows": {
+        "ETHA": 16.1,
+        "FETH": 5.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 21.4
+    },
+    {
+      "date": "2025-06-17",
+      "flows": {
+        "ETHA": 36.7,
+        "FETH": -20.2,
+        "ETHW": 3.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -9.0,
+        "ETH": 0.0
+      },
+      "total": 11.1
+    },
+    {
+      "date": "2025-06-18",
+      "flows": {
+        "ETHA": 15.1,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 4.0
+      },
+      "total": 19.1
+    },
+    {
+      "date": "2025-06-20",
+      "flows": {
+        "ETHA": -19.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 1.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.6
+      },
+      "total": -11.3
+    },
+    {
+      "date": "2025-06-23",
+      "flows": {
+        "ETHA": 25.8,
+        "FETH": 60.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 9.0,
+        "ETH": 5.4
+      },
+      "total": 100.7
+    },
+    {
+      "date": "2025-06-24",
+      "flows": {
+        "ETHA": 98.0,
+        "FETH": -26.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 71.3
+    },
+    {
+      "date": "2025-06-25",
+      "flows": {
+        "ETHA": 55.2,
+        "FETH": 0.0,
+        "ETHW": 5.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 60.4
+    },
+    {
+      "date": "2025-06-26",
+      "flows": {
+        "ETHA": 5.9,
+        "FETH": 4.9,
+        "ETHW": 2.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.4,
+        "ETH": -12.4
+      },
+      "total": -26.4
+    },
+    {
+      "date": "2025-06-27",
+      "flows": {
+        "ETHA": 48.1,
+        "FETH": 28.9,
+        "ETHW": 0.0,
+        "TETH": 0.5,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 77.5
+    },
+    {
+      "date": "2025-06-30",
+      "flows": {
+        "ETHA": 6.1,
+        "FETH": 25.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 31.8
+    },
+    {
+      "date": "2025-07-01",
+      "flows": {
+        "ETHA": 54.8,
+        "FETH": -24.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.0,
+        "ETH": 0.0
+      },
+      "total": 40.7
+    },
+    {
+      "date": "2025-07-02",
+      "flows": {
+        "ETHA": -46.9,
+        "FETH": 25.8,
+        "ETHW": 8.3,
+        "TETH": 0.0,
+        "ETHV": 2.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 8.1
+      },
+      "total": -1.9
+    },
+    {
+      "date": "2025-07-03",
+      "flows": {
+        "ETHA": 85.4,
+        "FETH": 64.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.4,
+        "ETH": 3.9
+      },
+      "total": 148.5
+    },
+    {
+      "date": "2025-07-07",
+      "flows": {
+        "ETHA": 53.2,
+        "FETH": 8.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 62.1
+    },
+    {
+      "date": "2025-07-08",
+      "flows": {
+        "ETHA": 25.3,
+        "FETH": -0.7,
+        "ETHW": 4.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 7.9,
+        "ETH": 9.3
+      },
+      "total": 46.7
+    },
+    {
+      "date": "2025-07-09",
+      "flows": {
+        "ETHA": 158.6,
+        "FETH": 29.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 5.2,
+        "ETHE": 0.0,
+        "ETH": 18.0
+      },
+      "total": 211.3
+    },
+    {
+      "date": "2025-07-10",
+      "flows": {
+        "ETHA": 300.9,
+        "FETH": 37.3,
+        "ETHW": 3.2,
+        "TETH": 0.0,
+        "ETHV": 2.1,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 18.9,
+        "ETH": 20.7
+      },
+      "total": 383.1
+    },
+    {
+      "date": "2025-07-11",
+      "flows": {
+        "ETHA": 137.1,
+        "FETH": 12.0,
+        "ETHW": 8.6,
+        "TETH": 5.1,
+        "ETHV": 6.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.0,
+        "ETH": 25.5
+      },
+      "total": 204.9
+    },
+    {
+      "date": "2025-07-14",
+      "flows": {
+        "ETHA": 151.4,
+        "FETH": 31.4,
+        "ETHW": 11.2,
+        "TETH": 0.0,
+        "ETHV": 6.6,
+        "QETH": 0.0,
+        "EZET": 5.7,
+        "ETHE": 8.9,
+        "ETH": 43.8
+      },
+      "total": 259.0
+    },
+    {
+      "date": "2025-07-15",
+      "flows": {
+        "ETHA": 171.5,
+        "FETH": 12.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 8.6
+      },
+      "total": 192.3
+    },
+    {
+      "date": "2025-07-16",
+      "flows": {
+        "ETHA": 499.2,
+        "FETH": 113.3,
+        "ETHW": 14.4,
+        "TETH": 0.0,
+        "ETHV": 3.7,
+        "QETH": 3.7,
+        "EZET": 5.1,
+        "ETHE": 33.0,
+        "ETH": 54.2
+      },
+      "total": 726.6
+    },
+    {
+      "date": "2025-07-17",
+      "flows": {
+        "ETHA": 546.7,
+        "FETH": 17.2,
+        "ETHW": 4.4,
+        "TETH": 3.8,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 29.9
+      },
+      "total": 602.0
+    },
+    {
+      "date": "2025-07-18",
+      "flows": {
+        "ETHA": 394.9,
+        "FETH": -45.4,
+        "ETHW": 13.0,
+        "TETH": 0.0,
+        "ETHV": 2.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -27.9,
+        "ETH": 65.3
+      },
+      "total": 402.5
+    },
+    {
+      "date": "2025-07-21",
+      "flows": {
+        "ETHA": 102.0,
+        "FETH": 126.9,
+        "ETHW": 13.1,
+        "TETH": -0.4,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 54.9
+      },
+      "total": 296.5
+    },
+    {
+      "date": "2025-07-22",
+      "flows": {
+        "ETHA": 426.2,
+        "FETH": 35.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 72.6
+      },
+      "total": 533.8
+    },
+    {
+      "date": "2025-07-23",
+      "flows": {
+        "ETHA": 324.6,
+        "FETH": 3.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 4.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 332.2
+    },
+    {
+      "date": "2025-07-24",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 210.1,
+        "ETHW": 11.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 2.8,
+        "ETHE": -18.5,
+        "ETH": 25.3
+      },
+      "total": 231.2
+    },
+    {
+      "date": "2025-07-25",
+      "flows": {
+        "ETHA": 440.1,
+        "FETH": 7.3,
+        "ETHW": 10.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -23.5,
+        "ETH": 18.9
+      },
+      "total": 452.8
+    },
+    {
+      "date": "2025-07-28",
+      "flows": {
+        "ETHA": 132.0,
+        "FETH": -49.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -17.6,
+        "ETH": 0.0
+      },
+      "total": 65.2
+    },
+    {
+      "date": "2025-07-29",
+      "flows": {
+        "ETHA": 223.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": -5.1,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 218.6
+    },
+    {
+      "date": "2025-07-30",
+      "flows": {
+        "ETHA": 20.3,
+        "FETH": -22.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 7.8,
+        "ETH": 0.0
+      },
+      "total": 5.8
+    },
+    {
+      "date": "2025-07-31",
+      "flows": {
+        "ETHA": 18.2,
+        "FETH": 5.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -6.8,
+        "ETH": 0.0
+      },
+      "total": 17.0
+    },
+    {
+      "date": "2025-08-01",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -6.2,
+        "ETHW": -40.3,
+        "TETH": -1.9,
+        "ETHV": -5.2,
+        "QETH": -8.4,
+        "EZET": -5.4,
+        "ETHE": -37.2,
+        "ETH": -47.7
+      },
+      "total": -152.3
+    },
+    {
+      "date": "2025-08-04",
+      "flows": {
+        "ETHA": -375.0,
+        "FETH": -55.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -7.0,
+        "ETH": -28.0
+      },
+      "total": -465.1
+    },
+    {
+      "date": "2025-08-05",
+      "flows": {
+        "ETHA": 88.8,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 3.6,
+        "ETHV": 5.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.9,
+        "ETH": -13.4
+      },
+      "total": 73.3
+    },
+    {
+      "date": "2025-08-06",
+      "flows": {
+        "ETHA": 33.4,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.4,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.0,
+        "ETH": -8.7
+      },
+      "total": 35.1
+    },
+    {
+      "date": "2025-08-07",
+      "flows": {
+        "ETHA": 103.5,
+        "FETH": 31.8,
+        "ETHW": 24.8,
+        "TETH": 0.0,
+        "ETHV": 7.0,
+        "QETH": 3.9,
+        "EZET": 5.8,
+        "ETHE": 10.9,
+        "ETH": 34.6
+      },
+      "total": 222.3
+    },
+    {
+      "date": "2025-08-08",
+      "flows": {
+        "ETHA": 254.7,
+        "FETH": 132.3,
+        "ETHW": 7.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 1.2,
+        "EZET": 0.0,
+        "ETHE": 26.8,
+        "ETH": 38.2
+      },
+      "total": 461.0
+    },
+    {
+      "date": "2025-08-11",
+      "flows": {
+        "ETHA": 639.8,
+        "FETH": 276.9,
+        "ETHW": 4.3,
+        "TETH": 3.9,
+        "ETHV": 9.4,
+        "QETH": 0.0,
+        "EZET": 4.9,
+        "ETHE": 13.0,
+        "ETH": 66.6
+      },
+      "total": 1018.8
+    },
+    {
+      "date": "2025-08-12",
+      "flows": {
+        "ETHA": 318.7,
+        "FETH": 144.9,
+        "ETHW": 0.0,
+        "TETH": 1.8,
+        "ETHV": 4.9,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 9.3,
+        "ETH": 44.3
+      },
+      "total": 523.9
+    },
+    {
+      "date": "2025-08-13",
+      "flows": {
+        "ETHA": 500.9,
+        "FETH": 154.7,
+        "ETHW": 10.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 3.6,
+        "ETHE": 7.8,
+        "ETH": 51.3
+      },
+      "total": 729.1
+    },
+    {
+      "date": "2025-08-14",
+      "flows": {
+        "ETHA": 519.7,
+        "FETH": 56.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 2.3,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 60.7
+      },
+      "total": 639.6
+    },
+    {
+      "date": "2025-08-15",
+      "flows": {
+        "ETHA": 338.1,
+        "FETH": -272.2,
+        "ETHW": -15.8,
+        "TETH": -4.4,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -101.7,
+        "ETH": -3.3
+      },
+      "total": -59.3
+    },
+    {
+      "date": "2025-08-18",
+      "flows": {
+        "ETHA": -87.2,
+        "FETH": -78.4,
+        "ETHW": -0.9,
+        "TETH": 0.0,
+        "ETHV": -4.8,
+        "QETH": 0.0,
+        "EZET": -6.6,
+        "ETHE": -18.7,
+        "ETH": 0.0
+      },
+      "total": -196.6
+    },
+    {
+      "date": "2025-08-19",
+      "flows": {
+        "ETHA": -6.3,
+        "FETH": -156.3,
+        "ETHW": -39.8,
+        "TETH": 0.0,
+        "ETHV": -3.0,
+        "QETH": -7.4,
+        "EZET": -6.3,
+        "ETHE": -122.0,
+        "ETH": -88.5
+      },
+      "total": -429.6
+    },
+    {
+      "date": "2025-08-20",
+      "flows": {
+        "ETHA": -257.8,
+        "FETH": 8.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 9.0
+      },
+      "total": -240.2
+    },
+    {
+      "date": "2025-08-21",
+      "flows": {
+        "ETHA": 233.6,
+        "FETH": 28.5,
+        "ETHW": 7.0,
+        "TETH": 0.0,
+        "ETHV": 6.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 5.9,
+        "ETH": 6.4
+      },
+      "total": 287.6
+    },
+    {
+      "date": "2025-08-22",
+      "flows": {
+        "ETHA": 109.4,
+        "FETH": 117.9,
+        "ETHW": 36.3,
+        "TETH": 0.0,
+        "ETHV": 3.5,
+        "QETH": 0.0,
+        "EZET": 5.5,
+        "ETHE": 45.9,
+        "ETH": 22.7
+      },
+      "total": 341.2
+    },
+    {
+      "date": "2025-08-25",
+      "flows": {
+        "ETHA": 314.9,
+        "FETH": 87.4,
+        "ETHW": 9.7,
+        "TETH": 5.6,
+        "ETHV": 0.0,
+        "QETH": 2.2,
+        "EZET": 0.0,
+        "ETHE": -29.2,
+        "ETH": 53.3
+      },
+      "total": 443.9
+    },
+    {
+      "date": "2025-08-26",
+      "flows": {
+        "ETHA": 323.1,
+        "FETH": 85.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 5.3,
+        "ETH": 41.1
+      },
+      "total": 455.0
+    },
+    {
+      "date": "2025-08-27",
+      "flows": {
+        "ETHA": 262.6,
+        "FETH": 20.5,
+        "ETHW": 0.0,
+        "TETH": 2.3,
+        "ETHV": 3.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 5.7,
+        "ETH": 15.1
+      },
+      "total": 309.5
+    },
+    {
+      "date": "2025-08-28",
+      "flows": {
+        "ETHA": 67.6,
+        "FETH": -33.5,
+        "ETHW": -1.3,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.3
+      },
+      "total": 39.1
+    },
+    {
+      "date": "2025-08-29",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -51.0,
+        "ETHW": -23.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -28.6,
+        "ETH": -61.3
+      },
+      "total": -164.6
+    },
+    {
+      "date": "2025-09-02",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -99.2,
+        "ETHW": -24.2,
+        "TETH": -6.6,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.3,
+        "ETH": 0.0
+      },
+      "total": -135.3
+    },
+    {
+      "date": "2025-09-03",
+      "flows": {
+        "ETHA": -151.4,
+        "FETH": 65.8,
+        "ETHW": 20.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 26.6
+      },
+      "total": -38.2
+    },
+    {
+      "date": "2025-09-04",
+      "flows": {
+        "ETHA": 148.8,
+        "FETH": -216.7,
+        "ETHW": -45.7,
+        "TETH": 0.0,
+        "ETHV": -17.2,
+        "QETH": -2.1,
+        "EZET": -1.6,
+        "ETHE": -26.4,
+        "ETH": -6.4
+      },
+      "total": -167.3
+    },
+    {
+      "date": "2025-09-05",
+      "flows": {
+        "ETHA": -309.9,
+        "FETH": -37.8,
+        "ETHW": 0.0,
+        "TETH": -14.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -51.8,
+        "ETH": -32.6
+      },
+      "total": -446.8
+    },
+    {
+      "date": "2025-09-08",
+      "flows": {
+        "ETHA": -192.7,
+        "FETH": 75.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 9.5,
+        "ETH": 11.3
+      },
+      "total": -96.7
+    },
+    {
+      "date": "2025-09-09",
+      "flows": {
+        "ETHA": 44.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 44.2
+    },
+    {
+      "date": "2025-09-10",
+      "flows": {
+        "ETHA": 74.5,
+        "FETH": 49.5,
+        "ETHW": 8.4,
+        "TETH": 7.1,
+        "ETHV": 11.1,
+        "QETH": 4.3,
+        "EZET": 0.0,
+        "ETHE": 8.9,
+        "ETH": 7.7
+      },
+      "total": 171.5
+    },
+    {
+      "date": "2025-09-11",
+      "flows": {
+        "ETHA": -17.4,
+        "FETH": 88.3,
+        "ETHW": 19.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 3.4,
+        "ETHE": 14.6,
+        "ETH": 4.6
+      },
+      "total": 113.1
+    },
+    {
+      "date": "2025-09-12",
+      "flows": {
+        "ETHA": 165.6,
+        "FETH": 168.2,
+        "ETHW": 16.6,
+        "TETH": 6.9,
+        "ETHV": 6.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 23.8,
+        "ETH": 17.6
+      },
+      "total": 405.5
+    },
+    {
+      "date": "2025-09-15",
+      "flows": {
+        "ETHA": 363.2,
+        "FETH": -13.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 10.0,
+        "ETH": 0.0
+      },
+      "total": 359.7
+    },
+    {
+      "date": "2025-09-16",
+      "flows": {
+        "ETHA": -20.3,
+        "FETH": -48.1,
+        "ETHW": 6.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -61.7
+    },
+    {
+      "date": "2025-09-17",
+      "flows": {
+        "ETHA": 25.9,
+        "FETH": -29.2,
+        "ETHW": -9.7,
+        "TETH": 2.0,
+        "ETHV": 0.0,
+        "QETH": 2.7,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.4
+      },
+      "total": -1.9
+    },
+    {
+      "date": "2025-09-18",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 159.4,
+        "ETHW": 17.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 3.5,
+        "ETHE": 9.8,
+        "ETH": 22.9
+      },
+      "total": 213.1
+    },
+    {
+      "date": "2025-09-19",
+      "flows": {
+        "ETHA": 144.3,
+        "FETH": -53.4,
+        "ETHW": -7.0,
+        "TETH": -6.0,
+        "ETHV": -8.2,
+        "QETH": -4.4,
+        "EZET": 0.0,
+        "ETHE": -6.2,
+        "ETH": -11.3
+      },
+      "total": 47.8
+    },
+    {
+      "date": "2025-09-22",
+      "flows": {
+        "ETHA": -15.1,
+        "FETH": -33.1,
+        "ETHW": -22.3,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -5.5
+      },
+      "total": -76.0
+    },
+    {
+      "date": "2025-09-23",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -63.4,
+        "ETHW": -23.9,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -17.1,
+        "ETH": -36.4
+      },
+      "total": -140.8
+    },
+    {
+      "date": "2025-09-24",
+      "flows": {
+        "ETHA": -26.5,
+        "FETH": -33.3,
+        "ETHW": -4.5,
+        "TETH": -6.2,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -8.9,
+        "ETH": 0.0
+      },
+      "total": -79.4
+    },
+    {
+      "date": "2025-09-25",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -158.1,
+        "ETHW": -27.6,
+        "TETH": -2.4,
+        "ETHV": -1.4,
+        "QETH": -2.3,
+        "EZET": -3.0,
+        "ETHE": -30.3,
+        "ETH": -26.1
+      },
+      "total": -251.2
+    },
+    {
+      "date": "2025-09-26",
+      "flows": {
+        "ETHA": -199.9,
+        "FETH": -74.4,
+        "ETHW": 0.0,
+        "TETH": 8.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 17.9,
+        "ETH": 0.0
+      },
+      "total": -248.4
+    },
+    {
+      "date": "2025-09-29",
+      "flows": {
+        "ETHA": 154.2,
+        "FETH": 202.2,
+        "ETHW": 36.5,
+        "TETH": 3.1,
+        "ETHV": 15.3,
+        "QETH": 6.7,
+        "EZET": 6.3,
+        "ETHE": 22.8,
+        "ETH": 99.8
+      },
+      "total": 546.9
+    },
+    {
+      "date": "2025-09-30",
+      "flows": {
+        "ETHA": 127.5,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 127.5
+    },
+    {
+      "date": "2025-10-01",
+      "flows": {
+        "ETHA": 26.2,
+        "FETH": 36.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 3.6,
+        "ETH": 14.3
+      },
+      "total": 80.9
+    },
+    {
+      "date": "2025-10-02",
+      "flows": {
+        "ETHA": 177.1,
+        "FETH": 60.7,
+        "ETHW": 46.5,
+        "TETH": 2.7,
+        "ETHV": 3.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 4.1,
+        "ETH": 12.7
+      },
+      "total": 307.1
+    },
+    {
+      "date": "2025-10-03",
+      "flows": {
+        "ETHA": 206.7,
+        "FETH": 5.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 3.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 17.9
+      },
+      "total": 233.5
+    },
+    {
+      "date": "2025-10-06",
+      "flows": {
+        "ETHA": 92.6,
+        "FETH": 23.5,
+        "ETHW": 27.0,
+        "TETH": 0.0,
+        "ETHV": 5.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 14.8,
+        "ETH": 18.7
+      },
+      "total": 181.8
+    },
+    {
+      "date": "2025-10-07",
+      "flows": {
+        "ETHA": 437.5,
+        "FETH": -25.7,
+        "ETHW": 0.0,
+        "TETH": 3.6,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 5.5
+      },
+      "total": 420.9
+    },
+    {
+      "date": "2025-10-08",
+      "flows": {
+        "ETHA": 148.9,
+        "FETH": -63.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -16.7,
+        "ETH": 0.0
+      },
+      "total": 69.1
+    },
+    {
+      "date": "2025-10-09",
+      "flows": {
+        "ETHA": 39.3,
+        "FETH": -30.3,
+        "ETHW": -8.1,
+        "TETH": -2.6,
+        "ETHV": -4.8,
+        "QETH": -2.2,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -8.7
+    },
+    {
+      "date": "2025-10-10",
+      "flows": {
+        "ETHA": -80.2,
+        "FETH": -30.1,
+        "ETHW": -21.6,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -30.6,
+        "ETH": -12.4
+      },
+      "total": -174.9
+    },
+    {
+      "date": "2025-10-13",
+      "flows": {
+        "ETHA": -310.1,
+        "FETH": -19.1,
+        "ETHW": -12.8,
+        "TETH": 0.0,
+        "ETHV": -9.3,
+        "QETH": 0.0,
+        "EZET": -6.5,
+        "ETHE": -21.0,
+        "ETH": -49.7
+      },
+      "total": -428.5
+    },
+    {
+      "date": "2025-10-14",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 154.6,
+        "ETHW": 13.3,
+        "TETH": 0.0,
+        "ETHV": 10.5,
+        "QETH": 0.0,
+        "EZET": 7.8,
+        "ETHE": 15.2,
+        "ETH": 34.8
+      },
+      "total": 236.2
+    },
+    {
+      "date": "2025-10-15",
+      "flows": {
+        "ETHA": 164.3,
+        "FETH": 1.0,
+        "ETHW": 12.3,
+        "TETH": -8.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 169.6
+    },
+    {
+      "date": "2025-10-16",
+      "flows": {
+        "ETHA": 46.9,
+        "FETH": -11.6,
+        "ETHW": -15.8,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -2.9,
+        "ETHE": -69.0,
+        "ETH": -4.4
+      },
+      "total": -56.8
+    },
+    {
+      "date": "2025-10-17",
+      "flows": {
+        "ETHA": -146.1,
+        "FETH": -30.6,
+        "ETHW": -20.6,
+        "TETH": 0.0,
+        "ETHV": -4.2,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -26.1,
+        "ETH": -4.7
+      },
+      "total": -232.3
+    },
+    {
+      "date": "2025-10-20",
+      "flows": {
+        "ETHA": -117.9,
+        "FETH": -27.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -145.7
+    },
+    {
+      "date": "2025-10-21",
+      "flows": {
+        "ETHA": 42.5,
+        "FETH": 59.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 4.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 13.1,
+        "ETH": 22.6
+      },
+      "total": 141.7
+    },
+    {
+      "date": "2025-10-22",
+      "flows": {
+        "ETHA": 110.7,
+        "FETH": -49.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -33.5,
+        "ETH": -46.6
+      },
+      "total": -18.9
+    },
+    {
+      "date": "2025-10-23",
+      "flows": {
+        "ETHA": -23.4,
+        "FETH": -77.0,
+        "ETHW": -8.8,
+        "TETH": 0.0,
+        "ETHV": -5.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -5.7,
+        "ETH": -6.9
+      },
+      "total": -127.4
+    },
+    {
+      "date": "2025-10-24",
+      "flows": {
+        "ETHA": -101.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 7.4
+      },
+      "total": -93.6
+    },
+    {
+      "date": "2025-10-27",
+      "flows": {
+        "ETHA": 72.5,
+        "FETH": 11.5,
+        "ETHW": 22.6,
+        "TETH": 0.0,
+        "ETHV": 4.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 6.9,
+        "ETH": 15.8
+      },
+      "total": 133.9
+    },
+    {
+      "date": "2025-10-28",
+      "flows": {
+        "ETHA": 76.4,
+        "FETH": 99.3,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -2.7,
+        "ETH": 73.0
+      },
+      "total": 246.0
+    },
+    {
+      "date": "2025-10-29",
+      "flows": {
+        "ETHA": 21.4,
+        "FETH": -69.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -4.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -12.8,
+        "ETH": -16.2
+      },
+      "total": -81.4
+    },
+    {
+      "date": "2025-10-30",
+      "flows": {
+        "ETHA": -118.0,
+        "FETH": -18.5,
+        "ETHW": -31.1,
+        "TETH": -3.2,
+        "ETHV": -2.7,
+        "QETH": -2.0,
+        "EZET": -4.2,
+        "ETHE": 0.0,
+        "ETH": -4.5
+      },
+      "total": -184.2
+    },
+    {
+      "date": "2025-10-31",
+      "flows": {
+        "ETHA": -38.6,
+        "FETH": -27.1,
+        "ETHW": -6.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -13.7,
+        "ETH": -12.1
+      },
+      "total": -98.2
+    },
+    {
+      "date": "2025-11-03",
+      "flows": {
+        "ETHA": -81.7,
+        "FETH": -25.1,
+        "ETHW": -6.2,
+        "TETH": 0.0,
+        "ETHV": -2.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -15.0,
+        "ETH": -5.1
+      },
+      "total": -135.7
+    },
+    {
+      "date": "2025-11-04",
+      "flows": {
+        "ETHA": -111.1,
+        "FETH": -19.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -19.8,
+        "ETH": -68.6
+      },
+      "total": -219.4
+    },
+    {
+      "date": "2025-11-05",
+      "flows": {
+        "ETHA": -146.6,
+        "FETH": 3.5,
+        "ETHW": 0.0,
+        "TETH": 0.5,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 24.1
+      },
+      "total": -118.5
+    },
+    {
+      "date": "2025-11-06",
+      "flows": {
+        "ETHA": 8.0,
+        "FETH": 4.9,
+        "ETHW": 3.1,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -3.5,
+        "ETH": 0.0
+      },
+      "total": 12.5
+    },
+    {
+      "date": "2025-11-07",
+      "flows": {
+        "ETHA": 34.4,
+        "FETH": -72.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 2.6,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -11.4
+      },
+      "total": -46.6
+    },
+    {
+      "date": "2025-11-10",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "date": "2025-11-11",
+      "flows": {
+        "ETHA": -19.8,
+        "FETH": -3.4,
+        "ETHW": -4.4,
+        "TETH": 0.0,
+        "ETHV": -3.8,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": -75.7
+      },
+      "total": -107.1
+    },
+    {
+      "date": "2025-11-12",
+      "flows": {
+        "ETHA": -91.0,
+        "FETH": -19.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -49.3,
+        "ETH": -23.8
+      },
+      "total": -183.7
+    },
+    {
+      "date": "2025-11-13",
+      "flows": {
+        "ETHA": -137.3,
+        "FETH": -14.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": -4.4,
+        "EZET": 0.0,
+        "ETHE": -67.9,
+        "ETH": -35.8
+      },
+      "total": -259.6
+    },
+    {
+      "date": "2025-11-14",
+      "flows": {
+        "ETHA": -173.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -4.6,
+        "ETH": 0.0
+      },
+      "total": -177.9
+    },
+    {
+      "date": "2025-11-17",
+      "flows": {
+        "ETHA": -193.0,
+        "FETH": -3.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 2.5,
+        "ETH": 10.8
+      },
+      "total": -182.7
+    },
+    {
+      "date": "2025-11-18",
+      "flows": {
+        "ETHA": -165.1,
+        "FETH": 0.0,
+        "ETHW": 19.1,
+        "TETH": 0.0,
+        "ETHV": 4.6,
+        "QETH": 0.0,
+        "EZET": 4.8,
+        "ETHE": 0.0,
+        "ETH": 62.4
+      },
+      "total": -74.2
+    },
+    {
+      "date": "2025-11-19",
+      "flows": {
+        "ETHA": -24.6,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 2.9,
+        "EZET": 0.0,
+        "ETHE": -15.7,
+        "ETH": 0.0
+      },
+      "total": -37.4
+    },
+    {
+      "date": "2025-11-20",
+      "flows": {
+        "ETHA": -122.6,
+        "FETH": -90.5,
+        "ETHW": -11.2,
+        "TETH": 0.0,
+        "ETHV": -18.7,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -18.6,
+        "ETH": 0.0
+      },
+      "total": -261.6
+    },
+    {
+      "date": "2025-11-21",
+      "flows": {
+        "ETHA": -53.7,
+        "FETH": 95.4,
+        "ETHW": 6.3,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 7.7
+      },
+      "total": 55.7
+    },
+    {
+      "date": "2025-11-24",
+      "flows": {
+        "ETHA": 92.6,
+        "FETH": -2.2,
+        "ETHW": -4.3,
+        "TETH": 0.7,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 9.8
+      },
+      "total": 96.6
+    },
+    {
+      "date": "2025-11-25",
+      "flows": {
+        "ETHA": 46.1,
+        "FETH": 47.5,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -23.3,
+        "ETH": 8.3
+      },
+      "total": 78.6
+    },
+    {
+      "date": "2025-11-26",
+      "flows": {
+        "ETHA": 50.2,
+        "FETH": 0.0,
+        "ETHW": 4.3,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 6.3
+      },
+      "total": 60.8
+    },
+    {
+      "date": "2025-11-28",
+      "flows": {
+        "ETHA": 68.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 8.3,
+        "ETH": 0.0
+      },
+      "total": 76.6
+    },
+    {
+      "date": "2025-12-01",
+      "flows": {
+        "ETHA": 26.7,
+        "FETH": -31.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -4.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -49.8,
+        "ETH": -20.3
+      },
+      "total": -79.0
+    },
+    {
+      "date": "2025-12-02",
+      "flows": {
+        "ETHA": -88.7,
+        "FETH": 50.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 28.1
+      },
+      "total": -9.9
+    },
+    {
+      "date": "2025-12-03",
+      "flows": {
+        "ETHA": 53.0,
+        "FETH": 34.4,
+        "ETHW": 4.5,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 27.6,
+        "ETH": 20.7
+      },
+      "total": 140.2
+    },
+    {
+      "date": "2025-12-04",
+      "flows": {
+        "ETHA": 28.4,
+        "FETH": -17.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -31.0,
+        "ETH": -21.0
+      },
+      "total": -41.5
+    },
+    {
+      "date": "2025-12-05",
+      "flows": {
+        "ETHA": -75.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -75.2
+    },
+    {
+      "date": "2025-12-08",
+      "flows": {
+        "ETHA": 23.7,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 11.8
+      },
+      "total": 35.5
+    },
+    {
+      "date": "2025-12-09",
+      "flows": {
+        "ETHA": 35.3,
+        "FETH": 51.5,
+        "ETHW": 17.9,
+        "TETH": 1.7,
+        "ETHV": 14.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 11.5,
+        "ETH": 45.2
+      },
+      "total": 177.7
+    },
+    {
+      "date": "2025-12-10",
+      "flows": {
+        "ETHA": 56.5,
+        "FETH": -6.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 7.9
+      },
+      "total": 57.6
+    },
+    {
+      "date": "2025-12-11",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": -3.2,
+        "ETHW": 0.0,
+        "TETH": 2.1,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -31.2,
+        "ETH": -10.0
+      },
+      "total": -42.3
+    },
+    {
+      "date": "2025-12-12",
+      "flows": {
+        "ETHA": 23.2,
+        "FETH": -6.1,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -14.4,
+        "ETH": -22.1
+      },
+      "total": -19.4
+    },
+    {
+      "date": "2025-12-15",
+      "flows": {
+        "ETHA": -139.1,
+        "FETH": -11.0,
+        "ETHW": -13.0,
+        "TETH": 0.0,
+        "ETHV": -6.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -35.1,
+        "ETH": -20.2
+      },
+      "total": -224.8
+    },
+    {
+      "date": "2025-12-16",
+      "flows": {
+        "ETHA": -221.3,
+        "FETH": -2.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -224.2
+    },
+    {
+      "date": "2025-12-17",
+      "flows": {
+        "ETHA": -19.6,
+        "FETH": -2.8,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -22.4
+    },
+    {
+      "date": "2025-12-18",
+      "flows": {
+        "ETHA": -102.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 2.7,
+        "ETH": 2.9
+      },
+      "total": -96.6
+    },
+    {
+      "date": "2025-12-19",
+      "flows": {
+        "ETHA": -75.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -75.9
+    },
+    {
+      "date": "2025-12-22",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 53.7,
+        "ETH": 30.9
+      },
+      "total": 84.6
+    },
+    {
+      "date": "2025-12-23",
+      "flows": {
+        "ETHA": -25.0,
+        "FETH": 0.0,
+        "ETHW": -14.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": -5.6,
+        "ETHE": -50.9,
+        "ETH": 0.0
+      },
+      "total": -95.5
+    },
+    {
+      "date": "2025-12-24",
+      "flows": {
+        "ETHA": -22.3,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -33.8,
+        "ETH": 3.3
+      },
+      "total": -52.8
+    },
+    {
+      "date": "2025-12-26",
+      "flows": {
+        "ETHA": -22.1,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -16.6,
+        "ETH": 0.0
+      },
+      "total": -38.7
+    },
+    {
+      "date": "2025-12-29",
+      "flows": {
+        "ETHA": -13.3,
+        "FETH": 3.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0
+      },
+      "total": -9.6
+    },
+    {
+      "date": "2025-12-30",
+      "flows": {
+        "ETHA": 0.0,
+        "FETH": 3.7,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 50.2,
+        "ETH": 14.0
+      },
+      "total": 67.9
+    },
+    {
+      "date": "2025-12-31",
+      "flows": {
+        "ETHA": -21.5,
+        "FETH": -2.2,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -14.1,
+        "QETH": 0.0,
+        "EZET": -2.2,
+        "ETHE": 0.0,
+        "ETH": -32.0
+      },
+      "total": -72.0
+    },
+    {
+      "date": "2026-01-02",
+      "flows": {
+        "ETHA": 47.2,
+        "FETH": 0.0,
+        "ETHW": 19.0,
+        "TETH": 0.0,
+        "ETHV": 4.6,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 53.7,
+        "ETH": 50.0
+      },
+      "total": 174.5
+    },
+    {
+      "date": "2026-01-05",
+      "flows": {
+        "ETHA": 102.9,
+        "FETH": 21.8,
+        "ETHW": 19.7,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 1.3,
+        "ETH": 22.3
+      },
+      "total": 168.0
+    },
+    {
+      "date": "2026-01-06",
+      "flows": {
+        "ETHA": 198.8,
+        "FETH": -1.6,
+        "ETHW": 1.4,
+        "TETH": 1.6,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -53.0,
+        "ETH": -32.5
+      },
+      "total": 114.7
+    },
+    {
+      "date": "2026-01-07",
+      "flows": {
+        "ETHA": -6.6,
+        "FETH": -13.3,
+        "ETHW": -11.2,
+        "TETH": 0.0,
+        "ETHV": -4.6,
+        "QETH": 0.0,
+        "EZET": 2.4,
+        "ETHE": -52.0,
+        "ETH": -13.0
+      },
+      "total": -98.3
+    },
+    {
+      "date": "2026-01-08",
+      "flows": {
+        "ETHA": -107.7,
+        "FETH": -4.6,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -2.3,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -31.7,
+        "ETH": -12.9
+      },
+      "total": -159.2
+    },
+    {
+      "date": "2026-01-09",
+      "flows": {
+        "ETHA": -83.8,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.0,
+        "ETH": 0.0
+      },
+      "total": -93.8
+    },
+    {
+      "date": "2026-01-12",
+      "flows": {
+        "ETHA": -79.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 5.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 50.7,
+        "ETH": 29.3
+      },
+      "total": 5.1
+    },
+    {
+      "date": "2026-01-13",
+      "flows": {
+        "ETHA": 53.3,
+        "FETH": 14.4,
+        "ETHW": 23.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 3.9,
+        "ETH": 35.4
+      },
+      "total": 130.0
+    },
+    {
+      "date": "2026-01-14",
+      "flows": {
+        "ETHA": 81.6,
+        "FETH": 5.9,
+        "ETHW": 8.0,
+        "TETH": 0.0,
+        "ETHV": 3.7,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 32.4,
+        "ETH": 43.5
+      },
+      "total": 175.1
+    },
+    {
+      "date": "2026-01-15",
+      "flows": {
+        "ETHA": 149.2,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 0.0,
+        "ETH": 15.2
+      },
+      "total": 164.4
+    },
+    {
+      "date": "2026-01-16",
+      "flows": {
+        "ETHA": 14.9,
+        "FETH": 0.0,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.2,
+        "ETH": 0.0
+      },
+      "total": 4.7
+    },
+    {
+      "date": "2026-01-20",
+      "flows": {
+        "ETHA": -92.3,
+        "FETH": -51.5,
+        "ETHW": -31.1,
+        "TETH": 0.0,
+        "ETHV": -5.5,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -38.5,
+        "ETH": -11.1
+      },
+      "total": -230.0
+    },
+    {
+      "date": "2026-01-21",
+      "flows": {
+        "ETHA": -250.3,
+        "FETH": -30.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": -4.4,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -11.4,
+        "ETH": 10.0
+      },
+      "total": -287.0
+    },
+    {
+      "date": "2026-01-22",
+      "flows": {
+        "ETHA": -44.4,
+        "FETH": 0.0,
+        "ETHW": -15.2,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": 7.9,
+        "ETH": 9.7
+      },
+      "total": -42.0
+    },
+    {
+      "date": "2026-01-23",
+      "flows": {
+        "ETHA": -44.5,
+        "FETH": 4.4,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "ETHE": -10.8,
+        "ETH": 9.2
+      },
+      "total": -41.7
+    },
     {
       "date": "2026-01-26",
       "flows": {
