@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ETF 자금 흐름 대시보드 | Herdvibe</title>
+<title>ETF 플로우 분석기 | Herdvibe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -164,8 +164,8 @@ body::-webkit-scrollbar{display:none}
 <header class="hv-header">
   <div class="hv-header-inner">
     <div class="hv-header-center">
-      <h1 id="headerTitle"><img src="assets/btc.png" id="headerIcon" alt=""> ETF 자금 흐름 대시보드</h1>
-      <span class="hv-header-category">ETF Flow · Full Dashboard</span>
+      <h1 id="headerTitle"><img src="assets/btc.png" id="headerIcon" alt=""> ETF 플로우 분석기</h1>
+      <span class="hv-header-category">ETF FLOW · ANALYZER</span>
     </div>
     <div class="hv-header-right">
       <div class="hv-update-badge"><span class="hv-live-dot"></span><span id="lastUpdated">—</span></div>
@@ -242,7 +242,7 @@ body::-webkit-scrollbar{display:none}
   <!-- BOTTOM SHARE -->
   <div class="card" style="overflow:hidden">
     <div class="share-bar" style="border-top:none">
-      <div class="share-bar-preview"><span>ETF 자금 흐름 대시보드</span> — herdvibe.com</div>
+      <div class="share-bar-preview"><span>ETF 플로우 분석기</span> — herdvibe.com</div>
       <div class="share-bar-buttons" id="shareBottomBtns"></div>
     </div>
   </div>
@@ -273,7 +273,7 @@ function ensureKakao(){try{if(typeof Kakao!=='undefined'&&!Kakao.isInitialized()
 ensureKakao();
 function copyToClipboard(t){try{window.parent.postMessage({type:'clipboard',text:t},'*');}catch(e){}try{navigator.clipboard.writeText(t);}catch(e){}}
 function flashCopied(btn){if(!btn)return;var o=btn.innerHTML;btn.style.background='#22c55e';btn.style.color='#fff';btn.style.borderColor='#22c55e';var hl=btn.querySelector('.label-text');btn.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>'+(hl?'<span class="label-text" style="color:#fff">복사됨!</span>':'');setTimeout(function(){btn.style.background='';btn.style.color='';btn.style.borderColor='';btn.innerHTML=o;},2000);}
-function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('ETF 자금 흐름 대시보드 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'ETF 자금 흐름 대시보드',description:'미국 현물 ETF 자금 흐름 종합 분석',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'대시보드 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다 ✓');break;}}
+function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('ETF 플로우 분석기 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'ETF 플로우 분석기',description:'미국 현물 ETF 자금 흐름 상세 분석',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'대시보드 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다 ✓');break;}}
 function toast(m){var c=document.querySelector('.toast-wrap');if(!c){c=document.createElement('div');c.className='toast-wrap';document.body.appendChild(c);}var t=document.createElement('div');t.className='toast';t.textContent=m;c.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transform='translateY(12px)';t.style.transition='.3s';setTimeout(function(){t.remove();},300);},3000);}
 
 /* ===== CONFIG ===== */
@@ -320,14 +320,15 @@ function fmtDF(iso){var d=new Date(iso+'T00:00:00');return d.getFullYear()+'.'+S
 function weekKey(iso){var d=new Date(iso+'T00:00:00'),j=new Date(d.getFullYear(),0,1);var w=Math.ceil(((d-j)/864e5+j.getDay()+1)/7);return d.getFullYear()+'-W'+String(w).padStart(2,'0');}
 
 /* ===== UI ===== */
-function updateHeader(){var c=ASSETS[currentAsset];document.getElementById('headerIcon').src=c.icon;document.getElementById('headerTitle').innerHTML='<img src="'+c.icon+'" style="width:24px;height:24px;border-radius:50%"> '+c.name+' ETF 대시보드';}
+function updateHeader(){var c=ASSETS[currentAsset];document.getElementById('headerIcon').src=c.icon;document.getElementById('headerTitle').innerHTML='<img src="'+c.icon+'" style="width:24px;height:24px;border-radius:50%"> '+c.name+' ETF 플로우 분석기';}
 function updateSubs(){var c=ASSETS[currentAsset];var pp=priceData?' · '+c.priceLabel+' 오버레이':'';document.getElementById('dailyChartSub').textContent='미국 '+c.name+' 현물 ETF · US$M'+pp;document.getElementById('kpiSub').textContent='미국 '+c.name+' 현물 ETF · US$M';}
 
 /* ===== SWITCH ===== */
 async function switchAsset(asset){
-  if(asset===currentAsset&&allData)return;currentAsset=asset;
+  currentAsset=asset;
   document.querySelectorAll('.asset-tab').forEach(function(t){t.classList.remove('active');});
-  document.querySelector('.asset-tab[data-asset="'+asset+'"]').classList.add('active');
+  var activeTab=document.querySelector('.asset-tab[data-asset="'+asset+'"]');
+  if(activeTab)activeTab.classList.add('active');
   updateHeader();
   document.getElementById('kpiGrid').innerHTML='<div class="loading"><div class="spinner"></div>데이터 로딩 중...</div>';
   var ok=await loadData(asset);if(ok){updateSubs();renderAll();}
@@ -423,15 +424,29 @@ function renderWeeklyChart(data){
 }
 
 /* ===== EVENTS ===== */
-document.querySelectorAll('.asset-tab').forEach(function(tab){tab.addEventListener('click',function(){switchAsset(tab.dataset.asset);});});
-document.querySelectorAll('.period-btn').forEach(function(btn){btn.addEventListener('click',function(){document.querySelector('.period-btn.active').classList.remove('active');btn.classList.add('active');currentPeriod=parseInt(btn.dataset.period);renderAll();});});
+document.querySelectorAll('.asset-tab').forEach(function(tab){
+  tab.addEventListener('click',function(e){
+    e.preventDefault();e.stopPropagation();
+    var asset=this.getAttribute('data-asset');
+    if(asset)switchAsset(asset);
+  });
+});
+document.querySelectorAll('.period-btn').forEach(function(btn){
+  btn.addEventListener('click',function(e){
+    e.preventDefault();e.stopPropagation();
+    document.querySelector('.period-btn.active').classList.remove('active');
+    this.classList.add('active');
+    currentPeriod=parseInt(this.getAttribute('data-period'));
+    renderAll();
+  });
+});
 
 /* HASH */
 function assetFromHash(){var h=location.hash.replace('#','').toLowerCase();return ASSETS[h]?h:'btc';}
 window.addEventListener('hashchange',function(){switchAsset(assetFromHash());});
 
 /* INIT */
-switchAsset(assetFromHash());
+document.addEventListener('DOMContentLoaded',function(){switchAsset(assetFromHash());});
 
 /* IFRAME RESIZE */
 var _lastH=0,_ht,_frameId='hvEtfAll';
