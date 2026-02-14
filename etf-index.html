@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ETF 자금 흐름 시그널 | Herdvibe</title>
+<title>ETF 요약 리포트 | Herdvibe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -122,8 +122,8 @@ body::-webkit-scrollbar{display:none}
 <header class="hv-header">
   <div class="hv-header-inner">
     <div class="hv-header-center">
-      <h1 id="headerTitle"><img src="assets/btc.png" id="headerIcon" alt=""> ETF 자금 흐름 시그널</h1>
-      <span class="hv-header-category">ETF Flow · Signal</span>
+      <h1 id="headerTitle"><img src="assets/btc.png" id="headerIcon" alt=""> ETF 요약 리포트</h1>
+      <span class="hv-header-category">ETF FLOW · SUMMARY</span>
     </div>
     <div class="hv-header-right">
       <div class="hv-update-badge"><span class="hv-live-dot"></span><span id="lastUpdated">—</span></div>
@@ -166,7 +166,7 @@ body::-webkit-scrollbar{display:none}
   <!-- SHARE BAR -->
   <div style="background:var(--hv-bg-card);border:1px solid var(--hv-border);border-radius:var(--hv-radius-lg);margin-top:var(--hv-space-lg);overflow:hidden">
     <div class="share-bar" style="border-top:none">
-      <div class="share-bar-preview"><span>ETF 자금 흐름 시그널</span> — herdvibe.com</div>
+      <div class="share-bar-preview"><span>ETF 요약 리포트</span> — herdvibe.com</div>
       <div class="share-bar-buttons">
         <button class="share-btn share-btn--x" onclick="doShare('twitter')"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="label-text">트위터</span></button>
         <button class="share-btn share-btn--kakao" onclick="doShare('kakao')"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.463 2 10.691c0 2.724 1.8 5.112 4.508 6.458l-1.148 4.265a.5.5 0 0 0 .764.533l4.94-3.26c.304.02.612.03.936.03 5.523 0 10-3.462 10-7.735C22 6.463 17.523 3 12 3z"/></svg><span class="label-text">카카오톡</span></button>
@@ -185,7 +185,7 @@ function ensureKakao(){try{if(typeof Kakao!=='undefined'&&!Kakao.isInitialized()
 ensureKakao();
 function copyToClipboard(t){try{window.parent.postMessage({type:'clipboard',text:t},'*');}catch(e){}try{navigator.clipboard.writeText(t);}catch(e){}}
 function flashCopied(btn){if(!btn)return;var o=btn.innerHTML;btn.style.background='#22c55e';btn.style.color='#fff';btn.style.borderColor='#22c55e';var hl=btn.querySelector('.label-text');btn.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>'+(hl?'<span class="label-text" style="color:#fff">복사됨!</span>':'');setTimeout(function(){btn.style.background='';btn.style.color='';btn.style.borderColor='';btn.innerHTML=o;},2000);}
-function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('ETF 자금 흐름 시그널 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'ETF 자금 흐름 시그널',description:'미국 현물 ETF 자금 흐름 실시간 시그널',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'대시보드 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다 ✓');break;}}
+function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('ETF 요약 리포트 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'ETF 요약 리포트',description:'미국 현물 ETF 자금 흐름 요약 리포트',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'대시보드 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다 ✓');break;}}
 function toast(m){var c=document.querySelector('.toast-wrap');if(!c){c=document.createElement('div');c.className='toast-wrap';document.body.appendChild(c);}var t=document.createElement('div');t.className='toast';t.textContent=m;c.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transform='translateY(12px)';t.style.transition='.3s';setTimeout(function(){t.remove();},300);},3000);}
 
 /* ===== CONFIG ===== */
@@ -277,22 +277,28 @@ function renderChart(data){
 
 /* ===== SWITCH ASSET ===== */
 async function switchAsset(asset){
-  if(asset===currentAsset&&allData)return;
   currentAsset=asset;
   document.querySelectorAll('.asset-tab').forEach(function(t){t.classList.remove('active');});
-  document.querySelector('.asset-tab[data-asset="'+asset+'"]').classList.add('active');
+  var activeTab=document.querySelector('.asset-tab[data-asset="'+asset+'"]');
+  if(activeTab)activeTab.classList.add('active');
   var cfg=ASSETS[asset];
   document.getElementById('headerIcon').src=cfg.icon;
-  document.getElementById('headerTitle').innerHTML='<img src="'+cfg.icon+'" style="width:24px;height:24px;border-radius:50%"> '+cfg.name+' ETF 시그널';
+  document.getElementById('headerTitle').innerHTML='<img src="'+cfg.icon+'" style="width:24px;height:24px;border-radius:50%"> '+cfg.name+' ETF 요약 리포트';
   document.getElementById('kpiGrid').innerHTML='<div class="loading"><div class="spinner"></div>데이터 로딩 중...</div>';
   var ok=await loadData(asset);
   if(ok)render();
 }
 
-document.querySelectorAll('.asset-tab').forEach(function(tab){tab.addEventListener('click',function(){switchAsset(tab.dataset.asset);});});
+document.querySelectorAll('.asset-tab').forEach(function(tab){
+  tab.addEventListener('click',function(e){
+    e.preventDefault();e.stopPropagation();
+    var asset=this.getAttribute('data-asset');
+    if(asset)switchAsset(asset);
+  });
+});
 
 /* ===== INIT ===== */
-switchAsset('btc');
+document.addEventListener('DOMContentLoaded',function(){switchAsset('btc');});
 
 /* IFRAME RESIZE */
 var _lastH=0,_ht,_frameId='hvEtfIndex';
