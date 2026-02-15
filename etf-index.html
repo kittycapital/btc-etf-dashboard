@@ -36,10 +36,12 @@ body::-webkit-scrollbar{display:none}
 ::selection{background:var(--hv-primary);color:#fff}
 
 .hv-header{position:sticky;top:0;z-index:100;height:var(--hv-header-height);background:rgba(0,0,0,.9);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--hv-border);display:flex;align-items:center;padding:0 var(--hv-space-lg)}
-.hv-header-inner{width:100%;max-width:var(--hv-max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:var(--hv-space-md)}
+.hv-header-inner{width:100%;max-width:var(--hv-max-width);margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--hv-space-md)}
+.hv-header-left{min-width:0}
+.hv-header-center{text-align:center}
 .hv-header-center h1{font-family:var(--hv-font-display);font-size:.938rem;font-weight:600;color:var(--hv-text-primary);white-space:nowrap}
-.hv-header-category{font-size:.7rem;color:var(--hv-text-tertiary);font-weight:500;text-transform:uppercase;letter-spacing:.08em}
-.hv-header-right{display:flex;align-items:center;gap:var(--hv-space-xs);flex-shrink:0}
+.hv-header-category{font-size:.7rem;color:var(--hv-text-tertiary);font-weight:500;text-transform:uppercase;letter-spacing:.08em;text-align:center}
+.hv-header-right{display:flex;align-items:center;gap:var(--hv-space-xs);flex-shrink:0;justify-content:flex-end}
 .hv-update-badge{font-family:var(--hv-font-mono);font-size:.688rem;color:var(--hv-text-tertiary);white-space:nowrap;display:flex;align-items:center;gap:6px}
 .hv-live-dot{width:5px;height:5px;background:var(--hv-up);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -51,7 +53,6 @@ body::-webkit-scrollbar{display:none}
 .card-title{font-size:15px;font-weight:700;margin-bottom:2px;display:flex;align-items:center;gap:7px}
 .card-desc{font-size:11.5px;color:var(--hv-text-secondary);margin-bottom:14px;line-height:1.5}
 
-/* ASSET TABS */
 .asset-tabs{display:flex;gap:6px;margin-bottom:14px}
 .asset-tab{display:flex;align-items:center;gap:8px;padding:8px 18px;border:1px solid var(--hv-border);border-radius:8px;background:transparent;color:var(--hv-text-secondary);font-family:var(--hv-font-mono);font-size:13px;font-weight:500;cursor:pointer;transition:all .25s;white-space:nowrap}
 .asset-tab:hover{border-color:var(--hv-border-strong);color:var(--hv-text-primary)}
@@ -61,7 +62,6 @@ body::-webkit-scrollbar{display:none}
 .asset-tab[data-asset="eth"].active{border-color:var(--eth);color:var(--eth)}
 .asset-tab[data-asset="sol"].active{border-color:var(--sol);color:var(--sol)}
 
-/* KPI */
 .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .kpi{background:rgba(255,255,255,.02);border:1px solid var(--hv-border);border-radius:8px;padding:14px 16px;transition:all .2s}
 .kpi:hover{border-color:var(--hv-border-strong);transform:translateY(-1px)}
@@ -76,7 +76,6 @@ body::-webkit-scrollbar{display:none}
 .spinner{width:16px;height:16px;border:2px solid var(--hv-border);border-top-color:var(--hv-primary);border-radius:50%;animation:spin .8s linear infinite;margin-right:10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* SHARE */
 .share-bar{display:flex;align-items:center;justify-content:space-between;padding:12px var(--hv-space-lg);border-top:1px solid var(--hv-border);background:var(--hv-bg-surface);border-radius:0 0 var(--hv-radius-lg) var(--hv-radius-lg)}
 .share-bar-preview{font-size:.75rem;color:var(--hv-text-tertiary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50%;font-family:var(--hv-font-mono)}
 .share-bar-preview span{color:var(--hv-text-secondary);font-weight:500}
@@ -109,6 +108,7 @@ body::-webkit-scrollbar{display:none}
 
 <header class="hv-header">
   <div class="hv-header-inner">
+    <div class="hv-header-left"></div>
     <div class="hv-header-center">
       <h1>암호화폐 ETF 요약 리포트</h1>
       <span class="hv-header-category">CRYPTO ETF · SUMMARY</span>
@@ -131,13 +131,13 @@ body::-webkit-scrollbar{display:none}
 
   <div class="card">
     <div class="card-label">KEY METRICS</div>
-    <div class="card-title">📊 핵심 지표</div>
+    <div class="card-title">핵심 지표</div>
     <div class="kpi-grid" id="kpiGrid"><div class="loading"><div class="spinner"></div>데이터 로딩 중...</div></div>
   </div>
 
   <div class="card">
     <div class="card-label">DAILY NET FLOW</div>
-    <div class="card-title">📈 최근 30일 순유입</div>
+    <div class="card-title">최근 30일 순유입</div>
     <div class="card-desc">일별 순유입/유출 바 차트</div>
     <div class="chart-wrap"><canvas id="flowChart"></canvas></div>
   </div>
@@ -157,64 +157,45 @@ body::-webkit-scrollbar{display:none}
 </div>
 
 <script>
-/* ===== SHARE UTILS ===== */
 var SHARE_URL='https://herdvibe.com/56';
 function ensureKakao(){try{if(typeof Kakao!=='undefined'&&!Kakao.isInitialized())Kakao.init('a43ed7b39fac35458f4f9df925a279b5');return typeof Kakao!=='undefined'&&Kakao.isInitialized();}catch(e){return false;}}
 function copyToClipboard(t){try{window.parent.postMessage({type:'clipboard',text:t},'*');}catch(e){}try{navigator.clipboard.writeText(t);}catch(e){}}
 function flashCopied(btn){if(!btn)return;var o=btn.innerHTML;btn.style.background='#22c55e';btn.style.color='#fff';btn.style.borderColor='#22c55e';var hl=btn.querySelector('.label-text');btn.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>'+(hl?'<span class="label-text" style="color:#fff">복사됨!</span>':'');setTimeout(function(){btn.style.background='';btn.style.color='';btn.style.borderColor='';btn.innerHTML=o;},2000);}
 function toast(m){var c=document.querySelector('.toast-wrap');if(!c){c=document.createElement('div');c.className='toast-wrap';document.body.appendChild(c);}var t=document.createElement('div');t.className='toast';t.textContent=m;c.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transform='translateY(12px)';t.style.transition='.3s';setTimeout(function(){t.remove();},300);},3000);}
-function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('암호화폐 ETF 요약 리포트 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'암호화폐 ETF 요약 리포트',description:'미국 현물 ETF 자금 흐름 요약',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'리포트 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다 ✓');break;}}
+function doShare(p,btn){var u=SHARE_URL,t=encodeURIComponent('암호화폐 ETF 요약 리포트 | herdvibe.com'),eu=encodeURIComponent(u);switch(p){case'twitter':window.open('https://twitter.com/intent/tweet?text='+t+'&url='+eu,'_blank');break;case'telegram':window.open('https://t.me/share/url?url='+eu+'&text='+t,'_blank');break;case'kakao':if(!ensureKakao()){copyToClipboard(u);toast('링크 복사완료!');}else try{Kakao.Share.sendDefault({objectType:'feed',content:{title:'암호화폐 ETF 요약 리포트',description:'미국 현물 ETF 자금 흐름 요약',imageUrl:'https://raw.githubusercontent.com/kittycapital/kittycapital.github.io/main/assets/herdvibe-og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'리포트 보기',link:{mobileWebUrl:u,webUrl:u}}]});}catch(e){copyToClipboard(u);toast('링크 복사완료!');}break;case'instagram':copyToClipboard(u);flashCopied(btn);toast('링크 복사완료! 인스타그램에 붙여넣기 하세요');break;case'link':copyToClipboard(u);flashCopied(btn);toast('링크가 복사되었습니다');break;}}
 
-/* ===== ASSET CONFIG ===== */
 var ASSETS={
   btc:{name:'비트코인',flowUrl:'data/etf_flows.json',icon:'assets/btc.png',color:'#f7931a'},
   eth:{name:'이더리움',flowUrl:'data/eth_etf_flows.json',icon:'assets/eth.svg',color:'#627eea'},
   sol:{name:'솔라나',flowUrl:'data/sol_etf_flows.json',icon:'assets/sol.png',color:'#9945ff'}
 };
 
-/* ===== STATE ===== */
 var currentAsset=null;
-var currentData=null;  /* ← 현재 표시 중인 데이터 */
+var currentData=null;
 var flowChart=null;
 var cache={};
 
-/* ===== HELPERS ===== */
 function fmt(v){if(v===0)return'0.0';return(v>0?'+':'')+v.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1});}
 function fmtB(v){var a=Math.abs(v);if(a>=1000)return(v>0?'+':'')+(v/1000).toFixed(1)+'B';return fmt(v);}
 function fmtD(iso){var p=iso.split('-');return parseInt(p[1])+'/'+parseInt(p[2]);}
 function fmtDF(iso){return iso.replace(/-/g,'.');}
 
-/* ===== SWITCH ASSET ===== */
 function switchAsset(asset){
   if(asset===currentAsset)return;
   currentAsset=asset;
   var cfg=ASSETS[asset];
-
-  /* tab UI */
   document.querySelectorAll('.asset-tab').forEach(function(t){t.classList.remove('active');});
   var tab=document.querySelector('[data-asset="'+asset+'"]');
   if(tab)tab.classList.add('active');
-
-  /* description */
   document.getElementById('descText').textContent='미국 '+cfg.name+' 현물 ETF 최근 30일 자금 흐름 요약 · 단위: 백만 달러 (US$M)';
-
-  /* loading state */
   document.getElementById('kpiGrid').innerHTML='<div class="loading"><div class="spinner"></div>'+cfg.name+' 데이터 로딩 중...</div>';
   if(flowChart){flowChart.destroy();flowChart=null;}
-
-  /* fetch or cache */
-  if(cache[asset]){
-    currentData=cache[asset];
-    render();
-    return;
-  }
-
+  if(cache[asset]){currentData=cache[asset];render();return;}
   fetch(cfg.flowUrl).then(function(r){
     if(!r.ok)throw new Error('HTTP '+r.status);
     return r.json();
   }).then(function(json){
     cache[asset]=json;
-    /* 사용자가 이미 다른 탭 클릭했으면 무시 */
     if(currentAsset!==asset)return;
     currentData=json;
     render();
@@ -224,12 +205,10 @@ function switchAsset(asset){
   });
 }
 
-/* ===== RENDER ===== */
 function render(){
   if(!currentData)return;
   renderKPI();
   renderChart();
-  /* update time */
   if(currentData.metadata&&currentData.metadata.last_updated){
     var d=new Date(currentData.metadata.last_updated);
     document.getElementById('lastUpdated').textContent=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
@@ -247,12 +226,11 @@ function renderKPI(){
   for(var i=flows.length-1;i>=0;i--){if((flows[i].total>=0?1:-1)===sign)streak++;else break;}
   var mx=flows[0],mn=flows[0];
   flows.forEach(function(d){if(d.total>mx.total)mx=d;if(d.total<mn.total)mn=d;});
-
   var items=[
     {l:'최근 일별 순유입',v:fmt(latest.total),c:latest.total>=0?'pos':'neg',s:fmtDF(latest.date)},
     {l:'30일 누적',v:fmtB(cum),c:cum>=0?'pos':'neg',s:flows.length+'거래일 합계'},
     {l:'최근 7일',v:fmt(w7),c:w7>=0?'pos':'neg',s:'일평균 '+fmt(w7/l7.length)+'M'},
-    {l:sign>0?'연속 유입':'연속 유출',v:streak+'일',c:'neu',s:sign>0?'📈 유입 지속':'📉 유출 지속'},
+    {l:sign>0?'연속 유입':'연속 유출',v:streak+'일',c:'neu',s:sign>0?'유입 지속':'유출 지속'},
     {l:'최대 유입일',v:fmt(mx.total),c:'pos',s:fmtDF(mx.date)},
     {l:'최대 유출일',v:fmt(mn.total),c:'neg',s:fmtDF(mn.date)}
   ];
@@ -284,7 +262,6 @@ function renderChart(){
   });
 }
 
-/* ===== TAB CLICK — EVENT DELEGATION ===== */
 document.getElementById('assetTabs').addEventListener('click',function(e){
   var btn=e.target.closest('.asset-tab');
   if(!btn)return;
@@ -292,11 +269,9 @@ document.getElementById('assetTabs').addEventListener('click',function(e){
   if(a)switchAsset(a);
 });
 
-/* ===== INIT ===== */
 ensureKakao();
 switchAsset('btc');
 
-/* ===== IFRAME RESIZE ===== */
 var _lastH=0,_ht;
 function sendHeight(){clearTimeout(_ht);_ht=setTimeout(function(){var h=document.documentElement.scrollHeight;if(Math.abs(h-_lastH)>5){_lastH=h;try{window.parent.postMessage({type:'resize',height:h,id:'hvEtfIndex'},'*');window.parent.postMessage({height:h,id:'hvEtfIndex'},'*');}catch(e){}}},120);}
 window.addEventListener('resize',sendHeight);
