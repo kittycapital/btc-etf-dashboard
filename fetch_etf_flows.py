@@ -287,6 +287,8 @@ def fetch_btc_prices():
             existing = json.load(f)
     prices = existing.get("prices", {})
 
+    now = datetime.now(timezone.utc)
+
     # Define date ranges to fetch (6-month chunks)
     ranges = [
         ("2024-01-01", "2024-06-30"),
@@ -294,26 +296,36 @@ def fetch_btc_prices():
         ("2025-01-01", "2025-06-30"),
         ("2025-07-01", "2025-12-31"),
         ("2026-01-01", "2026-06-30"),
+        ("2026-07-01", "2026-12-31"),
     ]
 
-    total_new = 0
+    # Filter out fully future ranges
+    active_ranges = []
     for start_str, end_str in ranges:
         start_dt = datetime.strptime(start_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        if start_dt <= now:
+            active_ranges.append((start_str, end_str))
+
+    total_new = 0
+    for idx, (start_str, end_str) in enumerate(active_ranges):
+        start_dt = datetime.strptime(start_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
         end_dt = datetime.strptime(end_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        is_last_range = (idx == len(active_ranges) - 1)
 
-        # Skip future ranges
-        if start_dt > datetime.now(timezone.utc):
-            continue
-
-        # Skip if we already have good coverage for this range
-        existing_in_range = sum(1 for d in prices if start_str <= d <= end_str)
-        expected_days = (min(end_dt, datetime.now(timezone.utc)) - start_dt).days
-        if existing_in_range >= expected_days * 0.9:
-            print(f"  [{start_str}~{end_str}] Already have {existing_in_range} days, skipping")
-            continue
+        # Skip if we already have good coverage — BUT always fetch the last range
+        if not is_last_range:
+            existing_in_range = sum(1 for d in prices if start_str <= d <= end_str)
+            expected_days = (min(end_dt, now) - start_dt).days
+            if expected_days > 0 and existing_in_range >= expected_days * 0.9:
+                print(f"  [{start_str}~{end_str}] Already have {existing_in_range} days, skipping")
+                continue
 
         ts_from = int(start_dt.timestamp())
-        ts_to = int(min(end_dt, datetime.now(timezone.utc)).timestamp())
+        ts_to = int(min(end_dt, now).timestamp())
+
+        if is_last_range:
+            print(f"  [{start_str}~{end_str}] Last range — always fetching for latest prices")
+
         url = f"https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from={ts_from}&to={ts_to}"
 
         result = subprocess.run(
@@ -359,7 +371,7 @@ def fetch_btc_prices():
     result_data = {
         "description": "BTC/USD daily closing prices",
         "source": "CoinGecko",
-        "last_updated": datetime.now(timezone.utc).isoformat(),
+        "last_updated": now.isoformat(),
         "prices": dict(sorted(prices.items())),
     }
 
