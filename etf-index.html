@@ -273,7 +273,7 @@ ensureKakao();
 switchAsset('btc');
 
 var _lastH=0,_ht;
-function sendHeight(){clearTimeout(_ht);_ht=setTimeout(function(){var h=document.documentElement.scrollHeight;if(Math.abs(h-_lastH)>5){_lastH=h;try{window.parent.postMessage({type:'resize',height:h,id:'hvEtfIndex'},'*');window.parent.postMessage({height:h,id:'hvEtfIndex'},'*');}catch(e){}}},120);}
+function sendHeight(){clearTimeout(_ht);_ht=setTimeout(function(){var el=document.querySelector('.hv-page');var h=el?el.offsetTop+el.offsetHeight+20:document.body.scrollHeight;if(Math.abs(h-_lastH)>5){_lastH=h;try{window.parent.postMessage({type:'resize',height:h,id:'hvEtfIndex'},'*');window.parent.postMessage({height:h,id:'hvEtfIndex'},'*');}catch(e){}}},120);}
 window.addEventListener('resize',sendHeight);
 window.addEventListener('load',function(){sendHeight();setTimeout(sendHeight,500);setTimeout(sendHeight,2000);});
 new MutationObserver(sendHeight).observe(document.body,{childList:true,subtree:true});
