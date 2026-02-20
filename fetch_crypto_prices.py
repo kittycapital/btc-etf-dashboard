@@ -2,11 +2,12 @@
 """
 Crypto Price Fetcher (CoinGecko)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Fetches ETH & SOL daily prices using CoinGecko free API.
+Fetches BTC, ETH & SOL daily prices using CoinGecko free API.
 Outputs JSON in same format as btc_price.json.
 
 Usage:
-  python3 fetch_crypto_prices.py          # fetch all (eth, sol)
+  python3 fetch_crypto_prices.py          # fetch all (btc, eth, sol)
+  python3 fetch_crypto_prices.py btc      # fetch BTC only
   python3 fetch_crypto_prices.py eth      # fetch ETH only
   python3 fetch_crypto_prices.py sol      # fetch SOL only
 """
@@ -23,6 +24,12 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 
 COINS = {
+    "btc": {
+        "coingecko_id": "bitcoin",
+        "output_file": "btc_price.json",
+        "description": "BTC/USD daily closing prices",
+        "start_date": "2024-01-01",  # BTC ETFs launched Jan 2024
+    },
     "eth": {
         "coingecko_id": "ethereum",
         "output_file": "eth_price.json",
@@ -102,22 +109,27 @@ def fetch_prices(coin_key):
         cursor = chunk_end
 
     total_new = 0
-    for start_str, end_str in ranges:
+    for idx, (start_str, end_str) in enumerate(ranges):
         start_dt = datetime.strptime(start_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
         end_dt = datetime.strptime(end_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        is_last_chunk = (idx == len(ranges) - 1)
 
         if start_dt > now:
             continue
 
-        # Skip if good coverage exists
-        existing_in_range = sum(1 for d in prices if start_str <= d <= end_str)
-        expected_days = (min(end_dt, now) - start_dt).days
-        if expected_days > 0 and existing_in_range >= expected_days * 0.9:
-            print(f"  [{start_str}~{end_str}] Already have {existing_in_range} days, skipping")
-            continue
+        # Skip if good coverage exists — BUT always fetch the last chunk
+        if not is_last_chunk:
+            existing_in_range = sum(1 for d in prices if start_str <= d <= end_str)
+            expected_days = (min(end_dt, now) - start_dt).days
+            if expected_days > 0 and existing_in_range >= expected_days * 0.9:
+                print(f"  [{start_str}~{end_str}] Already have {existing_in_range} days, skipping")
+                continue
 
         ts_from = int(start_dt.timestamp())
         ts_to = int(min(end_dt, now).timestamp())
+
+        if is_last_chunk:
+            print(f"  [{start_str}~{end_str}] Last chunk — always fetching for latest prices")
 
         raw_prices = fetch_price_range(coin_id, ts_from, ts_to)
         if raw_prices is None:
