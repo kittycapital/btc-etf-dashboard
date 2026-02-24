@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF 자금 흐름 위젯</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            background: #0a0a0f;
+            color: #e4e4e7;
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .widget {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .title-link {
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+        }
+
+        .arrow {
+            display: inline-block;
+            font-size: 1rem;
+            color: #52525b;
+            margin-left: 2px;
+            transition: transform 0.2s;
+        }
+
+        a.page-link:hover .arrow { transform: translateX(3px); }
+
+        .subtitle {
+            font-size: 0.7rem;
+            color: #52525b;
+            margin-top: 4px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        .card-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+            object-fit: contain;
+        }
+
+        .card-label {
+            font-size: 0.65rem;
+            color: #52525b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .card-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .card-val.positive { color: #00d4aa; }
+        .card-val.negative { color: #ff4757; }
+        .card-val.zero     { color: #555; }
+
+        .card-date {
+            font-size: 0.6rem;
+            color: #52525b;
+            margin-top: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .card-unit {
+            font-size: 0.6rem;
+            color: #52525b;
+            margin-top: 2px;
+        }
+
+        .updated {
+            margin-top: 14px;
+            font-size: 0.65rem;
+            color: #3a3a3a;
+        }
+
+        @media (max-width: 360px) {
+            .cards { gap: 6px; }
+            .card { padding: 10px 6px; }
+            .card-val { font-size: 1.1rem; }
+            .title { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://herdvibe.com/56" target="_top" class="page-link" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+    <div class="widget">
+        <div class="title-link">
+            <span class="title">현물 ETF 자금 흐름 <span class="arrow">›</span></span>
+            <div class="subtitle">미국 현물 ETF 최근 일별 순유입 · 단위: 백만 달러 (US$M)</div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <img class="card-icon" src="assets/btc.png" alt="BTC">
+                <div class="card-label">Bitcoin</div>
+                <div class="card-val zero" id="btc-val">--</div>
+                <div class="card-unit">US$M</div>
+                <div class="card-date" id="btc-date">-</div>
+            </div>
+            <div class="card">
+                <img class="card-icon" src="assets/eth.svg" alt="ETH">
+                <div class="card-label">Ethereum</div>
+                <div class="card-val zero" id="eth-val">--</div>
+                <div class="card-unit">US$M</div>
+                <div class="card-date" id="eth-date">-</div>
+            </div>
+            <div class="card">
+                <img class="card-icon" src="assets/sol.png" alt="SOL">
+                <div class="card-label">Solana</div>
+                <div class="card-val zero" id="sol-val">--</div>
+                <div class="card-unit">US$M</div>
+                <div class="card-date" id="sol-date">-</div>
+            </div>
+        </div>
+
+        <div class="updated" id="updated"></div>
+    </div>
+    </a>
+
+    <script>
+        var FILES = {
+            btc: { path: 'data/etf_flows.json',     valId: 'btc-val', dateId: 'btc-date' },
+            eth: { path: 'data/eth_etf_flows.json',  valId: 'eth-val', dateId: 'eth-date' },
+            sol: { path: 'data/sol_etf_flows.json',  valId: 'sol-val', dateId: 'sol-date' }
+        };
+
+        function fmtFlow(v) {
+            var sign = v > 0 ? '+' : '';
+            return sign + v.toFixed(1);
+        }
+
+        function fmtDate(d) {
+            return d.replace(/-/g, '.');
+        }
+
+        async function loadAsset(key) {
+            var cfg = FILES[key];
+            try {
+                var r = await fetch(cfg.path);
+                if (!r.ok) throw new Error('not found');
+                var data = await r.json();
+                var flows = data.daily_flows;
+                if (!flows || !flows.length) throw new Error('empty');
+
+                var latest = flows[flows.length - 1];
+                var val = latest.total;
+                var valEl = document.getElementById(cfg.valId);
+                valEl.textContent = fmtFlow(val);
+                valEl.className = 'card-val ' + (val > 0 ? 'positive' : val < 0 ? 'negative' : 'zero');
+                document.getElementById(cfg.dateId).textContent = fmtDate(latest.date);
+            } catch (e) {
+                console.error(key, e);
+            }
+        }
+
+        async function init() {
+            await Promise.all([loadAsset('btc'), loadAsset('eth'), loadAsset('sol')]);
+        }
+
+        init();
+    </script>
+    <script>
+    function sendHeight(){
+        window.parent.postMessage({
+            id:'hvETFFlowWidget',
+            height:document.documentElement.scrollHeight,
+            desktopHeight:340,
+            mobileHeight:320
+        },'*');
+    }
+    window.addEventListener('load',function(){sendHeight();setTimeout(sendHeight,500);setTimeout(sendHeight,1500)});
+    window.addEventListener('resize',sendHeight);
+    </script>
+</body>
+</html>
