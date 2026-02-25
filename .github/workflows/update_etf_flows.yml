@@ -2,8 +2,10 @@ name: Update ETF Flow Data
 
 on:
   schedule:
-    # 매일 한국시간 7:00 AM (UTC 22:00 전날)
-    - cron: '0 22 * * *'
+    # 1차: 한국시간 11:00 AM (UTC 02:00) — 미국 장 마감 후 5시간
+    - cron: '0 2 * * *'
+    # 2차: 한국시간 3:00 PM (UTC 06:00) — 지연 데이터 보완
+    - cron: '0 6 * * *'
   workflow_dispatch:  # 수동 실행 가능
 
 jobs:
