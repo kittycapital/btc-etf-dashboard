@@ -1,7 +1,7 @@
 {
   "description": "SOL/USD daily closing prices",
   "source": "CoinGecko",
-  "last_updated": "2026-04-09T04:22:32.217561+00:00",
+  "last_updated": "2026-04-09T07:31:16.399332+00:00",
   "prices": {
     "2025-10-01": 219.77,
     "2025-10-02": 232.97,
