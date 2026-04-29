@@ -21,9 +21,10 @@ FLOWS_FILE = os.path.join(DATA_DIR, "etf_flows.json")
 BTC_PRICE_FILE = os.path.join(DATA_DIR, "btc_price.json")
 SOURCE_URL = "https://bitbo.io/treasuries/etf-flows/"
 
-ETF_TICKERS = [
+# Fallback only — actual tickers are read from the table header at runtime
+ETF_TICKERS_FALLBACK = [
     "IBIT", "FBTC", "GBTC", "BTC", "BITB",
-    "ARKB", "HODL", "BTCO", "BRRR", "EZBC", "BTCW", "DEFI"
+    "ARKB", "HODL", "BTCO", "BRRR", "EZBC", "MSBT", "BTCW", "DEFI"
 ]
 
 ETF_INFO = {
@@ -37,9 +38,13 @@ ETF_INFO = {
     "BTCO": {"name": "Invesco Galaxy Bitcoin ETF", "issuer": "Invesco"},
     "BRRR": {"name": "Valkyrie Bitcoin Fund", "issuer": "CoinShares"},
     "EZBC": {"name": "Franklin Bitcoin ETF", "issuer": "Franklin Templeton"},
+    "MSBT": {"name": "Morgan Stanley Bitcoin Trust", "issuer": "Morgan Stanley"},
     "BTCW": {"name": "WisdomTree Bitcoin Fund", "issuer": "WisdomTree"},
     "DEFI": {"name": "Hashdex Bitcoin ETF", "issuer": "Hashdex"},
 }
+
+# Ticker pattern for auto-detection from table headers
+TICKER_RE = re.compile(r"^[A-Z]{2,6}$")
 
 MONTHS = {
     "Jan": "01", "Feb": "02", "Mar": "03", "Apr": "04",
@@ -97,45 +102,93 @@ def parse_num(text: str) -> float:
 
 
 # ─── Parsing strategies ─────────────────────────────────────────────────────
-def parse_html_table(html: str) -> list[dict]:
-    """Strategy 1: Parse <table> with <tr>/<td> tags."""
+
+def _strip_html(text: str) -> str:
+    """Remove HTML tags from a string."""
+    return re.sub(r"<[^>]+>", "", text).strip()
+
+
+def _extract_tickers_from_header(table_html: str) -> list[str]:
+    """
+    Extract ticker symbols from the table header row.
+    Dynamically adapts when new ETFs are added (e.g. MSBT).
+    """
+    # Try <thead> first
+    thead_match = re.search(r"<thead>(.*?)</thead>", table_html, re.DOTALL | re.I)
+    search_area = thead_match.group(1) if thead_match else table_html
+
+    # Find all header rows
+    header_rows = re.findall(r"<tr[^>]*>(.*?)</tr>", search_area, re.DOTALL | re.I)
+
+    # Look through header rows for one that contains known tickers
+    for row_html in header_rows:
+        cells = [
+            _strip_html(c) for c in
+            re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row_html, re.DOTALL | re.I)
+        ]
+        tickers = [c for c in cells if c and TICKER_RE.match(c) and c not in ("Date", "Total", "Totals")]
+        if len(tickers) >= 5:  # Must have a reasonable number of tickers
+            print(f"[INFO] Header tickers detected: {tickers}")
+            # Warn about unknown tickers
+            for t in tickers:
+                if t not in ETF_INFO:
+                    print(f"[WARN] Unknown ticker '{t}' found in header — add to ETF_INFO if permanent")
+            return tickers
+
+    print(f"[WARN] Could not extract tickers from header, using fallback list")
+    return ETF_TICKERS_FALLBACK
+
+
+def parse_html_table(html: str) -> tuple[list[str], list[dict]]:
+    """Strategy 1: Parse <table> with <tr>/<td> tags. Returns (tickers, records)."""
     # Find table containing ETF tickers
     tables = re.findall(r"<table[^>]*>(.*?)</table>", html, re.DOTALL | re.I)
     for table_html in tables:
         if "IBIT" not in table_html:
             continue
 
+        # ── Dynamic header extraction ──
+        tickers = _extract_tickers_from_header(table_html)
+
         rows = re.findall(r"<tr[^>]*>(.*?)</tr>", table_html, re.DOTALL | re.I)
         records = []
         for row_html in rows:
             cells = [
-                re.sub(r"<[^>]+>", "", c).strip()
+                _strip_html(c)
                 for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row_html, re.DOTALL | re.I)
             ]
-            if len(cells) < 13:
+            if len(cells) < len(tickers) + 1:  # date + tickers minimum
                 continue
             date = parse_date(cells[0])
             if not date:
                 continue
 
             flows = {}
-            for i, ticker in enumerate(ETF_TICKERS):
+            for i, ticker in enumerate(tickers):
                 flows[ticker] = parse_num(cells[i + 1]) if (i + 1) < len(cells) else 0.0
 
-            total_col = len(ETF_TICKERS) + 1
+            # Total is the column after all tickers
+            total_col = len(tickers) + 1
             total = parse_num(cells[total_col]) if total_col < len(cells) else round(sum(flows.values()), 1)
+
+            # Sanity check: if total is 0 but flows aren't, recalculate
+            flow_sum = round(sum(flows.values()), 1)
+            if total == 0.0 and flow_sum != 0.0:
+                total = flow_sum
 
             records.append({"date": date, "flows": flows, "total": total})
 
         if records:
-            return records
+            return tickers, records
 
-    return []
+    return ETF_TICKERS_FALLBACK, []
 
 
-def parse_pipe_table(html: str) -> list[dict]:
-    """Strategy 2: Parse markdown-style pipe-separated table."""
+def parse_pipe_table(html: str) -> tuple[list[str], list[dict]]:
+    """Strategy 2: Parse markdown-style pipe-separated table. Returns (tickers, records)."""
     records = []
+    tickers = None
+
     for line in html.split("\n"):
         line = line.strip()
         if "|" not in line:
@@ -145,10 +198,17 @@ def parse_pipe_table(html: str) -> list[dict]:
             continue
 
         cells = [c.strip() for c in line.split("|")]
-        # Remove empty first/last from leading/trailing pipes
         cells = [c for c in cells if c != ""]
 
-        if len(cells) < 13:
+        # Detect header row (contains ticker symbols)
+        if tickers is None:
+            detected = [c for c in cells if TICKER_RE.match(c) and c not in ("Date", "Total", "Totals")]
+            if len(detected) >= 5:
+                tickers = detected
+                print(f"[INFO] Pipe table tickers: {tickers}")
+                continue
+
+        if tickers is None or len(cells) < len(tickers) + 1:
             continue
 
         date = parse_date(cells[0])
@@ -156,15 +216,19 @@ def parse_pipe_table(html: str) -> list[dict]:
             continue
 
         flows = {}
-        for i, ticker in enumerate(ETF_TICKERS):
+        for i, ticker in enumerate(tickers):
             flows[ticker] = parse_num(cells[i + 1]) if (i + 1) < len(cells) else 0.0
 
-        total_col = len(ETF_TICKERS) + 1
+        total_col = len(tickers) + 1
         total = parse_num(cells[total_col]) if total_col < len(cells) else round(sum(flows.values()), 1)
+
+        flow_sum = round(sum(flows.values()), 1)
+        if total == 0.0 and flow_sum != 0.0:
+            total = flow_sum
 
         records.append({"date": date, "flows": flows, "total": total})
 
-    return records
+    return tickers or ETF_TICKERS_FALLBACK, records
 
 
 def parse_json_data(html: str) -> list[dict]:
@@ -189,26 +253,26 @@ def parse_json_data(html: str) -> list[dict]:
 
 
 # ─── Main extraction ─────────────────────────────────────────────────────────
-def extract_records(html: str) -> list[dict]:
-    """Try all parsing strategies and return the first that works."""
+def extract_records(html: str) -> tuple[list[str], list[dict]]:
+    """Try all parsing strategies and return (tickers, records)."""
 
     # Strategy 1: HTML <table>
-    records = parse_html_table(html)
+    tickers, records = parse_html_table(html)
     if records:
-        print(f"[OK] HTML table parser found {len(records)} records")
-        return records
+        print(f"[OK] HTML table parser found {len(records)} records ({len(tickers)} tickers)")
+        return tickers, records
 
     # Strategy 2: Pipe-separated (markdown) table
-    records = parse_pipe_table(html)
+    tickers, records = parse_pipe_table(html)
     if records:
-        print(f"[OK] Pipe table parser found {len(records)} records")
-        return records
+        print(f"[OK] Pipe table parser found {len(records)} records ({len(tickers)} tickers)")
+        return tickers, records
 
     # Strategy 3: Embedded JSON
     records = parse_json_data(html)
     if records:
         print(f"[OK] JSON parser found {len(records)} records")
-        return records
+        return ETF_TICKERS_FALLBACK, records
 
     # All strategies failed — dump debug info
     print("[ERROR] Could not parse ETF data from HTML")
@@ -225,7 +289,7 @@ def extract_records(html: str) -> list[dict]:
         f.write(html)
     print(f"[DEBUG] Saved raw HTML → {debug_path}")
 
-    return []
+    return ETF_TICKERS_FALLBACK, []
 
 
 # ─── Data persistence ────────────────────────────────────────────────────────
@@ -238,14 +302,14 @@ def load_existing() -> dict:
             "description": "Bitcoin Spot ETF Daily Net Flows (US$M)",
             "source": "bitbo.io/treasuries/etf-flows",
             "etf_info": ETF_INFO,
-            "tickers": ETF_TICKERS,
+            "tickers": ETF_TICKERS_FALLBACK,
             "last_updated": None,
         },
         "daily_flows": [],
     }
 
 
-def merge_and_save(existing: dict, new_records: list[dict]) -> None:
+def merge_and_save(existing: dict, new_records: list[dict], tickers: list[str]) -> None:
     date_idx = {r["date"]: i for i, r in enumerate(existing["daily_flows"])}
     added = updated = 0
 
@@ -257,8 +321,30 @@ def merge_and_save(existing: dict, new_records: list[dict]) -> None:
             existing["daily_flows"].append(rec)
             added += 1
 
+    # Backfill missing tickers in old entries (0.0 for ETFs that didn't exist yet)
+    for entry in existing["daily_flows"]:
+        for t in tickers:
+            if t not in entry["flows"]:
+                entry["flows"][t] = 0.0
+
     existing["daily_flows"].sort(key=lambda x: x["date"])
     existing["metadata"]["last_updated"] = datetime.now(timezone.utc).isoformat()
+    existing["metadata"]["tickers"] = tickers
+
+    # Update etf_info with any new tickers
+    if "etf_info" not in existing["metadata"]:
+        existing["metadata"]["etf_info"] = {}
+    for t in tickers:
+        if t not in existing["metadata"]["etf_info"] and t in ETF_INFO:
+            existing["metadata"]["etf_info"][t] = ETF_INFO[t]
+
+    # Update date_range and total_records
+    if existing["daily_flows"]:
+        existing["metadata"]["date_range"] = {
+            "start": existing["daily_flows"][0]["date"],
+            "end": existing["daily_flows"][-1]["date"],
+        }
+    existing["metadata"]["total_records"] = len(existing["daily_flows"])
 
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(FLOWS_FILE, "w", encoding="utf-8") as f:
@@ -386,7 +472,7 @@ def fetch_btc_prices():
 def main():
     try:
         html = fetch_html()
-        records = extract_records(html)
+        tickers, records = extract_records(html)
 
         if not records:
             print("[FATAL] No ETF flow records extracted")
@@ -395,9 +481,10 @@ def main():
         records.sort(key=lambda x: x["date"])
         print(f"[INFO] Date range: {records[0]['date']} → {records[-1]['date']}")
         print(f"[INFO] Latest: {records[-1]['date']}  total={records[-1]['total']}M")
+        print(f"[INFO] Tickers: {tickers}")
 
         existing = load_existing()
-        merge_and_save(existing, records)
+        merge_and_save(existing, records, tickers)
 
         # Also fetch BTC price (non-fatal if it fails)
         try:
