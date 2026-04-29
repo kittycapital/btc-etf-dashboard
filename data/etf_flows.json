@@ -50,6 +50,10 @@
       "DEFI": {
         "name": "Hashdex Bitcoin ETF",
         "issuer": "Hashdex"
+      },
+      "MSBT": {
+        "name": "Morgan Stanley Bitcoin Trust",
+        "issuer": "Morgan Stanley"
       }
     },
     "tickers": [
@@ -63,14 +67,15 @@
       "BTCO",
       "BRRR",
       "EZBC",
+      "MSBT",
       "BTCW",
       "DEFI"
     ],
     "last_updated": "2026-04-29T08:21:33.717697+00:00",
-    "total_records": 523,
+    "total_records": 574,
     "date_range": {
       "start": "2024-01-11",
-      "end": "2026-02-05"
+      "end": "2026-04-27"
     }
   },
   "daily_flows": [
@@ -88,7 +93,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 628.1
     },
@@ -106,7 +112,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 191.0
     },
@@ -124,7 +131,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -80.6
     },
@@ -142,7 +150,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 517.5
     },
@@ -160,7 +169,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -134.8
     },
@@ -178,7 +188,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 42.2
     },
@@ -196,7 +207,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -77.3
     },
@@ -214,7 +226,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -105.8
     },
@@ -232,7 +245,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -159.0
     },
@@ -250,7 +264,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -79.6
     },
@@ -268,7 +283,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 14.8
     },
@@ -286,7 +302,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 255.4
     },
@@ -304,7 +321,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 247.3
     },
@@ -322,7 +340,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 197.7
     },
@@ -340,7 +359,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 38.5
     },
@@ -358,7 +378,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 80.1
     },
@@ -376,7 +397,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 68.1
     },
@@ -394,7 +416,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 33.7
     },
@@ -412,7 +435,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 146.1
     },
@@ -430,7 +454,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 405.0
     },
@@ -448,7 +473,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 541.5
     },
@@ -466,7 +492,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 493.3
     },
@@ -484,7 +511,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 631.2
     },
@@ -502,7 +530,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 339.8
     },
@@ -520,7 +549,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 477.4
     },
@@ -538,7 +568,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 331.7
     },
@@ -556,7 +587,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 135.6
     },
@@ -574,7 +606,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -35.7
     },
@@ -592,7 +625,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 251.4
     },
@@ -610,7 +644,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 232.3
     },
@@ -628,7 +663,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 519.8
     },
@@ -646,7 +682,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 576.8
     },
@@ -664,7 +701,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 673.4
     },
@@ -682,7 +720,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 92.4
     },
@@ -700,7 +739,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -139.5
     },
@@ -718,7 +758,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 562.7
     },
@@ -736,7 +777,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 648.4
     },
@@ -754,7 +796,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 332.1
     },
@@ -772,7 +815,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 472.6
     },
@@ -790,7 +834,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 223.0
     },
@@ -808,7 +853,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 505.5
     },
@@ -826,7 +872,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1045.1
     },
@@ -844,7 +891,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 683.7
     },
@@ -862,7 +910,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 132.5
     },
@@ -880,7 +929,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 198.9
     },
@@ -898,7 +948,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -154.4
     },
@@ -916,7 +967,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -326.2
     },
@@ -934,7 +986,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -261.6
     },
@@ -952,7 +1005,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -93.9
     },
@@ -970,7 +1024,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -51.6
     },
@@ -988,7 +1043,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 15.7
     },
@@ -1006,7 +1062,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 418.0
     },
@@ -1024,7 +1081,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 243.4
     },
@@ -1042,7 +1100,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 183.0
     },
@@ -1060,7 +1119,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -85.8
     },
@@ -1078,7 +1138,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 39.5
     },
@@ -1096,7 +1157,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 113.2
     },
@@ -1114,7 +1176,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 213.5
     },
@@ -1132,7 +1195,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 203.0
     },
@@ -1150,7 +1214,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -223.8
     },
@@ -1168,7 +1233,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -19.5
     },
@@ -1186,7 +1252,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 123.7
     },
@@ -1204,7 +1271,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 91.3
     },
@@ -1222,7 +1290,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -55.1
     },
@@ -1240,7 +1309,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -36.7
     },
@@ -1258,7 +1328,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -58.0
     },
@@ -1276,7 +1347,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -165.1
     },
@@ -1294,7 +1366,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -4.4
     },
@@ -1312,7 +1385,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 59.6
     },
@@ -1330,7 +1404,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 62.1
     },
@@ -1348,7 +1423,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 31.6
     },
@@ -1366,7 +1442,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -120.6
     },
@@ -1384,7 +1461,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -217.6
     },
@@ -1402,7 +1480,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -83.6
     },
@@ -1420,7 +1499,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -51.5
     },
@@ -1438,7 +1518,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -161.6
     },
@@ -1456,7 +1537,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -563.8
     },
@@ -1474,7 +1556,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -34.4
     },
@@ -1492,7 +1575,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 378.2
     },
@@ -1510,7 +1594,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 217.1
     },
@@ -1528,7 +1613,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -15.6
     },
@@ -1546,7 +1632,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 11.5
     },
@@ -1564,7 +1651,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -11.3
     },
@@ -1582,7 +1670,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -84.7
     },
@@ -1600,7 +1689,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 66.0
     },
@@ -1618,7 +1708,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 100.5
     },
@@ -1636,7 +1727,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 303.0
     },
@@ -1654,7 +1746,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 257.3
     },
@@ -1672,7 +1765,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 221.5
     },
@@ -1690,7 +1784,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 241.1
     },
@@ -1708,7 +1803,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 305.7
     },
@@ -1726,7 +1822,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 153.9
     },
@@ -1744,7 +1841,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 107.9
     },
@@ -1762,7 +1860,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 251.9
     },
@@ -1780,7 +1879,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 45.1
     },
@@ -1798,7 +1898,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 28.3
     },
@@ -1816,7 +1917,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 48.7
     },
@@ -1834,7 +1936,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 48.7
     },
@@ -1852,7 +1955,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 105.1
     },
@@ -1870,7 +1974,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 886.8
     },
@@ -1888,7 +1993,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 488.2
     },
@@ -1906,7 +2012,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 217.8
     },
@@ -1924,7 +2031,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 131.0
     },
@@ -1942,7 +2050,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -64.9
     },
@@ -1960,7 +2069,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -200.3
     },
@@ -1978,7 +2088,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 100.9
     },
@@ -1996,7 +2107,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -226.2
     },
@@ -2014,7 +2126,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -190.1
     },
@@ -2032,7 +2145,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -145.8
     },
@@ -2050,7 +2164,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -152.4
     },
@@ -2068,7 +2183,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -139.9
     },
@@ -2086,7 +2202,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -106.0
     },
@@ -2104,7 +2221,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -174.4
     },
@@ -2122,7 +2240,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 31.0
     },
@@ -2140,7 +2259,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 21.5
     },
@@ -2158,7 +2278,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 11.8
     },
@@ -2176,7 +2297,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 73.0
     },
@@ -2194,7 +2316,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 129.5
     },
@@ -2212,7 +2335,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -13.6
     },
@@ -2230,7 +2354,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -20.4
     },
@@ -2248,7 +2373,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 143.1
     },
@@ -2266,7 +2392,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 294.9
     },
@@ -2284,7 +2411,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 216.3
     },
@@ -2302,7 +2430,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 147.4
     },
@@ -2320,7 +2449,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 78.9
     },
@@ -2338,7 +2468,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 310.2
     },
@@ -2356,7 +2487,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 301.0
     },
@@ -2374,7 +2506,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 422.7
     },
@@ -2392,7 +2525,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 53.3
     },
@@ -2410,7 +2544,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 37.1
     },
@@ -2428,7 +2563,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 427.2
     },
@@ -2446,7 +2582,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 485.9
     },
@@ -2464,7 +2601,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -78.0
     },
@@ -2482,7 +2620,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 44.5
     },
@@ -2500,7 +2639,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 31.2
     },
@@ -2518,7 +2658,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 51.7
     },
@@ -2536,7 +2677,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 124.1
     },
@@ -2554,7 +2696,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -18.3
     },
@@ -2572,7 +2715,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 0.3
     },
@@ -2590,7 +2734,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 50.6
     },
@@ -2608,7 +2753,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -237.5
     },
@@ -2626,7 +2772,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -168.4
     },
@@ -2644,7 +2791,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -148.6
     },
@@ -2662,7 +2810,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 45.1
     },
@@ -2680,7 +2829,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 192.6
     },
@@ -2698,7 +2848,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -89.7
     },
@@ -2716,7 +2867,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 27.9
     },
@@ -2734,7 +2886,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 38.9
     },
@@ -2752,7 +2905,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -81.4
     },
@@ -2770,7 +2924,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 11.1
     },
@@ -2788,7 +2943,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 36.0
     },
@@ -2806,7 +2962,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 62.0
     },
@@ -2824,7 +2981,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 88.1
     },
@@ -2842,7 +3000,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 39.4
     },
@@ -2860,7 +3019,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 64.9
     },
@@ -2878,7 +3038,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 252.0
     },
@@ -2896,7 +3057,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 202.5
     },
@@ -2914,7 +3076,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -127.1
     },
@@ -2932,7 +3095,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -105.2
     },
@@ -2950,7 +3114,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -71.7
     },
@@ -2968,7 +3133,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -175.7
     },
@@ -2986,7 +3152,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -287.8
     },
@@ -3004,7 +3171,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -37.3
     },
@@ -3022,7 +3190,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -211.2
     },
@@ -3040,7 +3209,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -170.0
     },
@@ -3058,7 +3228,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 28.7
     },
@@ -3076,7 +3247,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 117.0
     },
@@ -3094,7 +3266,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -44.0
     },
@@ -3112,7 +3285,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 39.0
     },
@@ -3130,7 +3304,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 263.1
     },
@@ -3148,7 +3323,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 12.9
     },
@@ -3166,7 +3342,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 186.8
     },
@@ -3184,7 +3361,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -52.8
     },
@@ -3202,7 +3380,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 158.2
     },
@@ -3220,7 +3399,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 92.0
     },
@@ -3238,7 +3418,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 4.6
     },
@@ -3256,7 +3437,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 135.9
     },
@@ -3274,7 +3456,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 105.8
     },
@@ -3292,7 +3475,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 365.6
     },
@@ -3310,7 +3494,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 494.3
     },
@@ -3328,7 +3513,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 61.3
     },
@@ -3346,7 +3532,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -242.5
     },
@@ -3364,7 +3551,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -91.8
     },
@@ -3382,7 +3570,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -54.1
     },
@@ -3400,7 +3589,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 25.6
     },
@@ -3418,7 +3608,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 235.2
     },
@@ -3436,7 +3627,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -18.7
     },
@@ -3454,7 +3646,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -40.6
     },
@@ -3472,7 +3665,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -120.8
     },
@@ -3490,7 +3684,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 253.5
     },
@@ -3508,7 +3703,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 555.9
     },
@@ -3526,7 +3722,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 371.0
     },
@@ -3544,7 +3741,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 458.5
     },
@@ -3562,7 +3760,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 470.5
     },
@@ -3580,7 +3779,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 273.7
     },
@@ -3598,7 +3798,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 294.3
     },
@@ -3616,7 +3817,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -79.1
     },
@@ -3634,7 +3836,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 192.3
     },
@@ -3652,7 +3855,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 188.1
     },
@@ -3670,7 +3874,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 402.1
     },
@@ -3688,7 +3893,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 479.4
     },
@@ -3706,7 +3912,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 870.0
     },
@@ -3724,7 +3931,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 893.2
     },
@@ -3742,7 +3950,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 32.1
     },
@@ -3760,7 +3969,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -54.9
     },
@@ -3778,7 +3988,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -541.1
     },
@@ -3796,7 +4007,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -116.9
     },
@@ -3814,7 +4026,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 621.9
     },
@@ -3832,7 +4045,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1376.0
     },
@@ -3850,7 +4064,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 293.5
     },
@@ -3868,7 +4083,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1114.0
     },
@@ -3886,7 +4102,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 817.5
     },
@@ -3904,7 +4121,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 510.1
     },
@@ -3922,7 +4140,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -400.7
     },
@@ -3940,7 +4159,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -370.1
     },
@@ -3958,7 +4178,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 254.8
     },
@@ -3976,7 +4197,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 837.4
     },
@@ -3994,7 +4216,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 796.1
     },
@@ -4012,7 +4235,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1005.0
     },
@@ -4030,7 +4254,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 490.3
     },
@@ -4048,7 +4273,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -438.4
     },
@@ -4066,7 +4292,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -122.8
     },
@@ -4084,7 +4311,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 103.1
     },
@@ -4102,7 +4330,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 320.0
     },
@@ -4120,7 +4349,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 353.7
     },
@@ -4138,7 +4368,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 676.0
     },
@@ -4156,7 +4387,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 556.8
     },
@@ -4174,7 +4406,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 766.7
     },
@@ -4192,7 +4425,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 376.6
     },
@@ -4210,7 +4444,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 479.1
     },
@@ -4228,7 +4463,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 439.6
     },
@@ -4246,7 +4482,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 223.0
     },
@@ -4264,7 +4501,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 597.6
     },
@@ -4282,7 +4520,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 429.0
     },
@@ -4300,7 +4539,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 636.8
     },
@@ -4318,7 +4558,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 493.9
     },
@@ -4336,7 +4577,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 275.4
     },
@@ -4354,7 +4596,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -680.0
     },
@@ -4372,7 +4615,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -276.9
     },
@@ -4390,7 +4634,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -226.6
     },
@@ -4408,7 +4653,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -338.4
     },
@@ -4426,7 +4672,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 475.2
     },
@@ -4444,7 +4691,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -297.8
     },
@@ -4462,7 +4710,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -426.1
     },
@@ -4480,7 +4729,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 5.3
     },
@@ -4498,7 +4748,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -242.3
     },
@@ -4516,7 +4767,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 908.1
     },
@@ -4534,7 +4786,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 987.1
     },
@@ -4552,7 +4805,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 52.4
     },
@@ -4570,7 +4824,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -582.9
     },
@@ -4588,7 +4843,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -149.4
     },
@@ -4606,7 +4862,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -284.2
     },
@@ -4624,7 +4881,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -209.8
     },
@@ -4642,7 +4900,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 755.0
     },
@@ -4660,7 +4919,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 626.2
     },
@@ -4678,7 +4938,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1076.4
     },
@@ -4696,7 +4957,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 802.5
     },
@@ -4714,7 +4976,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 248.7
     },
@@ -4732,7 +4995,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 188.6
     },
@@ -4750,7 +5014,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 517.7
     },
@@ -4768,7 +5033,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -457.5
     },
@@ -4786,7 +5052,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 18.4
     },
@@ -4804,7 +5071,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 92.1
     },
@@ -4822,7 +5090,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 588.2
     },
@@ -4840,7 +5109,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 318.6
     },
@@ -4858,7 +5128,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -234.5
     },
@@ -4876,7 +5147,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 340.8
     },
@@ -4894,7 +5166,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 66.4
     },
@@ -4912,7 +5185,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -140.3
     },
@@ -4930,7 +5204,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 171.2
     },
@@ -4948,7 +5223,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -186.3
     },
@@ -4966,7 +5242,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -56.8
     },
@@ -4984,7 +5261,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -251.0
     },
@@ -5002,7 +5280,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -157.8
     },
@@ -5020,7 +5299,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 66.2
     },
@@ -5038,7 +5318,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -60.6
     },
@@ -5056,7 +5337,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -71.1
     },
@@ -5074,7 +5356,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -364.9
     },
@@ -5092,7 +5375,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -62.8
     },
@@ -5110,7 +5394,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -539.0
     },
@@ -5128,7 +5413,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -1138.8
     },
@@ -5146,7 +5432,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -754.5
     },
@@ -5164,7 +5451,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -275.8
     },
@@ -5182,7 +5470,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 94.3
     },
@@ -5200,7 +5489,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -74.2
     },
@@ -5218,7 +5508,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -143.4
     },
@@ -5236,7 +5527,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -38.3
     },
@@ -5254,7 +5546,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -134.3
     },
@@ -5272,7 +5565,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -409.2
     },
@@ -5290,7 +5584,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -369.4
     },
@@ -5308,7 +5603,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -371.0
     },
@@ -5326,7 +5622,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 13.3
     },
@@ -5344,7 +5641,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -143.3
     },
@@ -5362,7 +5660,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 32.1
     },
@@ -5380,7 +5679,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 274.6
     },
@@ -5398,7 +5698,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 209.1
     },
@@ -5416,7 +5717,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 11.8
     },
@@ -5434,7 +5736,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 165.8
     },
@@ -5452,7 +5755,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 83.1
     },
@@ -5470,7 +5774,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 84.2
     },
@@ -5488,7 +5793,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 26.8
     },
@@ -5506,7 +5812,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 89.6
     },
@@ -5524,7 +5831,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 89.1
     },
@@ -5542,7 +5850,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -93.2
     },
@@ -5560,7 +5869,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -71.1
     },
@@ -5578,7 +5888,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -157.6
     },
@@ -5596,7 +5907,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 220.8
     },
@@ -5614,7 +5926,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -99.9
     },
@@ -5632,7 +5945,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -64.9
     },
@@ -5650,7 +5964,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -109.2
     },
@@ -5668,7 +5983,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -326.3
     },
@@ -5686,7 +6002,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -127.1
     },
@@ -5704,7 +6021,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -149.7
     },
@@ -5722,7 +6040,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -1.0
     },
@@ -5740,7 +6059,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1.5
     },
@@ -5758,7 +6078,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 76.4
     },
@@ -5776,7 +6097,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -169.9
     },
@@ -5794,7 +6116,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 107.8
     },
@@ -5812,7 +6135,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 381.4
     },
@@ -5830,7 +6154,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 936.4
     },
@@ -5848,7 +6173,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 916.9
     },
@@ -5866,7 +6192,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 442.0
     },
@@ -5884,7 +6211,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 380.0
     },
@@ -5902,7 +6230,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 591.3
     },
@@ -5920,7 +6249,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 172.8
     },
@@ -5938,7 +6268,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -56.2
     },
@@ -5956,7 +6287,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 422.4
     },
@@ -5974,7 +6306,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 674.9
     },
@@ -5992,7 +6325,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 425.5
     },
@@ -6010,7 +6344,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -85.6
     },
@@ -6028,7 +6363,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 142.3
     },
@@ -6046,7 +6382,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 117.5
     },
@@ -6064,7 +6401,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 334.6
     },
@@ -6082,7 +6420,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 5.1
     },
@@ -6100,7 +6439,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -96.1
     },
@@ -6118,7 +6458,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 319.6
     },
@@ -6136,7 +6477,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 115.0
     },
@@ -6154,7 +6496,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 260.3
     },
@@ -6172,7 +6515,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 667.4
     },
@@ -6190,7 +6534,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 329.0
     },
@@ -6208,7 +6553,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 609.0
     },
@@ -6226,7 +6572,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 934.7
     },
@@ -6244,7 +6591,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 211.7
     },
@@ -6262,7 +6610,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 384.9
     },
@@ -6280,7 +6629,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 432.6
     },
@@ -6298,7 +6648,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -358.7
     },
@@ -6316,7 +6667,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -616.2
     },
@@ -6334,7 +6686,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -267.5
     },
@@ -6352,7 +6705,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 378.0
     },
@@ -6370,7 +6724,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 86.9
     },
@@ -6388,7 +6743,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -278.4
     },
@@ -6406,7 +6762,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -47.8
     },
@@ -6424,7 +6781,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 386.3
     },
@@ -6442,7 +6800,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 431.1
     },
@@ -6460,7 +6819,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 164.6
     },
@@ -6478,7 +6838,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 86.3
     },
@@ -6496,7 +6857,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 322.6
     },
@@ -6514,7 +6876,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 412.2
     },
@@ -6532,7 +6895,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 216.5
     },
@@ -6550,7 +6914,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 389.6
     },
@@ -6568,7 +6933,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 6.4
     },
@@ -6586,7 +6952,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 350.4
     },
@@ -6604,7 +6971,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 588.5
     },
@@ -6622,7 +6990,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 547.7
     },
@@ -6640,7 +7009,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 228.2
     },
@@ -6658,7 +7028,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 501.3
     },
@@ -6676,7 +7047,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 102.1
     },
@@ -6694,7 +7066,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -342.3
     },
@@ -6712,7 +7085,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 407.8
     },
@@ -6730,7 +7104,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 601.9
     },
@@ -6748,7 +7123,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 216.6
     },
@@ -6766,7 +7142,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 80.1
     },
@@ -6784,7 +7161,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 218.0
     },
@@ -6802,7 +7180,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1178.8
     },
@@ -6820,7 +7199,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1029.7
     },
@@ -6838,7 +7218,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 297.4
     },
@@ -6856,7 +7237,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 403.0
     },
@@ -6874,7 +7256,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 799.4
     },
@@ -6892,7 +7275,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 522.6
     },
@@ -6910,7 +7294,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 363.5
     },
@@ -6928,7 +7313,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -131.3
     },
@@ -6946,7 +7332,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -67.9
     },
@@ -6964,7 +7351,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -86.0
     },
@@ -6982,7 +7370,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 226.6
     },
@@ -7000,7 +7389,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 130.7
     },
@@ -7018,7 +7408,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 157.0
     },
@@ -7036,7 +7427,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 80.0
     },
@@ -7054,7 +7446,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 47.0
     },
@@ -7072,7 +7465,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -114.8
     },
@@ -7090,7 +7484,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -812.2
     },
@@ -7108,7 +7503,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -333.2
     },
@@ -7126,7 +7522,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -196.2
     },
@@ -7144,7 +7541,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 91.6
     },
@@ -7162,7 +7560,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 280.7
     },
@@ -7180,7 +7579,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 403.9
     },
@@ -7198,7 +7598,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 178.2
     },
@@ -7216,7 +7617,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 65.9
     },
@@ -7234,7 +7636,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 86.9
     },
@@ -7252,7 +7655,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 230.9
     },
@@ -7270,7 +7674,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -14.1
     },
@@ -7288,7 +7693,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -121.8
     },
@@ -7306,7 +7712,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -523.3
     },
@@ -7324,7 +7731,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -311.6
     },
@@ -7342,7 +7750,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -194.3
     },
@@ -7360,7 +7769,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -23.1
     },
@@ -7378,7 +7788,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 219.0
     },
@@ -7396,7 +7807,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 88.2
     },
@@ -7414,7 +7826,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 81.2
     },
@@ -7432,7 +7845,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 178.9
     },
@@ -7450,7 +7864,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -126.6
     },
@@ -7468,7 +7883,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 332.8
     },
@@ -7486,7 +7902,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 301.3
     },
@@ -7504,7 +7921,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -227.5
     },
@@ -7522,7 +7940,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -160.2
     },
@@ -7540,7 +7959,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 368.3
     },
@@ -7558,7 +7978,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 23.1
     },
@@ -7576,7 +7997,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 757.1
     },
@@ -7594,7 +8016,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 552.8
     },
@@ -7612,7 +8035,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 642.4
     },
@@ -7630,7 +8054,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 260.0
     },
@@ -7648,7 +8073,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 292.3
     },
@@ -7666,7 +8092,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -51.3
     },
@@ -7684,7 +8111,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 163.0
     },
@@ -7702,7 +8130,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 222.6
     },
@@ -7720,7 +8149,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -363.2
     },
@@ -7738,7 +8168,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -103.6
     },
@@ -7756,7 +8187,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 241.0
     },
@@ -7774,7 +8206,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -258.5
     },
@@ -7792,7 +8225,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -418.3
     },
@@ -7810,7 +8244,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 522.0
     },
@@ -7828,7 +8263,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 430.0
     },
@@ -7846,7 +8282,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 675.8
     },
@@ -7864,7 +8301,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 627.2
     },
@@ -7882,7 +8320,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 985.1
     },
@@ -7900,7 +8339,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 1205.2
     },
@@ -7918,7 +8358,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 875.6
     },
@@ -7936,7 +8377,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 440.7
     },
@@ -7954,7 +8396,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 197.7
     },
@@ -7972,7 +8415,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -4.5
     },
@@ -7990,7 +8434,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -326.5
     },
@@ -8008,7 +8453,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 102.6
     },
@@ -8026,7 +8472,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -104.1
     },
@@ -8044,7 +8491,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -536.4
     },
@@ -8062,7 +8510,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -366.6
     },
@@ -8080,7 +8529,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -40.5
     },
@@ -8098,7 +8548,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 477.2
     },
@@ -8116,7 +8567,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -101.3
     },
@@ -8134,7 +8586,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 20.3
     },
@@ -8152,7 +8605,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 90.6
     },
@@ -8170,7 +8624,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 149.3
     },
@@ -8188,7 +8643,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": 202.5
     },
@@ -8206,7 +8662,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -470.7
     },
@@ -8224,7 +8681,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -488.4
     },
@@ -8242,7 +8700,8 @@
         "BRRR": 0,
         "EZBC": 0,
         "BTCW": 0,
-        "DEFI": 0
+        "DEFI": 0,
+        "MSBT": 0.0
       },
       "total": -191.6
     },
@@ -8260,7 +8719,8 @@
         "BRRR": -2.2,
         "EZBC": 1.2,
         "BTCW": 2.3,
-        "DEFI": 11.6
+        "DEFI": 11.6,
+        "MSBT": 0.0
       },
       "total": 14.3
     },
@@ -8278,7 +8738,8 @@
         "BRRR": 5.3,
         "EZBC": -14.5,
         "BTCW": -3.1,
-        "DEFI": 4.9
+        "DEFI": 4.9,
+        "MSBT": 0.0
       },
       "total": 279.7
     },
@@ -8296,7 +8757,8 @@
         "BRRR": -26.2,
         "EZBC": -6.1,
         "BTCW": -9.2,
-        "DEFI": 8.8
+        "DEFI": 8.8,
+        "MSBT": 0.0
       },
       "total": 228.6
     },
@@ -8314,7 +8776,8 @@
         "BRRR": 6.4,
         "EZBC": 3.5,
         "BTCW": 6.5,
-        "DEFI": 4.8
+        "DEFI": 4.8,
+        "MSBT": 0.0
       },
       "total": 172.8
     },
@@ -8332,7 +8795,8 @@
         "BRRR": 7.7,
         "EZBC": 14.2,
         "BTCW": 5.1,
-        "DEFI": 8.4
+        "DEFI": 8.4,
+        "MSBT": 0.0
       },
       "total": 31.9
     },
@@ -8350,7 +8814,8 @@
         "BRRR": -3.2,
         "EZBC": 7.2,
         "BTCW": 5.8,
-        "DEFI": 23.2
+        "DEFI": 23.2,
+        "MSBT": 0.0
       },
       "total": 320.5
     },
@@ -8368,7 +8833,8 @@
         "BRRR": -7.2,
         "EZBC": -2.9,
         "BTCW": -18.4,
-        "DEFI": -10.8
+        "DEFI": -10.8,
+        "MSBT": 0.0
       },
       "total": 121.8
     },
@@ -8386,7 +8852,8 @@
         "BRRR": 2.7,
         "EZBC": -10.1,
         "BTCW": 9.0,
-        "DEFI": 3.8
+        "DEFI": 3.8,
+        "MSBT": 0.0
       },
       "total": 153.5
     },
@@ -8404,7 +8871,8 @@
         "BRRR": -1.5,
         "EZBC": 14.2,
         "BTCW": 8.2,
-        "DEFI": 6.9
+        "DEFI": 6.9,
+        "MSBT": 0.0
       },
       "total": 519.8
     },
@@ -8422,7 +8890,8 @@
         "BRRR": -4.3,
         "EZBC": 13.6,
         "BTCW": -4.5,
-        "DEFI": -3.6
+        "DEFI": -3.6,
+        "MSBT": 0.0
       },
       "total": -279.9
     },
@@ -8440,7 +8909,8 @@
         "BRRR": 13.7,
         "EZBC": -13.0,
         "BTCW": -1.2,
-        "DEFI": 3.2
+        "DEFI": 3.2,
+        "MSBT": 0.0
       },
       "total": 74.3
     },
@@ -8458,7 +8928,8 @@
         "BRRR": -12.5,
         "EZBC": 2.0,
         "BTCW": -1.9,
-        "DEFI": 20.2
+        "DEFI": 20.2,
+        "MSBT": 0.0
       },
       "total": 461.4
     },
@@ -8476,7 +8947,8 @@
         "BRRR": -11.2,
         "EZBC": 4.6,
         "BTCW": 5.2,
-        "DEFI": 4.9
+        "DEFI": 4.9,
+        "MSBT": 0.0
       },
       "total": 16.6
     },
@@ -8494,7 +8966,8 @@
         "BRRR": 2.4,
         "EZBC": -3.0,
         "BTCW": 1.1,
-        "DEFI": 14.8
+        "DEFI": 14.8,
+        "MSBT": 0.0
       },
       "total": 231.3
     },
@@ -8512,7 +8985,8 @@
         "BRRR": 8.7,
         "EZBC": 6.1,
         "BTCW": -9.9,
-        "DEFI": 5.2
+        "DEFI": 5.2,
+        "MSBT": 0.0
       },
       "total": 201.9
     },
@@ -8530,7 +9004,8 @@
         "BRRR": 4.0,
         "EZBC": 10.2,
         "BTCW": -7.1,
-        "DEFI": 3.8
+        "DEFI": 3.8,
+        "MSBT": 0.0
       },
       "total": -37.3
     },
@@ -8548,7 +9023,8 @@
         "BRRR": 22.4,
         "EZBC": -4.4,
         "BTCW": 3.5,
-        "DEFI": -4.9
+        "DEFI": -4.9,
+        "MSBT": 0.0
       },
       "total": 284.8
     },
@@ -8566,7 +9042,8 @@
         "BRRR": -10.1,
         "EZBC": 2.9,
         "BTCW": 30,
-        "DEFI": -8.7
+        "DEFI": -8.7,
+        "MSBT": 0.0
       },
       "total": 24.7
     },
@@ -8584,7 +9061,8 @@
         "BRRR": 12.4,
         "EZBC": 4.7,
         "BTCW": -19.6,
-        "DEFI": -0.4
+        "DEFI": -0.4,
+        "MSBT": 0.0
       },
       "total": -182.4
     },
@@ -8602,7 +9080,8 @@
         "BRRR": 5.8,
         "EZBC": -4.8,
         "BTCW": -11.5,
-        "DEFI": -7.8
+        "DEFI": -7.8,
+        "MSBT": 0.0
       },
       "total": 542.4
     },
@@ -8620,7 +9099,8 @@
         "BRRR": -4.0,
         "EZBC": -7.4,
         "BTCW": -6.7,
-        "DEFI": 15.3
+        "DEFI": 15.3,
+        "MSBT": 0.0
       },
       "total": -25.7
     },
@@ -8638,7 +9118,8 @@
         "BRRR": 15.1,
         "EZBC": -14.0,
         "BTCW": -4.0,
-        "DEFI": 4.3
+        "DEFI": 4.3,
+        "MSBT": 0.0
       },
       "total": 549.6
     },
@@ -8656,7 +9137,8 @@
         "BRRR": -12.2,
         "EZBC": -20.2,
         "BTCW": 3.3,
-        "DEFI": 3.7
+        "DEFI": 3.7,
+        "MSBT": 0.0
       },
       "total": 2.8
     },
@@ -8674,7 +9156,8 @@
         "BRRR": -21.7,
         "EZBC": 1.6,
         "BTCW": 2.5,
-        "DEFI": -3.6
+        "DEFI": -3.6,
+        "MSBT": 0.0
       },
       "total": 377.7
     },
@@ -8692,7 +9175,8 @@
         "BRRR": -1.3,
         "EZBC": 0.6,
         "BTCW": 18.4,
-        "DEFI": 9.4
+        "DEFI": 9.4,
+        "MSBT": 0.0
       },
       "total": 98.9
     },
@@ -8710,7 +9194,8 @@
         "BRRR": 5.7,
         "EZBC": -19.0,
         "BTCW": 5.5,
-        "DEFI": -4.1
+        "DEFI": -4.1,
+        "MSBT": 0.0
       },
       "total": 345.7
     },
@@ -8728,7 +9213,8 @@
         "BRRR": 18.0,
         "EZBC": -20.6,
         "BTCW": 7.7,
-        "DEFI": -19.2
+        "DEFI": -19.2,
+        "MSBT": 0.0
       },
       "total": 206.0
     },
@@ -8746,7 +9232,8 @@
         "BRRR": 1.1,
         "EZBC": -4.7,
         "BTCW": 13.7,
-        "DEFI": -14.2
+        "DEFI": -14.2,
+        "MSBT": 0.0
       },
       "total": 403.7
     },
@@ -8764,7 +9251,8 @@
         "BRRR": -9.4,
         "EZBC": 17.6,
         "BTCW": 7.9,
-        "DEFI": -1.7
+        "DEFI": -1.7,
+        "MSBT": 0.0
       },
       "total": 362.3
     },
@@ -8782,7 +9270,8 @@
         "BRRR": 7.6,
         "EZBC": -1.8,
         "BTCW": 8.3,
-        "DEFI": 6.7
+        "DEFI": 6.7,
+        "MSBT": 0.0
       },
       "total": 48.6
     },
@@ -8800,7 +9289,8 @@
         "BRRR": 22.8,
         "EZBC": 0.2,
         "BTCW": -15.5,
-        "DEFI": -3.8
+        "DEFI": -3.8,
+        "MSBT": 0.0
       },
       "total": 15.4
     },
@@ -8818,7 +9308,8 @@
         "BRRR": -1.6,
         "EZBC": -8.3,
         "BTCW": -3.7,
-        "DEFI": 9.5
+        "DEFI": 9.5,
+        "MSBT": 0.0
       },
       "total": -62.7
     },
@@ -8836,7 +9327,8 @@
         "BRRR": -4.0,
         "EZBC": 12.0,
         "BTCW": 8.2,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 167.0
     },
@@ -8854,7 +9346,8 @@
         "BRRR": 1.7,
         "EZBC": -5.8,
         "BTCW": 10.4,
-        "DEFI": 6.1
+        "DEFI": 6.1,
+        "MSBT": 0.0
       },
       "total": -86.3
     },
@@ -8872,7 +9365,8 @@
         "BRRR": 0.4,
         "EZBC": 11.3,
         "BTCW": 2.3,
-        "DEFI": -3.1
+        "DEFI": -3.1,
+        "MSBT": 0.0
       },
       "total": -47.4
     },
@@ -8890,7 +9384,8 @@
         "BRRR": 0.1,
         "EZBC": -17.1,
         "BTCW": 8.2,
-        "DEFI": 6.5
+        "DEFI": 6.5,
+        "MSBT": 0.0
       },
       "total": -127.2
     },
@@ -8908,7 +9403,8 @@
         "BRRR": -14.7,
         "EZBC": -25.8,
         "BTCW": -20.2,
-        "DEFI": -13.8
+        "DEFI": -13.8,
+        "MSBT": 0.0
       },
       "total": 472.3
     },
@@ -8926,7 +9422,8 @@
         "BRRR": -7.6,
         "EZBC": 1.2,
         "BTCW": 0.2,
-        "DEFI": 14.2
+        "DEFI": 14.2,
+        "MSBT": 0.0
       },
       "total": 105.7
     },
@@ -8944,7 +9441,8 @@
         "BRRR": -5.3,
         "EZBC": -1.4,
         "BTCW": 1.8,
-        "DEFI": 15.3
+        "DEFI": 15.3,
+        "MSBT": 0.0
       },
       "total": -40.2
     },
@@ -8962,7 +9460,8 @@
         "BRRR": -13.3,
         "EZBC": -7.8,
         "BTCW": 10.6,
-        "DEFI": -13.3
+        "DEFI": -13.3,
+        "MSBT": 0.0
       },
       "total": -108.5
     },
@@ -8980,7 +9479,8 @@
         "BRRR": -13.0,
         "EZBC": -3.9,
         "BTCW": 1.3,
-        "DEFI": 6.9
+        "DEFI": 6.9,
+        "MSBT": 0.0
       },
       "total": -65.0
     },
@@ -8998,7 +9498,8 @@
         "BRRR": -1.7,
         "EZBC": -1.6,
         "BTCW": -10.1,
-        "DEFI": 8.0
+        "DEFI": 8.0,
+        "MSBT": 0.0
       },
       "total": -39.8
     },
@@ -9016,7 +9517,8 @@
         "BRRR": 0.7,
         "EZBC": -9.7,
         "BTCW": 0.2,
-        "DEFI": -18.9
+        "DEFI": -18.9,
+        "MSBT": 0.0
       },
       "total": 418.6
     },
@@ -9034,7 +9536,8 @@
         "BRRR": -9.7,
         "EZBC": -13.7,
         "BTCW": 6.3,
-        "DEFI": -2.1
+        "DEFI": -2.1,
+        "MSBT": 0.0
       },
       "total": 124.8
     },
@@ -9052,7 +9555,8 @@
         "BRRR": 6.8,
         "EZBC": 11.9,
         "BTCW": -0.1,
-        "DEFI": -4.9
+        "DEFI": -4.9,
+        "MSBT": 0.0
       },
       "total": 169.2
     },
@@ -9070,7 +9574,8 @@
         "BRRR": -0.9,
         "EZBC": -3.9,
         "BTCW": -5.1,
-        "DEFI": -13.1
+        "DEFI": -13.1,
+        "MSBT": 0.0
       },
       "total": -4.4
     },
@@ -9088,7 +9593,8 @@
         "BRRR": -8.7,
         "EZBC": 4.2,
         "BTCW": -9.1,
-        "DEFI": -0.3
+        "DEFI": -0.3,
+        "MSBT": 0.0
       },
       "total": 533.5
     },
@@ -9106,7 +9612,8 @@
         "BRRR": -2.6,
         "EZBC": -25.8,
         "BTCW": -2.3,
-        "DEFI": 18.0
+        "DEFI": 18.0,
+        "MSBT": 0.0
       },
       "total": -5.5
     },
@@ -9124,7 +9631,8 @@
         "BRRR": 5.5,
         "EZBC": -5.1,
         "BTCW": -13.4,
-        "DEFI": 3.0
+        "DEFI": 3.0,
+        "MSBT": 0.0
       },
       "total": -269.1
     },
@@ -9142,7 +9650,8 @@
         "BRRR": -2.4,
         "EZBC": -7.7,
         "BTCW": 24.3,
-        "DEFI": 1.6
+        "DEFI": 1.6,
+        "MSBT": 0.0
       },
       "total": 88.6
     },
@@ -9160,7 +9669,8 @@
         "BRRR": 5.9,
         "EZBC": 3.9,
         "BTCW": -3.1,
-        "DEFI": -8.0
+        "DEFI": -8.0,
+        "MSBT": 0.0
       },
       "total": 137.6
     },
@@ -9178,7 +9688,8 @@
         "BRRR": -0.0,
         "EZBC": 5.1,
         "BTCW": 1.8,
-        "DEFI": 4.7
+        "DEFI": 4.7,
+        "MSBT": 0.0
       },
       "total": -381.6
     },
@@ -9196,7 +9707,8 @@
         "BRRR": -0.9,
         "EZBC": 4.5,
         "BTCW": 2.5,
-        "DEFI": 6.7
+        "DEFI": 6.7,
+        "MSBT": 0.0
       },
       "total": -407.7
     },
@@ -9214,7 +9726,8 @@
         "BRRR": 7.9,
         "EZBC": -8.5,
         "BTCW": 9.1,
-        "DEFI": -9.4
+        "DEFI": -9.4,
+        "MSBT": 0.0
       },
       "total": -9.6
     },
@@ -9232,7 +9745,8 @@
         "BRRR": 12.6,
         "EZBC": 6.3,
         "BTCW": 5.4,
-        "DEFI": 1.9
+        "DEFI": 1.9,
+        "MSBT": 0.0
       },
       "total": -166.6
     },
@@ -9250,7 +9764,8 @@
         "BRRR": -10.8,
         "EZBC": -1.5,
         "BTCW": -18.6,
-        "DEFI": 7.0
+        "DEFI": 7.0,
+        "MSBT": 0.0
       },
       "total": -287.1
     },
@@ -9268,7 +9783,8 @@
         "BRRR": -3.1,
         "EZBC": -4.9,
         "BTCW": 1.8,
-        "DEFI": 3.5
+        "DEFI": 3.5,
+        "MSBT": 0.0
       },
       "total": 4.9
     },
@@ -9286,7 +9802,8 @@
         "BRRR": -8.7,
         "EZBC": -21.0,
         "BTCW": 3.3,
-        "DEFI": -13.6
+        "DEFI": -13.6,
+        "MSBT": 0.0
       },
       "total": 218.6
     },
@@ -9304,7 +9821,8 @@
         "BRRR": 4.3,
         "EZBC": 7.4,
         "BTCW": -0.1,
-        "DEFI": -13.0
+        "DEFI": -13.0,
+        "MSBT": 0.0
       },
       "total": -626.7
     },
@@ -9322,7 +9840,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9340,7 +9859,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9358,7 +9878,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9376,7 +9897,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9394,7 +9916,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9412,7 +9935,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.1
     },
@@ -9430,7 +9954,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.1
     },
@@ -9448,7 +9973,8 @@
         "BRRR": -1.7,
         "EZBC": 8.2,
         "BTCW": -30,
-        "DEFI": -19.2
+        "DEFI": -19.2,
+        "MSBT": 0.0
       },
       "total": 89.3
     },
@@ -9466,7 +9992,8 @@
         "BRRR": -0.0,
         "EZBC": -0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.1
     },
@@ -9484,7 +10011,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9502,7 +10030,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9520,7 +10049,8 @@
         "BRRR": -0.0,
         "EZBC": -0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9538,7 +10068,8 @@
         "BRRR": -2.9,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -198.1
     },
@@ -9556,7 +10087,8 @@
         "BRRR": 0.0,
         "EZBC": -0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9574,7 +10106,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9592,7 +10125,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9610,7 +10144,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -118.5
     },
@@ -9628,7 +10163,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -173.0
     },
@@ -9646,7 +10182,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -9664,7 +10201,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.1,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -158.7
     },
@@ -9682,7 +10220,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 248.0
     },
@@ -9700,7 +10239,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 393.8
     },
@@ -9718,7 +10258,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 403.2
     },
@@ -9736,7 +10277,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9754,7 +10296,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 282.5
     },
@@ -9772,7 +10315,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.1
     },
@@ -9790,7 +10334,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 7.5,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -150.0
     },
@@ -9808,7 +10353,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.1
     },
@@ -9826,7 +10372,8 @@
         "BRRR": -4.2,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 145.5
     },
@@ -9844,7 +10391,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 247.7
     },
@@ -9862,7 +10410,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 121.9
     },
@@ -9880,7 +10429,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 60.0
     },
@@ -9898,7 +10448,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -9916,7 +10467,8 @@
         "BRRR": 1.9,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 187.4
     },
@@ -9934,7 +10486,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 175.3
     },
@@ -9952,7 +10505,8 @@
         "BRRR": 3.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -141.6
     },
@@ -9970,7 +10524,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.1
     },
@@ -9988,7 +10543,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -0.0
     },
@@ -10006,7 +10562,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 195.8
     },
@@ -10024,7 +10581,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -123.3
     },
@@ -10042,7 +10600,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": -26.3
     },
@@ -10060,9 +10619,10 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": -89.5
     },
     {
       "date": "2026-03-27",
@@ -10078,7 +10638,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -10096,9 +10657,10 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": 45.3
     },
     {
       "date": "2026-04-01",
@@ -10114,7 +10676,8 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -10132,7 +10695,8 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
       "total": 0.0
     },
@@ -10150,9 +10714,10 @@
         "BRRR": 2.5,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": 360.5
     },
     {
       "date": "2026-04-07",
@@ -10168,9 +10733,10 @@
         "BRRR": 0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": -101.8
     },
     {
       "date": "2026-04-08",
@@ -10185,10 +10751,11 @@
         "BTCO": 0.0,
         "BRRR": 0.0,
         "EZBC": 0.0,
-        "BTCW": 0.0,
-        "DEFI": -0.0
+        "BTCW": -0.0,
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": -195.4
     },
     {
       "date": "2026-04-09",
@@ -10203,10 +10770,11 @@
         "BTCO": 0.0,
         "BRRR": 0.0,
         "EZBC": 0.0,
-        "BTCW": 16.0,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 16.0
       },
-      "total": 0.0
+      "total": 356.5
     },
     {
       "date": "2026-04-10",
@@ -10221,10 +10789,11 @@
         "BTCO": 0.0,
         "BRRR": 0.0,
         "EZBC": 0.0,
-        "BTCW": 17.3,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 17.3
       },
-      "total": 0.0
+      "total": 17.3
     },
     {
       "date": "2026-04-13",
@@ -10239,10 +10808,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 6.6,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 6.6
       },
-      "total": 0.0
+      "total": -241.1
     },
     {
       "date": "2026-04-14",
@@ -10257,10 +10827,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 16.1,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 16.1
       },
-      "total": 0.0
+      "total": 360.2
     },
     {
       "date": "2026-04-15",
@@ -10275,10 +10846,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 19.9,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 19.9
       },
-      "total": 0.0
+      "total": 230.5
     },
     {
       "date": "2026-04-16",
@@ -10293,10 +10865,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 13.7,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 13.7
       },
-      "total": 0.0
+      "total": 4.3
     },
     {
       "date": "2026-04-17",
@@ -10311,10 +10884,11 @@
         "BTCO": 0.0,
         "BRRR": 5.8,
         "EZBC": 0.0,
-        "BTCW": 16.6,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 16.6
       },
-      "total": 0.0
+      "total": 617.0
     },
     {
       "date": "2026-04-20",
@@ -10329,10 +10903,11 @@
         "BTCO": 3.8,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 8.2,
-        "DEFI": -0.1
+        "BTCW": -0.1,
+        "DEFI": 0.0,
+        "MSBT": 8.2
       },
-      "total": 0.0
+      "total": 301.8
     },
     {
       "date": "2026-04-22",
@@ -10347,10 +10922,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 22.1,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 22.1
       },
-      "total": 0.0
+      "total": 320.1
     },
     {
       "date": "2026-04-23",
@@ -10365,10 +10941,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 9.3,
-        "DEFI": 0.0
+        "BTCW": 0.0,
+        "DEFI": 0.0,
+        "MSBT": 9.3
       },
-      "total": 0.0
+      "total": 225.3
     },
     {
       "date": "2026-04-24",
@@ -10383,10 +10960,11 @@
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "BTCW": 11.0,
-        "DEFI": 6.1
+        "BTCW": 6.1,
+        "DEFI": 0.0,
+        "MSBT": 11.0
       },
-      "total": 0.0
+      "total": 4.5
     },
     {
       "date": "2026-04-27",
@@ -10402,9 +10980,10 @@
         "BRRR": -0.0,
         "EZBC": 0.0,
         "BTCW": 0.0,
-        "DEFI": 0.0
+        "DEFI": 0.0,
+        "MSBT": 0.0
       },
-      "total": 0.0
+      "total": -206.3
     }
   ]
 }
