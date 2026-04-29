@@ -205,8 +205,13 @@ function switchAsset(asset){
   });
 }
 
+function getTotal(d){
+  if(d.flows){var s=0;var vals=Object.values(d.flows);for(var i=0;i<vals.length;i++)s+=vals[i];if(s!==0)return Math.round(s*10)/10;}
+  return d.total;
+}
 function render(){
   if(!currentData)return;
+  currentData.daily_flows.forEach(function(d){d._total=getTotal(d);});
   renderKPI();
   renderChart();
   if(currentData.metadata&&currentData.metadata.last_updated){
@@ -220,19 +225,19 @@ function renderKPI(){
   var flows=currentData.daily_flows.slice(-30);
   if(!flows.length)return;
   var latest=flows[flows.length-1];
-  var cum=0;flows.forEach(function(d){cum+=d.total;});
-  var l7=flows.slice(-7),w7=0;l7.forEach(function(d){w7+=d.total;});
-  var streak=0,sign=latest.total>=0?1:-1;
-  for(var i=flows.length-1;i>=0;i--){if((flows[i].total>=0?1:-1)===sign)streak++;else break;}
+  var cum=0;flows.forEach(function(d){cum+=d._total;});
+  var l7=flows.slice(-7),w7=0;l7.forEach(function(d){w7+=d._total;});
+  var streak=0,sign=latest._total>=0?1:-1;
+  for(var i=flows.length-1;i>=0;i--){if((flows[i]._total>=0?1:-1)===sign)streak++;else break;}
   var mx=flows[0],mn=flows[0];
-  flows.forEach(function(d){if(d.total>mx.total)mx=d;if(d.total<mn.total)mn=d;});
+  flows.forEach(function(d){if(d._total>mx._total)mx=d;if(d._total<mn._total)mn=d;});
   var items=[
-    {l:'최근 일별 순유입',v:fmt(latest.total),c:latest.total>=0?'pos':'neg',s:fmtDF(latest.date)},
+    {l:'최근 일별 순유입',v:fmt(latest._total),c:latest._total>=0?'pos':'neg',s:fmtDF(latest.date)},
     {l:'30일 누적',v:fmtB(cum),c:cum>=0?'pos':'neg',s:flows.length+'거래일 합계'},
     {l:'최근 7일',v:fmt(w7),c:w7>=0?'pos':'neg',s:'일평균 '+fmt(w7/l7.length)+'M'},
     {l:sign>0?'연속 유입':'연속 유출',v:streak+'일',c:'neu',s:sign>0?'유입 지속':'유출 지속'},
-    {l:'최대 유입일',v:fmt(mx.total),c:'pos',s:fmtDF(mx.date)},
-    {l:'최대 유출일',v:fmt(mn.total),c:'neg',s:fmtDF(mn.date)}
+    {l:'최대 유입일',v:fmt(mx._total),c:'pos',s:fmtDF(mx.date)},
+    {l:'최대 유출일',v:fmt(mn._total),c:'neg',s:fmtDF(mn.date)}
   ];
   document.getElementById('kpiGrid').innerHTML=items.map(function(c){
     return '<div class="kpi"><div class="kpi-label">'+c.l+'</div><div class="kpi-value '+c.c+'">'+c.v+'</div><div class="kpi-sub">'+c.s+'</div></div>';
@@ -246,8 +251,8 @@ function renderChart(){
     type:'bar',
     data:{
       labels:flows.map(function(d){return fmtD(d.date);}),
-      datasets:[{data:flows.map(function(d){return d.total;}),
-        backgroundColor:flows.map(function(d){return d.total>=0?'#22c55e':'#ef4444';}),
+      datasets:[{data:flows.map(function(d){return d._total;}),
+        backgroundColor:flows.map(function(d){return d._total>=0?'#22c55e':'#ef4444';}),
         borderWidth:0,borderRadius:2,barPercentage:.85}]
     },
     options:{
