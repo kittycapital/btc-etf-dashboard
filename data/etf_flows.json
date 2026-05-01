@@ -71,11 +71,11 @@
       "BTCW",
       "DEFI"
     ],
-    "last_updated": "2026-04-30T08:24:14.847811+00:00",
-    "total_records": 575,
+    "last_updated": "2026-05-01T05:31:16.149177+00:00",
+    "total_records": 576,
     "date_range": {
       "start": "2024-01-11",
-      "end": "2026-04-28"
+      "end": "2026-04-29"
     }
   },
   "daily_flows": [
@@ -10855,113 +10855,113 @@
     {
       "date": "2026-04-16",
       "flows": {
-        "IBIT": 82.8,
-        "FBTC": -36.5,
-        "GBTC": -24.1,
+        "IBIT": 83.9,
+        "FBTC": -36.9,
+        "GBTC": -24.5,
         "BTC": -0.0,
         "BITB": 0.0,
-        "ARKB": -27.8,
+        "ARKB": -28.1,
         "HODL": -3.8,
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "MSBT": 13.6,
+        "MSBT": 13.7,
         "BTCW": 0.0,
         "DEFI": 0.0
       },
-      "total": 4.1
+      "total": 4.2
     },
     {
       "date": "2026-04-17",
       "flows": {
-        "IBIT": 279.3,
-        "FBTC": 160.6,
-        "GBTC": -23.0,
-        "BTC": 16.8,
-        "BITB": 37.6,
-        "ARKB": 115.7,
+        "IBIT": 283.1,
+        "FBTC": 162.8,
+        "GBTC": -23.3,
+        "BTC": 17.0,
+        "BITB": 38.1,
+        "ARKB": 117.3,
         "HODL": -0.0,
         "BTCO": 0.0,
         "BRRR": 5.8,
         "EZBC": 0.0,
-        "MSBT": 16.4,
+        "MSBT": 16.6,
         "BTCW": 0.0,
         "DEFI": 0.0
       },
-      "total": 609.1
+      "total": 617.3
     },
     {
       "date": "2026-04-20",
       "flows": {
-        "IBIT": 255.1,
-        "FBTC": -6.6,
-        "GBTC": 2.7,
-        "BTC": 28.5,
+        "IBIT": 258.6,
+        "FBTC": -6.7,
+        "GBTC": 2.8,
+        "BTC": 28.9,
         "BITB": 0.0,
         "ARKB": 0.0,
-        "HODL": 6.4,
+        "HODL": 6.5,
         "BTCO": -0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "MSBT": 8.1,
+        "MSBT": 8.2,
         "BTCW": -0.1,
         "DEFI": 0.0
       },
-      "total": 294.2
+      "total": 298.2
     },
     {
       "date": "2026-04-22",
       "flows": {
-        "IBIT": 277.6,
-        "FBTC": 48.0,
-        "GBTC": -43.5,
-        "BTC": 17.5,
+        "IBIT": 281.3,
+        "FBTC": 48.7,
+        "GBTC": -44.1,
+        "BTC": 17.7,
         "BITB": 2.1,
         "ARKB": -3.2,
         "HODL": -4.3,
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "MSBT": 21.8,
+        "MSBT": 22.1,
         "BTCW": 0.0,
         "DEFI": 0.0
       },
-      "total": 315.9
+      "total": 320.2
     },
     {
       "date": "2026-04-23",
       "flows": {
-        "IBIT": 163.8,
-        "FBTC": -16.6,
+        "IBIT": 166.0,
+        "FBTC": -16.8,
         "GBTC": 0.0,
         "BTC": 0.0,
-        "BITB": -7.4,
-        "ARKB": 69.7,
+        "BITB": -7.5,
+        "ARKB": 70.6,
         "HODL": 3.8,
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "MSBT": 9.2,
+        "MSBT": 9.3,
         "BTCW": 0.0,
         "DEFI": 0.0
       },
-      "total": 222.3
+      "total": 225.3
     },
     {
       "date": "2026-04-24",
       "flows": {
-        "IBIT": 22.4,
+        "IBIT": 22.7,
         "FBTC": 0.0,
-        "GBTC": -17.0,
-        "BTC": 5.0,
-        "BITB": -8.7,
-        "ARKB": -8.8,
-        "HODL": -5.4,
+        "GBTC": -17.2,
+        "BTC": 5.1,
+        "BITB": -8.8,
+        "ARKB": -8.9,
+        "HODL": -5.5,
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
-        "MSBT": 10.9,
-        "BTCW": 6.0,
+        "MSBT": 11.0,
+        "BTCW": 6.1,
         "DEFI": 0.0
       },
       "total": 4.5
@@ -10970,11 +10970,11 @@
       "date": "2026-04-27",
       "flows": {
         "IBIT": -0.0,
-        "FBTC": -150.6,
+        "FBTC": -152.7,
         "GBTC": -1.4,
         "BTC": -0.1,
-        "BITB": -8.7,
-        "ARKB": -42.9,
+        "BITB": -8.8,
+        "ARKB": -43.5,
         "HODL": -0.0,
         "BTCO": 0.0,
         "BRRR": -0.0,
@@ -10983,18 +10983,18 @@
         "BTCW": 0.0,
         "DEFI": 0.0
       },
-      "total": -203.7
+      "total": -206.4
     },
     {
       "date": "2026-04-28",
       "flows": {
-        "IBIT": -112.0,
-        "FBTC": -5.0,
-        "GBTC": -47.1,
+        "IBIT": -113.6,
+        "FBTC": -5.1,
+        "GBTC": -47.7,
         "BTC": -0.0,
-        "BITB": -13.6,
-        "ARKB": 41.2,
-        "HODL": -13.9,
+        "BITB": -13.8,
+        "ARKB": 41.7,
+        "HODL": -14.1,
         "BTCO": 0.0,
         "BRRR": -0.0,
         "EZBC": 0.0,
@@ -11002,7 +11002,26 @@
         "BTCW": 0.1,
         "DEFI": 0.0
       },
-      "total": -150.4
+      "total": -152.5
+    },
+    {
+      "date": "2026-04-29",
+      "flows": {
+        "IBIT": -55.9,
+        "FBTC": -37.0,
+        "GBTC": 0.0,
+        "BTC": 0.0,
+        "BITB": 0.0,
+        "ARKB": -30.9,
+        "HODL": 0.0,
+        "BTCO": 0.0,
+        "BRRR": 0.0,
+        "EZBC": -6.7,
+        "MSBT": 11.0,
+        "BTCW": 0.0,
+        "DEFI": 0.0
+      },
+      "total": -119.4
     }
   ]
 }
