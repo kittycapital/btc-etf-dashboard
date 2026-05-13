@@ -1,7 +1,7 @@
 {
   "description": "ETH/USD daily closing prices",
   "source": "CoinGecko",
-  "last_updated": "2026-05-13T02:59:58.336459+00:00",
+  "last_updated": "2026-05-13T07:16:37.578150+00:00",
   "prices": {
     "2024-07-01": 3442.67,
     "2024-07-02": 3421.71,
