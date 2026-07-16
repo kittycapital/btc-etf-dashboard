@@ -71,11 +71,11 @@
       "BTCW",
       "DEFI"
     ],
-    "last_updated": "2026-07-15T08:11:27.755318+00:00",
-    "total_records": 624,
+    "last_updated": "2026-07-16T04:46:55.026164+00:00",
+    "total_records": 625,
     "date_range": {
       "start": "2024-01-11",
-      "end": "2026-07-10"
+      "end": "2026-07-14"
     }
   },
   "daily_flows": [
@@ -11934,6 +11934,25 @@
         "DEFI": 0.0
       },
       "total": 92.8
+    },
+    {
+      "date": "2026-07-14",
+      "flows": {
+        "IBIT": -54.1,
+        "FBTC": -234.6,
+        "GBTC": -56.8,
+        "BTC": 61.9,
+        "BITB": 3.5,
+        "ARKB": 3.5,
+        "HODL": 10.0,
+        "BRRR": 0.0,
+        "MSBT": 7.4,
+        "EZBC": -0.1,
+        "BTCO": 0.0,
+        "BTCW": 0.0,
+        "DEFI": 0.0
+      },
+      "total": -259.3
     }
   ]
 }
