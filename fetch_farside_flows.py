@@ -22,6 +22,26 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 
 # Asset configs — easy to add more later (e.g. BTC from Farside)
 ASSETS = {
+    "btc": {
+        "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+        "output_file": "etf_flows.json",
+        "description": "Bitcoin Spot ETF Daily Net Flows (US$M)",
+        "etf_info": {
+            "IBIT": {"name": "iShares Bitcoin Trust", "issuer": "BlackRock"},
+            "FBTC": {"name": "Wise Origin Bitcoin Fund", "issuer": "Fidelity"},
+            "BITB": {"name": "Bitwise Bitcoin ETF", "issuer": "Bitwise"},
+            "ARKB": {"name": "ARK 21Shares Bitcoin ETF", "issuer": "ARK/21Shares"},
+            "BTCO": {"name": "Invesco Galaxy Bitcoin ETF", "issuer": "Invesco"},
+            "EZBC": {"name": "Franklin Bitcoin ETF", "issuer": "Franklin Templeton"},
+            "BRRR": {"name": "Valkyrie Bitcoin Fund", "issuer": "Valkyrie"},
+            "HODL": {"name": "VanEck Bitcoin ETF", "issuer": "VanEck"},
+            "BTCW": {"name": "WisdomTree Bitcoin Fund", "issuer": "WisdomTree"},
+            "MSBT": {"name": "Morgan Stanley Bitcoin ETF", "issuer": "Morgan Stanley"},
+            "GBTC": {"name": "Grayscale Bitcoin Trust", "issuer": "Grayscale"},
+            "BTC":  {"name": "Grayscale Bitcoin Mini Trust", "issuer": "Grayscale"},
+            "DEFI": {"name": "Hashdex Bitcoin ETF", "issuer": "Hashdex"},
+        },
+    },
     "eth": {
         "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
         "output_file": "eth_etf_flows.json",
@@ -285,18 +305,20 @@ def parse_farside_table(html: str, asset_key: str) -> tuple[list[str], list[dict
         return [], []
 
     thead_rows = re.findall(r"<tr[^>]*>(.*?)</tr>", thead_match.group(1), re.DOTALL | re.I)
-    if len(thead_rows) < 2:
-        print(f"[ERROR] Expected ≥2 thead rows, got {len(thead_rows)}")
+    if not thead_rows:
+        print(f"[ERROR] No thead rows found for {asset_key}")
         return [], []
 
-    # Parse ticker row (2nd row, index 1)
-    ticker_cells = [
-        strip_html(c) for c in
-        re.findall(r"<th[^>]*>(.*?)</th>", thead_rows[1], re.DOTALL | re.I)
-    ]
-    # First cell is empty (date column), last may be empty (Total column)
-    # Filter to only actual ticker symbols
-    tickers = [t for t in ticker_cells if t and t != "Total" and re.match(r'^[A-Z]{2,5}$', t)]
+    # 티커 행 자동 탐지: thead 행 중 '티커 심볼이 가장 많은 행' 선택
+    # (ETH/SOL은 2행 구조서 index1, BTC는 1행 구조 — 위치 무관하게 대응)
+    def _tickers_of(row):
+        cells = [strip_html(c) for c in re.findall(r"<th[^>]*>(.*?)</th>", row, re.DOTALL | re.I)]
+        return [t for t in cells if t and t != "Total" and re.match(r'^[A-Z]{2,5}$', t)]
+    tickers = []
+    for row in thead_rows:
+        cand = _tickers_of(row)
+        if len(cand) > len(tickers):
+            tickers = cand
     print(f"[INFO] Found tickers for {asset_key}: {tickers}")
 
     if not tickers:

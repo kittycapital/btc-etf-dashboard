@@ -32,12 +32,12 @@ jobs:
 
       # ─── BTC: bitbo.io ───
       - name: Fetch BTC ETF flows (bitbo.io)
-        run: python3 fetch_etf_flows.py
+        run: echo "BTC now via Farside (fetch_farside_flows.py btc) — bitbo 비활성"
         continue-on-error: true
 
       # ─── ETH & SOL: farside.co.uk ───
       - name: Fetch ETH & SOL ETF flows (Farside)
-        run: python3 fetch_farside_flows.py eth sol
+        run: python3 fetch_farside_flows.py btc eth sol
         continue-on-error: true
 
       - name: Debug Farside (if failed)
@@ -55,7 +55,7 @@ jobs:
 
       # ─── ETH & SOL Prices: CoinGecko ───
       - name: Fetch ETH & SOL prices (CoinGecko)
-        run: python3 fetch_crypto_prices.py eth sol
+        run: python3 fetch_crypto_prices.py btc eth sol
         continue-on-error: true
 
       # ─── Verify outputs ───
